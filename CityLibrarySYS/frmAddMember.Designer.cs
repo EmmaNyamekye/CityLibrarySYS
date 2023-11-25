@@ -159,7 +159,7 @@
             // txtEircode
             // 
             this.txtEircode.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEircode.Location = new System.Drawing.Point(566, 218);
+            this.txtEircode.Location = new System.Drawing.Point(570, 239);
             this.txtEircode.Margin = new System.Windows.Forms.Padding(2);
             this.txtEircode.Name = "txtEircode";
             this.txtEircode.Size = new System.Drawing.Size(152, 23);
