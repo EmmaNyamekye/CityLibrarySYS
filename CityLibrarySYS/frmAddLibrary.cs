@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CityLibrarySYS
 {
     public partial class frmAddLibrary : Form
     {
+        frmMainManu parent;
+
         public frmAddLibrary()
         {
             InitializeComponent();
+        }
+
+        public frmAddLibrary(frmMainManu parent)
+        {
+            InitializeComponent();
+            this.parent = parent;
         }
 
         private void txtSupervisor_TextChanged(object sender, EventArgs e)
@@ -35,53 +44,7 @@ namespace CityLibrarySYS
                                 MessageBoxIcon.Error);
                 return;
             }
-            //Validate length of fields are valid
-            else if (txtName.Text.Length > 20)
-            {
-                MessageBox.Show("The leght of the Name cannot be longer then 20 characters!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtName.Focus();
-                return;
-            }
-            else if (txtStreet.Text.Length > 20)
-            {
-                MessageBox.Show("The leght of the Street cannot be longer then 20 characters!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtStreet.Focus();
-                return;
-            }
-            else if (txtTown.Text.Length > 15)
-            {
-                MessageBox.Show("The leght of the Twon cannot be longer then 15 characters!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtTown.Focus();
-                return;
-            }
-            else if (txtCounty.Text.Length > 15)
-            {
-                MessageBox.Show("The leght of the County cannot be longer then 15 characters!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtCounty.Focus();
-                return;
-            }
-            else if (txtSupervisor.Text.Length > 20)
-            {
-                MessageBox.Show("The leght of the Supervisor cannot be longer then 20 characters!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtSupervisor.Focus();
-                return;
-            }
-
+            
             //Validate if Name, Street, Town, County and Supervisor are Not Numeric
             if (txtName.Text.All(c => char.IsDigit(c)))
             {
@@ -132,9 +95,15 @@ namespace CityLibrarySYS
             //Validate if Eircode is valid
             string eircode = txtEircode.Text;
 
-            //Define the regular expression pattern for Eircode validation
-            string eircodePattern = @"^([ACDEFHKNPRTVWXY][0-9]{2}|D6W)[ ][ACDEFHKNPRTVWXY0-9]{4}$";
-            // https://stackoverflow.com/questions/33391412/validation-for-irish-eircode
+            //Define Pattern for Eircode Validation
+            string eircodePattern = @"^[AC-Y]{1}[0-9]{1}[0-9W]{1}[ \-]?[0-9AC-Y]{4}$";
+            /*
+             Title: Validation for Irish Eircode
+             Author:
+             Site ownwer/sponcer:
+             Date:
+             Availability: 
+             (Accessed 25/11/2023)*/
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(eircode, eircodePattern))
             {
@@ -146,10 +115,10 @@ namespace CityLibrarySYS
                 return;
             }
 
-            //Validate if Phone is numeric, lenght 10 and starts with '06'
-            if (txtPhone.Text.Length != 10 || txtPhone.Text.All(char.IsDigit) || !txtPhone.Text.StartsWith("06"))
+            //Validate if Phone is numeric and starts with '06'
+            if (txtPhone.Text.All(char.IsDigit) || !txtPhone.Text.StartsWith("06"))
             {
-                MessageBox.Show("Phone number is invalid! It has to be all 10 char long and all digits",
+                MessageBox.Show("Phone number is invalid! Phone has to be all digits and start with 06",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -157,7 +126,80 @@ namespace CityLibrarySYS
                 return;
             }
 
-            //Email validation
+            // Validate if email is valid
+            string email = txtEmail.Text;
+
+            // Define Pattern for email validation
+            string emailPattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(email, emailPattern))
+            {
+                MessageBox.Show("Invalid email format!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                txtEmail.Focus();
+                return;
+            }
+
+            MessageBox.Show("Room Type Added To Database",
+                                "Success!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            txtName.Clear();
+            txtStreet.Clear();
+            txtTown.Clear();
+            txtCounty.Clear();
+            txtEircode.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
+            txtSupervisor.Clear();
+        }
+
+        private void bACKToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Visible = true;
+
+        }
+
+        private void frmAddLibrary_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStreet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTown_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCounty_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEircode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSupervisor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

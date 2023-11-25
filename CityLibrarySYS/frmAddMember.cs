@@ -21,7 +21,7 @@ namespace CityLibrarySYS
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             // Validate if all fields are entered
-            if (txtForename.Text.Equals("") || txtSurname.Text.Equals("") || txtDateBirth.Text.Equals("") ||
+            if (txtForename.Text.Equals("") || txtSurname.Text.Equals("") /*txtDateBirth.Text.Equals("")*/ ||
                 txtStreet.Text.Equals("") || txtTown.Text.Equals("") || txtCounty.Text.Equals("") ||
                 txtEircode.Text.Equals("") || txtPhone.Text.Equals("") || txtEmail.Text.Equals(""))
             {
@@ -51,7 +51,7 @@ namespace CityLibrarySYS
                 txtSurname.Focus();
                 return;
             }
-            else if (txtDateBirth.Text.Length != 10 || !DateTime.TryParseExact(txtDateBirth.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+            /*else if (txtDateBirth.Text.Length != 10 || !DateTime.TryParseExact(txtDateBirth.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
             {
                 MessageBox.Show("Date of Birth format must be dd/mm/yyyy!",
                                 "Error",
@@ -59,7 +59,7 @@ namespace CityLibrarySYS
                                 MessageBoxIcon.Error);
                 txtDateBirth.Focus();
                 return;
-            }
+            }*/
             else if (txtStreet.Text.Length > 10)
             {
                 MessageBox.Show("The length of the Street cannot be longer than 10 characters!",
@@ -159,6 +159,16 @@ namespace CityLibrarySYS
                 txtPhone.Focus();
                 return;
             }
+        }
+
+        private void mnuBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtForename_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

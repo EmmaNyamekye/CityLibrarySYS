@@ -29,204 +29,209 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainManu));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.libraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.queryLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.memberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deregisterMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reserveBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.collectBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.analysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.libraryPopularityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.genrePopularityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.picLibrary = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLibrary)).BeginInit();
+            this.mnuMainManu = new System.Windows.Forms.MenuStrip();
+            this.mnuLibrary = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAddLibrary = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuUpdateLibrary = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuQueryLibrary = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMember = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAddMember = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuUpdateMember = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDeregisterMember = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAddBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuUpdateBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRemoveBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLoan = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReserveBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCollectBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReturnBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAnalysis = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLibraryPopularity = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuGenrePopularity = new System.Windows.Forms.ToolStripMenuItem();
+            this.picWelcomeLibrary = new System.Windows.Forms.PictureBox();
+            this.mnuMainManu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picWelcomeLibrary)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // mnuMainManu
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.libraryToolStripMenuItem,
-            this.memberToolStripMenuItem,
-            this.bookToolStripMenuItem,
-            this.loanToolStripMenuItem,
-            this.analysisToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(884, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnuMainManu.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuMainManu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuLibrary,
+            this.mnuMember,
+            this.mnuBook,
+            this.mnuLoan,
+            this.mnuAnalysis});
+            this.mnuMainManu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.mnuMainManu.Location = new System.Drawing.Point(0, 0);
+            this.mnuMainManu.Name = "mnuMainManu";
+            this.mnuMainManu.Size = new System.Drawing.Size(884, 24);
+            this.mnuMainManu.TabIndex = 0;
+            this.mnuMainManu.Text = "Manu";
             // 
-            // libraryToolStripMenuItem
+            // mnuLibrary
             // 
-            this.libraryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addLibraryToolStripMenuItem,
-            this.updateLibraryToolStripMenuItem,
-            this.queryLibraryToolStripMenuItem});
-            this.libraryToolStripMenuItem.Name = "libraryToolStripMenuItem";
-            this.libraryToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.libraryToolStripMenuItem.Text = "Library";
-            this.libraryToolStripMenuItem.Click += new System.EventHandler(this.libraryToolStripMenuItem_Click);
+            this.mnuLibrary.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAddLibrary,
+            this.mnuUpdateLibrary,
+            this.mnuQueryLibrary});
+            this.mnuLibrary.Name = "mnuLibrary";
+            this.mnuLibrary.Size = new System.Drawing.Size(63, 20);
+            this.mnuLibrary.Text = "Library";
+            this.mnuLibrary.Click += new System.EventHandler(this.libraryToolStripMenuItem_Click);
             // 
-            // addLibraryToolStripMenuItem
+            // mnuAddLibrary
             // 
-            this.addLibraryToolStripMenuItem.Name = "addLibraryToolStripMenuItem";
-            this.addLibraryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addLibraryToolStripMenuItem.Text = "Add Library";
+            this.mnuAddLibrary.Name = "mnuAddLibrary";
+            this.mnuAddLibrary.Size = new System.Drawing.Size(180, 22);
+            this.mnuAddLibrary.Text = "Add Library";
+            this.mnuAddLibrary.Click += new System.EventHandler(this.addLibraryToolStripMenuItem_Click);
             // 
-            // updateLibraryToolStripMenuItem
+            // mnuUpdateLibrary
             // 
-            this.updateLibraryToolStripMenuItem.Name = "updateLibraryToolStripMenuItem";
-            this.updateLibraryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.updateLibraryToolStripMenuItem.Text = "Update Library";
+            this.mnuUpdateLibrary.Name = "mnuUpdateLibrary";
+            this.mnuUpdateLibrary.Size = new System.Drawing.Size(180, 22);
+            this.mnuUpdateLibrary.Text = "Update Library";
             // 
-            // queryLibraryToolStripMenuItem
+            // mnuQueryLibrary
             // 
-            this.queryLibraryToolStripMenuItem.Name = "queryLibraryToolStripMenuItem";
-            this.queryLibraryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.queryLibraryToolStripMenuItem.Text = "Query Library";
+            this.mnuQueryLibrary.Name = "mnuQueryLibrary";
+            this.mnuQueryLibrary.Size = new System.Drawing.Size(180, 22);
+            this.mnuQueryLibrary.Text = "Query Library";
             // 
-            // memberToolStripMenuItem
+            // mnuMember
             // 
-            this.memberToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addMemberToolStripMenuItem,
-            this.updateMemberToolStripMenuItem,
-            this.deregisterMemberToolStripMenuItem});
-            this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
-            this.memberToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.memberToolStripMenuItem.Text = "Member";
+            this.mnuMember.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAddMember,
+            this.mnuUpdateMember,
+            this.mnuDeregisterMember});
+            this.mnuMember.Name = "mnuMember";
+            this.mnuMember.Size = new System.Drawing.Size(70, 20);
+            this.mnuMember.Text = "Member";
             // 
-            // addMemberToolStripMenuItem
+            // mnuAddMember
             // 
-            this.addMemberToolStripMenuItem.Name = "addMemberToolStripMenuItem";
-            this.addMemberToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.addMemberToolStripMenuItem.Text = "Add Member";
+            this.mnuAddMember.Name = "mnuAddMember";
+            this.mnuAddMember.Size = new System.Drawing.Size(197, 22);
+            this.mnuAddMember.Text = "Add Member";
             // 
-            // updateMemberToolStripMenuItem
+            // mnuUpdateMember
             // 
-            this.updateMemberToolStripMenuItem.Name = "updateMemberToolStripMenuItem";
-            this.updateMemberToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.updateMemberToolStripMenuItem.Text = "Update Member";
+            this.mnuUpdateMember.Name = "mnuUpdateMember";
+            this.mnuUpdateMember.Size = new System.Drawing.Size(197, 22);
+            this.mnuUpdateMember.Text = "Update Member";
             // 
-            // deregisterMemberToolStripMenuItem
+            // mnuDeregisterMember
             // 
-            this.deregisterMemberToolStripMenuItem.Name = "deregisterMemberToolStripMenuItem";
-            this.deregisterMemberToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.deregisterMemberToolStripMenuItem.Text = "Deregister Member";
+            this.mnuDeregisterMember.Name = "mnuDeregisterMember";
+            this.mnuDeregisterMember.Size = new System.Drawing.Size(197, 22);
+            this.mnuDeregisterMember.Text = "Deregister Member";
             // 
-            // bookToolStripMenuItem
+            // mnuBook
             // 
-            this.bookToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addBookToolStripMenuItem,
-            this.updateBookToolStripMenuItem,
-            this.removeBookToolStripMenuItem});
-            this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
-            this.bookToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.bookToolStripMenuItem.Text = "Book";
+            this.mnuBook.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAddBook,
+            this.mnuUpdateBook,
+            this.mnuRemoveBook});
+            this.mnuBook.Name = "mnuBook";
+            this.mnuBook.Size = new System.Drawing.Size(50, 20);
+            this.mnuBook.Text = "Book";
             // 
-            // addBookToolStripMenuItem
+            // mnuAddBook
             // 
-            this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.addBookToolStripMenuItem.Text = "Add Book";
+            this.mnuAddBook.Name = "mnuAddBook";
+            this.mnuAddBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuAddBook.Text = "Add Book";
             // 
-            // updateBookToolStripMenuItem
+            // mnuUpdateBook
             // 
-            this.updateBookToolStripMenuItem.Name = "updateBookToolStripMenuItem";
-            this.updateBookToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.updateBookToolStripMenuItem.Text = "Update Book";
+            this.mnuUpdateBook.Name = "mnuUpdateBook";
+            this.mnuUpdateBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuUpdateBook.Text = "Update Book";
             // 
-            // removeBookToolStripMenuItem
+            // mnuRemoveBook
             // 
-            this.removeBookToolStripMenuItem.Name = "removeBookToolStripMenuItem";
-            this.removeBookToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.removeBookToolStripMenuItem.Text = "Remove Book";
+            this.mnuRemoveBook.Name = "mnuRemoveBook";
+            this.mnuRemoveBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuRemoveBook.Text = "Remove Book";
             // 
-            // loanToolStripMenuItem
+            // mnuLoan
             // 
-            this.loanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reserveBookToolStripMenuItem,
-            this.collectBookToolStripMenuItem,
-            this.returnBookToolStripMenuItem});
-            this.loanToolStripMenuItem.Name = "loanToolStripMenuItem";
-            this.loanToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.loanToolStripMenuItem.Text = "Loan";
+            this.mnuLoan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuReserveBook,
+            this.mnuCollectBook,
+            this.mnuReturnBook});
+            this.mnuLoan.Name = "mnuLoan";
+            this.mnuLoan.Size = new System.Drawing.Size(50, 20);
+            this.mnuLoan.Text = "Loan";
             // 
-            // reserveBookToolStripMenuItem
+            // mnuReserveBook
             // 
-            this.reserveBookToolStripMenuItem.Name = "reserveBookToolStripMenuItem";
-            this.reserveBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reserveBookToolStripMenuItem.Text = "Reserve Book";
+            this.mnuReserveBook.Name = "mnuReserveBook";
+            this.mnuReserveBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuReserveBook.Text = "Reserve Book";
             // 
-            // collectBookToolStripMenuItem
+            // mnuCollectBook
             // 
-            this.collectBookToolStripMenuItem.Name = "collectBookToolStripMenuItem";
-            this.collectBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.collectBookToolStripMenuItem.Text = "Collect Book";
+            this.mnuCollectBook.Name = "mnuCollectBook";
+            this.mnuCollectBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuCollectBook.Text = "Collect Book";
             // 
-            // returnBookToolStripMenuItem
+            // mnuReturnBook
             // 
-            this.returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
-            this.returnBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.returnBookToolStripMenuItem.Text = "Return Book";
+            this.mnuReturnBook.Name = "mnuReturnBook";
+            this.mnuReturnBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuReturnBook.Text = "Return Book";
             // 
-            // analysisToolStripMenuItem
+            // mnuAnalysis
             // 
-            this.analysisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.libraryPopularityToolStripMenuItem,
-            this.genrePopularityToolStripMenuItem});
-            this.analysisToolStripMenuItem.Name = "analysisToolStripMenuItem";
-            this.analysisToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.analysisToolStripMenuItem.Text = "Analysis";
+            this.mnuAnalysis.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuLibraryPopularity,
+            this.mnuGenrePopularity});
+            this.mnuAnalysis.Name = "mnuAnalysis";
+            this.mnuAnalysis.Size = new System.Drawing.Size(72, 20);
+            this.mnuAnalysis.Text = "Analysis";
             // 
-            // libraryPopularityToolStripMenuItem
+            // mnuLibraryPopularity
             // 
-            this.libraryPopularityToolStripMenuItem.Name = "libraryPopularityToolStripMenuItem";
-            this.libraryPopularityToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.libraryPopularityToolStripMenuItem.Text = "Library Popularity";
+            this.mnuLibraryPopularity.Name = "mnuLibraryPopularity";
+            this.mnuLibraryPopularity.Size = new System.Drawing.Size(188, 22);
+            this.mnuLibraryPopularity.Text = "Library Popularity";
             // 
-            // genrePopularityToolStripMenuItem
+            // mnuGenrePopularity
             // 
-            this.genrePopularityToolStripMenuItem.Name = "genrePopularityToolStripMenuItem";
-            this.genrePopularityToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.genrePopularityToolStripMenuItem.Text = "Genre Popularity";
+            this.mnuGenrePopularity.Name = "mnuGenrePopularity";
+            this.mnuGenrePopularity.Size = new System.Drawing.Size(188, 22);
+            this.mnuGenrePopularity.Text = "Genre Popularity";
             // 
-            // picLibrary
+            // picWelcomeLibrary
             // 
-            this.picLibrary.Image = ((System.Drawing.Image)(resources.GetObject("picLibrary.Image")));
-            this.picLibrary.Location = new System.Drawing.Point(0, 27);
-            this.picLibrary.Name = "picLibrary";
-            this.picLibrary.Size = new System.Drawing.Size(884, 536);
-            this.picLibrary.TabIndex = 1;
-            this.picLibrary.TabStop = false;
-            this.picLibrary.Click += new System.EventHandler(this.picLibraary_Click);
+            this.picWelcomeLibrary.Image = ((System.Drawing.Image)(resources.GetObject("picWelcomeLibrary.Image")));
+            this.picWelcomeLibrary.Location = new System.Drawing.Point(0, 27);
+            this.picWelcomeLibrary.Name = "picWelcomeLibrary";
+            this.picWelcomeLibrary.Size = new System.Drawing.Size(884, 536);
+            this.picWelcomeLibrary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picWelcomeLibrary.TabIndex = 1;
+            this.picWelcomeLibrary.TabStop = false;
+            this.picWelcomeLibrary.Click += new System.EventHandler(this.picLibraary_Click);
             // 
             // frmMainManu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.picLibrary);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.picWelcomeLibrary);
+            this.Controls.Add(this.mnuMainManu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.mnuMainManu;
             this.Name = "frmMainManu";
             this.Text = "City Library";
             this.Load += new System.EventHandler(this.frmMainManu_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLibrary)).EndInit();
+            this.mnuMainManu.ResumeLayout(false);
+            this.mnuMainManu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picWelcomeLibrary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,27 +239,27 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem libraryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addLibraryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateLibraryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem queryLibraryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem memberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addMemberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateMemberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deregisterMemberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reserveBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem collectBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem returnBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem analysisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem libraryPopularityToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem genrePopularityToolStripMenuItem;
-        private System.Windows.Forms.PictureBox picLibrary;
+        private System.Windows.Forms.MenuStrip mnuMainManu;
+        private System.Windows.Forms.ToolStripMenuItem mnuLibrary;
+        private System.Windows.Forms.ToolStripMenuItem mnuAddLibrary;
+        private System.Windows.Forms.ToolStripMenuItem mnuUpdateLibrary;
+        private System.Windows.Forms.ToolStripMenuItem mnuQueryLibrary;
+        private System.Windows.Forms.ToolStripMenuItem mnuMember;
+        private System.Windows.Forms.ToolStripMenuItem mnuAddMember;
+        private System.Windows.Forms.ToolStripMenuItem mnuUpdateMember;
+        private System.Windows.Forms.ToolStripMenuItem mnuDeregisterMember;
+        private System.Windows.Forms.ToolStripMenuItem mnuBook;
+        private System.Windows.Forms.ToolStripMenuItem mnuAddBook;
+        private System.Windows.Forms.ToolStripMenuItem mnuUpdateBook;
+        private System.Windows.Forms.ToolStripMenuItem mnuRemoveBook;
+        private System.Windows.Forms.ToolStripMenuItem mnuLoan;
+        private System.Windows.Forms.ToolStripMenuItem mnuReserveBook;
+        private System.Windows.Forms.ToolStripMenuItem mnuCollectBook;
+        private System.Windows.Forms.ToolStripMenuItem mnuReturnBook;
+        private System.Windows.Forms.ToolStripMenuItem mnuAnalysis;
+        private System.Windows.Forms.ToolStripMenuItem mnuLibraryPopularity;
+        private System.Windows.Forms.ToolStripMenuItem mnuGenrePopularity;
+        private System.Windows.Forms.PictureBox picWelcomeLibrary;
     }
 }
 

@@ -36,5 +36,12 @@ namespace CityLibrarySYS
         {
             
         }
+
+        private void addLibraryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddLibrary nextForm = new frmAddLibrary(this);
+            this.Hide();
+            nextForm.Show();
+        }
     }
 }

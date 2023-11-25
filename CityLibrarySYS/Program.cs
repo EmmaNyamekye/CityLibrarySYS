@@ -16,7 +16,7 @@ namespace CityLibrarySYS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddLibrary());
+            Application.Run(new frmMainManu());
         }
     }
 }
