@@ -1,6 +1,6 @@
 ﻿namespace CityLibrarySYS
 {
-    partial class frmUpdateMember
+    partial class frmRemoveBook
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateMember));
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.txtMemberId = new System.Windows.Forms.TextBox();
-            this.lblMemberId = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRemoveBook));
             this.mnuBackStrip = new System.Windows.Forms.MenuStrip();
             this.mnuBack = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBackStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BackColor = System.Drawing.Color.FloralWhite;
-            this.btnSubmit.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(841, 53);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(151, 53);
-            this.btnSubmit.TabIndex = 59;
-            this.btnSubmit.Text = "SUBMIT";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            // 
-            // txtMemberId
-            // 
-            this.txtMemberId.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMemberId.Location = new System.Drawing.Point(349, 65);
-            this.txtMemberId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMemberId.Name = "txtMemberId";
-            this.txtMemberId.Size = new System.Drawing.Size(407, 32);
-            this.txtMemberId.TabIndex = 58;
-            // 
-            // lblMemberId
-            // 
-            this.lblMemberId.AutoSize = true;
-            this.lblMemberId.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemberId.Location = new System.Drawing.Point(184, 69);
-            this.lblMemberId.Name = "lblMemberId";
-            this.lblMemberId.Size = new System.Drawing.Size(85, 20);
-            this.lblMemberId.TabIndex = 57;
-            this.lblMemberId.Text = "Member ID";
             // 
             // mnuBackStrip
             // 
@@ -77,7 +43,7 @@
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
             this.mnuBackStrip.Size = new System.Drawing.Size(1179, 34);
-            this.mnuBackStrip.TabIndex = 60;
+            this.mnuBackStrip.TabIndex = 86;
             this.mnuBackStrip.Text = "Back";
             // 
             // mnuBack
@@ -91,19 +57,15 @@
             this.mnuBack.Text = "BACK";
             this.mnuBack.Click += new System.EventHandler(this.mnuBack_Click);
             // 
-            // frmUpdateMember
+            // frmRemoveBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1179, 690);
             this.Controls.Add(this.mnuBackStrip);
-            this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.txtMemberId);
-            this.Controls.Add(this.lblMemberId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frmUpdateMember";
-            this.Text = "Update Member";
+            this.Name = "frmRemoveBook";
+            this.Text = "Remove Book";
             this.mnuBackStrip.ResumeLayout(false);
             this.mnuBackStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -113,9 +75,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.TextBox txtMemberId;
-        private System.Windows.Forms.Label lblMemberId;
         private System.Windows.Forms.MenuStrip mnuBackStrip;
         private System.Windows.Forms.ToolStripMenuItem mnuBack;
     }

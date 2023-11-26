@@ -53,9 +53,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboLibraryID = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpUpdate = new System.Windows.Forms.GroupBox();
             this.mnuBackStrip.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grpUpdate.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLibaryId
@@ -279,9 +279,10 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(85, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 41);
+            this.label1.Size = new System.Drawing.Size(268, 41);
             this.label1.TabIndex = 79;
-            this.label1.Text = "Update New Library";
+            this.label1.Text = "Update Library";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cboLibraryID
             // 
@@ -312,54 +313,54 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox1
+            // grpUpdate
             // 
-            this.groupBox1.Controls.Add(this.txtCounty);
-            this.groupBox1.Controls.Add(this.lblCounty);
-            this.groupBox1.Controls.Add(this.txtTown);
-            this.groupBox1.Controls.Add(this.lblTown);
-            this.groupBox1.Controls.Add(this.btnSubmit);
-            this.groupBox1.Controls.Add(this.txtSupervisor);
-            this.groupBox1.Controls.Add(this.lblSupervisor);
-            this.groupBox1.Controls.Add(this.lblOpeningHours);
-            this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.lblName);
-            this.groupBox1.Controls.Add(this.txtStreet);
-            this.groupBox1.Controls.Add(this.lblStreet);
-            this.groupBox1.Controls.Add(this.txtEircode);
-            this.groupBox1.Controls.Add(this.lblEircode);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.lblEmail);
-            this.groupBox1.Controls.Add(this.txtPhone);
-            this.groupBox1.Controls.Add(this.lblPhone);
-            this.groupBox1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(64, 234);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1065, 433);
-            this.groupBox1.TabIndex = 81;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Update";
+            this.grpUpdate.Controls.Add(this.txtCounty);
+            this.grpUpdate.Controls.Add(this.lblCounty);
+            this.grpUpdate.Controls.Add(this.txtTown);
+            this.grpUpdate.Controls.Add(this.lblTown);
+            this.grpUpdate.Controls.Add(this.btnSubmit);
+            this.grpUpdate.Controls.Add(this.txtSupervisor);
+            this.grpUpdate.Controls.Add(this.lblSupervisor);
+            this.grpUpdate.Controls.Add(this.lblOpeningHours);
+            this.grpUpdate.Controls.Add(this.txtName);
+            this.grpUpdate.Controls.Add(this.lblName);
+            this.grpUpdate.Controls.Add(this.txtStreet);
+            this.grpUpdate.Controls.Add(this.lblStreet);
+            this.grpUpdate.Controls.Add(this.txtEircode);
+            this.grpUpdate.Controls.Add(this.lblEircode);
+            this.grpUpdate.Controls.Add(this.txtEmail);
+            this.grpUpdate.Controls.Add(this.lblEmail);
+            this.grpUpdate.Controls.Add(this.txtPhone);
+            this.grpUpdate.Controls.Add(this.lblPhone);
+            this.grpUpdate.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpUpdate.Location = new System.Drawing.Point(64, 234);
+            this.grpUpdate.Name = "grpUpdate";
+            this.grpUpdate.Size = new System.Drawing.Size(1065, 433);
+            this.grpUpdate.TabIndex = 81;
+            this.grpUpdate.TabStop = false;
+            this.grpUpdate.Text = "Update";
             // 
             // frmUpdateLibrary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1179, 690);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpUpdate);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cboLibraryID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mnuBackStrip);
             this.Controls.Add(this.lblLibaryId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUpdateLibrary";
             this.Text = "Update Library";
             this.Load += new System.EventHandler(this.updateLibrary_Load);
             this.mnuBackStrip.ResumeLayout(false);
             this.mnuBackStrip.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpUpdate.ResumeLayout(false);
+            this.grpUpdate.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,6 +391,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboLibraryID;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpUpdate;
     }
 }

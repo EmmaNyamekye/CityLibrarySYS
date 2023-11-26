@@ -85,22 +85,23 @@
             // mnuAddLibrary
             // 
             this.mnuAddLibrary.Name = "mnuAddLibrary";
-            this.mnuAddLibrary.Size = new System.Drawing.Size(224, 26);
+            this.mnuAddLibrary.Size = new System.Drawing.Size(218, 26);
             this.mnuAddLibrary.Text = "Add Library";
             this.mnuAddLibrary.Click += new System.EventHandler(this.addLibraryToolStripMenuItem_Click);
             // 
             // mnuUpdateLibrary
             // 
             this.mnuUpdateLibrary.Name = "mnuUpdateLibrary";
-            this.mnuUpdateLibrary.Size = new System.Drawing.Size(224, 26);
+            this.mnuUpdateLibrary.Size = new System.Drawing.Size(218, 26);
             this.mnuUpdateLibrary.Text = "Update Library";
             this.mnuUpdateLibrary.Click += new System.EventHandler(this.mnuUpdateLibrary_Click);
             // 
             // mnuQueryLibrary
             // 
             this.mnuQueryLibrary.Name = "mnuQueryLibrary";
-            this.mnuQueryLibrary.Size = new System.Drawing.Size(224, 26);
+            this.mnuQueryLibrary.Size = new System.Drawing.Size(218, 26);
             this.mnuQueryLibrary.Text = "Query Library";
+            this.mnuQueryLibrary.Click += new System.EventHandler(this.mnuQueryLibrary_Click);
             // 
             // mnuMember
             // 
@@ -124,12 +125,14 @@
             this.mnuUpdateMember.Name = "mnuUpdateMember";
             this.mnuUpdateMember.Size = new System.Drawing.Size(256, 26);
             this.mnuUpdateMember.Text = "Update Member";
+            this.mnuUpdateMember.Click += new System.EventHandler(this.mnuUpdateMember_Click);
             // 
             // mnuDeregisterMember
             // 
             this.mnuDeregisterMember.Name = "mnuDeregisterMember";
             this.mnuDeregisterMember.Size = new System.Drawing.Size(256, 26);
             this.mnuDeregisterMember.Text = "Deregister Member";
+            this.mnuDeregisterMember.Click += new System.EventHandler(this.mnuDeregisterMember_Click);
             // 
             // mnuBook
             // 
@@ -144,7 +147,7 @@
             // mnuAddBook
             // 
             this.mnuAddBook.Name = "mnuAddBook";
-            this.mnuAddBook.Size = new System.Drawing.Size(224, 26);
+            this.mnuAddBook.Size = new System.Drawing.Size(209, 26);
             this.mnuAddBook.Text = "Add Book";
             this.mnuAddBook.Click += new System.EventHandler(this.mnuAddBook_Click);
             // 
@@ -153,12 +156,14 @@
             this.mnuUpdateBook.Name = "mnuUpdateBook";
             this.mnuUpdateBook.Size = new System.Drawing.Size(209, 26);
             this.mnuUpdateBook.Text = "Update Book";
+            this.mnuUpdateBook.Click += new System.EventHandler(this.mnuUpdateBook_Click);
             // 
             // mnuRemoveBook
             // 
             this.mnuRemoveBook.Name = "mnuRemoveBook";
-            this.mnuRemoveBook.Size = new System.Drawing.Size(209, 26);
+            this.mnuRemoveBook.Size = new System.Drawing.Size(224, 26);
             this.mnuRemoveBook.Text = "Remove Book";
+            this.mnuRemoveBook.Click += new System.EventHandler(this.mnuRemoveBook_Click);
             // 
             // mnuLoan
             // 
@@ -213,7 +218,7 @@
             // 
             this.picWelcomeLibrary.Image = ((System.Drawing.Image)(resources.GetObject("picWelcomeLibrary.Image")));
             this.picWelcomeLibrary.Location = new System.Drawing.Point(0, 33);
-            this.picWelcomeLibrary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picWelcomeLibrary.Margin = new System.Windows.Forms.Padding(4);
             this.picWelcomeLibrary.Name = "picWelcomeLibrary";
             this.picWelcomeLibrary.Size = new System.Drawing.Size(1179, 660);
             this.picWelcomeLibrary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -231,7 +236,7 @@
             this.Controls.Add(this.mnuMainManu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuMainManu;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainManu";
             this.Text = "City Library";
             this.Load += new System.EventHandler(this.frmMainManu_Load);

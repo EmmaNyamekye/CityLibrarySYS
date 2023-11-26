@@ -7,19 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CityLibrarySYS
 {
-    public partial class frmUpdateMember : Form
+    public partial class frmRemoveBook : Form
     {
         frmMainManu parent;
 
-        public frmUpdateMember()
+        public frmRemoveBook()
         {
             InitializeComponent();
         }
 
-        public frmUpdateMember(frmMainManu parent)
+        public frmRemoveBook(frmMainManu parent)
         {
             InitializeComponent();
             this.parent = parent;

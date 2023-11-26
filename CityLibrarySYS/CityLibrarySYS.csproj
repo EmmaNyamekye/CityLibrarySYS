@@ -82,6 +82,18 @@
     <Compile Include="frmQueryLibrary.Designer.cs">
       <DependentUpon>frmQueryLibrary.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRemoveBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRemoveBook.Designer.cs">
+      <DependentUpon>frmRemoveBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateBook.Designer.cs">
+      <DependentUpon>frmUpdateBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUpdateMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQueryLibrary.resx">
       <DependentUpon>frmQueryLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRemoveBook.resx">
+      <DependentUpon>frmRemoveBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateBook.resx">
+      <DependentUpon>frmUpdateBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateMember.resx">
       <DependentUpon>frmUpdateMember.cs</DependentUpon>

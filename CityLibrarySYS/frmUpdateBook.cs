@@ -7,22 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CityLibrarySYS
 {
-    public partial class frmUpdateMember : Form
+    public partial class frmUpdateBook : Form
     {
         frmMainManu parent;
 
-        public frmUpdateMember()
+        public frmUpdateBook()
         {
             InitializeComponent();
         }
 
-        public frmUpdateMember(frmMainManu parent)
+        public frmUpdateBook(frmMainManu parent)
         {
             InitializeComponent();
             this.parent = parent;
+        }
+
+        private void frmUpdateBook_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void mnuBack_Click(object sender, EventArgs e)

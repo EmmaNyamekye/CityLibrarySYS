@@ -7,14 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CityLibrarySYS
 {
     public partial class frmDeregisterMember : Form
     {
+        frmMainManu parent;
+
         public frmDeregisterMember()
         {
             InitializeComponent();
+        }
+
+        public frmDeregisterMember(frmMainManu parent)
+        {
+            InitializeComponent();
+            this.parent = parent;
+        }
+
+        private void mnuBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Visible = true;
         }
     }
 }

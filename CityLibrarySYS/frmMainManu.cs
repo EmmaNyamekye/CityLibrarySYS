@@ -64,5 +64,40 @@ namespace CityLibrarySYS
             this.Hide();
             nextForm.Show();
         }
+
+        private void mnuQueryLibrary_Click(object sender, EventArgs e)
+        {
+            frmQueryLibrary nextForm = new frmQueryLibrary(this);
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void mnuDeregisterMember_Click(object sender, EventArgs e)
+        {
+            frmDeregisterMember nextForm = new frmDeregisterMember(this);
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void mnuUpdateMember_Click(object sender, EventArgs e)
+        {
+            frmUpdateMember nextForm = new frmUpdateMember(this);
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void mnuUpdateBook_Click(object sender, EventArgs e)
+        {
+            frmUpdateBook nextForm = new frmUpdateBook(this);
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void mnuRemoveBook_Click(object sender, EventArgs e)
+        {
+            frmRemoveBook nextForm = new frmRemoveBook(this);
+            this.Hide();
+            nextForm.Show();
+        }
     }
 }
