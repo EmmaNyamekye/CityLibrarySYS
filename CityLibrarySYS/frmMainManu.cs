@@ -43,5 +43,24 @@ namespace CityLibrarySYS
             this.Hide();
             nextForm.Show();
         }
+
+        private void mnuUpdateLibrary_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void mnuAddMember_Click(object sender, EventArgs e)
+        {
+            frmRegisterMember nextForm = new frmRegisterMember(this);
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void mnuAddBook_Click(object sender, EventArgs e)
+        {
+            frmAddBook nextForm = new frmAddBook(this);
+            this.Hide();
+            nextForm.Show();
+        }
     }
 }

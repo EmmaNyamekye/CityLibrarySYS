@@ -57,6 +57,7 @@
             // mnuMainManu
             // 
             this.mnuMainManu.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuMainManu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuMainManu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuLibrary,
             this.mnuMember,
@@ -66,7 +67,7 @@
             this.mnuMainManu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.mnuMainManu.Location = new System.Drawing.Point(0, 0);
             this.mnuMainManu.Name = "mnuMainManu";
-            this.mnuMainManu.Size = new System.Drawing.Size(884, 24);
+            this.mnuMainManu.Size = new System.Drawing.Size(1179, 28);
             this.mnuMainManu.TabIndex = 0;
             this.mnuMainManu.Text = "Manu";
             // 
@@ -77,27 +78,28 @@
             this.mnuUpdateLibrary,
             this.mnuQueryLibrary});
             this.mnuLibrary.Name = "mnuLibrary";
-            this.mnuLibrary.Size = new System.Drawing.Size(63, 20);
+            this.mnuLibrary.Size = new System.Drawing.Size(82, 24);
             this.mnuLibrary.Text = "Library";
             this.mnuLibrary.Click += new System.EventHandler(this.libraryToolStripMenuItem_Click);
             // 
             // mnuAddLibrary
             // 
             this.mnuAddLibrary.Name = "mnuAddLibrary";
-            this.mnuAddLibrary.Size = new System.Drawing.Size(180, 22);
+            this.mnuAddLibrary.Size = new System.Drawing.Size(224, 26);
             this.mnuAddLibrary.Text = "Add Library";
             this.mnuAddLibrary.Click += new System.EventHandler(this.addLibraryToolStripMenuItem_Click);
             // 
             // mnuUpdateLibrary
             // 
             this.mnuUpdateLibrary.Name = "mnuUpdateLibrary";
-            this.mnuUpdateLibrary.Size = new System.Drawing.Size(180, 22);
+            this.mnuUpdateLibrary.Size = new System.Drawing.Size(224, 26);
             this.mnuUpdateLibrary.Text = "Update Library";
+            this.mnuUpdateLibrary.Click += new System.EventHandler(this.mnuUpdateLibrary_Click);
             // 
             // mnuQueryLibrary
             // 
             this.mnuQueryLibrary.Name = "mnuQueryLibrary";
-            this.mnuQueryLibrary.Size = new System.Drawing.Size(180, 22);
+            this.mnuQueryLibrary.Size = new System.Drawing.Size(224, 26);
             this.mnuQueryLibrary.Text = "Query Library";
             // 
             // mnuMember
@@ -107,25 +109,26 @@
             this.mnuUpdateMember,
             this.mnuDeregisterMember});
             this.mnuMember.Name = "mnuMember";
-            this.mnuMember.Size = new System.Drawing.Size(70, 20);
+            this.mnuMember.Size = new System.Drawing.Size(92, 24);
             this.mnuMember.Text = "Member";
             // 
             // mnuAddMember
             // 
             this.mnuAddMember.Name = "mnuAddMember";
-            this.mnuAddMember.Size = new System.Drawing.Size(197, 22);
+            this.mnuAddMember.Size = new System.Drawing.Size(256, 26);
             this.mnuAddMember.Text = "Add Member";
+            this.mnuAddMember.Click += new System.EventHandler(this.mnuAddMember_Click);
             // 
             // mnuUpdateMember
             // 
             this.mnuUpdateMember.Name = "mnuUpdateMember";
-            this.mnuUpdateMember.Size = new System.Drawing.Size(197, 22);
+            this.mnuUpdateMember.Size = new System.Drawing.Size(256, 26);
             this.mnuUpdateMember.Text = "Update Member";
             // 
             // mnuDeregisterMember
             // 
             this.mnuDeregisterMember.Name = "mnuDeregisterMember";
-            this.mnuDeregisterMember.Size = new System.Drawing.Size(197, 22);
+            this.mnuDeregisterMember.Size = new System.Drawing.Size(256, 26);
             this.mnuDeregisterMember.Text = "Deregister Member";
             // 
             // mnuBook
@@ -135,25 +138,26 @@
             this.mnuUpdateBook,
             this.mnuRemoveBook});
             this.mnuBook.Name = "mnuBook";
-            this.mnuBook.Size = new System.Drawing.Size(50, 20);
+            this.mnuBook.Size = new System.Drawing.Size(65, 24);
             this.mnuBook.Text = "Book";
             // 
             // mnuAddBook
             // 
             this.mnuAddBook.Name = "mnuAddBook";
-            this.mnuAddBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuAddBook.Size = new System.Drawing.Size(224, 26);
             this.mnuAddBook.Text = "Add Book";
+            this.mnuAddBook.Click += new System.EventHandler(this.mnuAddBook_Click);
             // 
             // mnuUpdateBook
             // 
             this.mnuUpdateBook.Name = "mnuUpdateBook";
-            this.mnuUpdateBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuUpdateBook.Size = new System.Drawing.Size(209, 26);
             this.mnuUpdateBook.Text = "Update Book";
             // 
             // mnuRemoveBook
             // 
             this.mnuRemoveBook.Name = "mnuRemoveBook";
-            this.mnuRemoveBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuRemoveBook.Size = new System.Drawing.Size(209, 26);
             this.mnuRemoveBook.Text = "Remove Book";
             // 
             // mnuLoan
@@ -163,25 +167,25 @@
             this.mnuCollectBook,
             this.mnuReturnBook});
             this.mnuLoan.Name = "mnuLoan";
-            this.mnuLoan.Size = new System.Drawing.Size(50, 20);
+            this.mnuLoan.Size = new System.Drawing.Size(63, 24);
             this.mnuLoan.Text = "Loan";
             // 
             // mnuReserveBook
             // 
             this.mnuReserveBook.Name = "mnuReserveBook";
-            this.mnuReserveBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuReserveBook.Size = new System.Drawing.Size(208, 26);
             this.mnuReserveBook.Text = "Reserve Book";
             // 
             // mnuCollectBook
             // 
             this.mnuCollectBook.Name = "mnuCollectBook";
-            this.mnuCollectBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuCollectBook.Size = new System.Drawing.Size(208, 26);
             this.mnuCollectBook.Text = "Collect Book";
             // 
             // mnuReturnBook
             // 
             this.mnuReturnBook.Name = "mnuReturnBook";
-            this.mnuReturnBook.Size = new System.Drawing.Size(180, 22);
+            this.mnuReturnBook.Size = new System.Drawing.Size(208, 26);
             this.mnuReturnBook.Text = "Return Book";
             // 
             // mnuAnalysis
@@ -190,27 +194,28 @@
             this.mnuLibraryPopularity,
             this.mnuGenrePopularity});
             this.mnuAnalysis.Name = "mnuAnalysis";
-            this.mnuAnalysis.Size = new System.Drawing.Size(72, 20);
+            this.mnuAnalysis.Size = new System.Drawing.Size(94, 24);
             this.mnuAnalysis.Text = "Analysis";
             // 
             // mnuLibraryPopularity
             // 
             this.mnuLibraryPopularity.Name = "mnuLibraryPopularity";
-            this.mnuLibraryPopularity.Size = new System.Drawing.Size(188, 22);
+            this.mnuLibraryPopularity.Size = new System.Drawing.Size(243, 26);
             this.mnuLibraryPopularity.Text = "Library Popularity";
             // 
             // mnuGenrePopularity
             // 
             this.mnuGenrePopularity.Name = "mnuGenrePopularity";
-            this.mnuGenrePopularity.Size = new System.Drawing.Size(188, 22);
+            this.mnuGenrePopularity.Size = new System.Drawing.Size(243, 26);
             this.mnuGenrePopularity.Text = "Genre Popularity";
             // 
             // picWelcomeLibrary
             // 
             this.picWelcomeLibrary.Image = ((System.Drawing.Image)(resources.GetObject("picWelcomeLibrary.Image")));
-            this.picWelcomeLibrary.Location = new System.Drawing.Point(0, 27);
+            this.picWelcomeLibrary.Location = new System.Drawing.Point(0, 33);
+            this.picWelcomeLibrary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picWelcomeLibrary.Name = "picWelcomeLibrary";
-            this.picWelcomeLibrary.Size = new System.Drawing.Size(884, 536);
+            this.picWelcomeLibrary.Size = new System.Drawing.Size(1179, 660);
             this.picWelcomeLibrary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picWelcomeLibrary.TabIndex = 1;
             this.picWelcomeLibrary.TabStop = false;
@@ -218,14 +223,15 @@
             // 
             // frmMainManu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(1179, 690);
             this.Controls.Add(this.picWelcomeLibrary);
             this.Controls.Add(this.mnuMainManu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuMainManu;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMainManu";
             this.Text = "City Library";
             this.Load += new System.EventHandler(this.frmMainManu_Load);

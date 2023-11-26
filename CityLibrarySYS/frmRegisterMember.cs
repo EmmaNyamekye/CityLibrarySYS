@@ -3,56 +3,60 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CityLibrarySYS
 {
-    public partial class frmAddLibrary : Form
+    public partial class frmRegisterMember : Form
     {
         frmMainManu parent;
 
-        public frmAddLibrary()
+        public frmRegisterMember()
         {
             InitializeComponent();
         }
 
-        public frmAddLibrary(frmMainManu parent)
+        public frmRegisterMember(frmMainManu parent)
         {
             InitializeComponent();
             this.parent = parent;
         }
 
-        private void txtSupervisor_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            //Validate if all fields are entered
-            if (txtName.Text.Equals("") || txtStreet.Text.Equals("") || txtTown.Text.Equals("") ||
-                txtCounty.Text.Equals("") || txtEircode.Text.Equals("") || txtPhone.Text.Equals("") ||
-                txtEmail.Text.Equals("") || txtSupervisor.Equals(""))
+            // Validate if all fields are entered
+            if (txtForename.Text.Equals("") || txtSurname.Text.Equals("") || dtpDateBirth.Text.Equals("") ||
+                txtStreet.Text.Equals("") || txtTown.Text.Equals("") || txtCounty.Text.Equals("") ||
+                txtEircode.Text.Equals("") || txtPhone.Text.Equals("") || txtEmail.Text.Equals(""))
             {
-                MessageBox.Show("All Fields Must Be Entered!",
+                MessageBox.Show("All fields must be entered!",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
                 return;
             }
-            
-            //Validate if Name, Street, Town, County and Supervisor are Not Numeric
-            else if (txtName.Text.All(c => char.IsDigit(c)))
+
+            // Validate if fields are not numeric
+            else if (txtForename.Text.All(c => char.IsDigit(c)))
             {
-                MessageBox.Show("Name cannot be numeric!",
+                MessageBox.Show("Forename cannot be numeric!",
                                "Error",
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Error);
-                txtName.Focus();
+                txtForename.Focus();
+                return;
+            }
+            else if (txtSurname.Text.All(c => char.IsDigit(c)))
+            {
+                MessageBox.Show("Surname cannot be numeric!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtSurname.Focus();
                 return;
             }
             else if (txtStreet.Text.All(c => char.IsDigit(c)))
@@ -66,7 +70,7 @@ namespace CityLibrarySYS
             }
             else if (txtTown.Text.All(c => char.IsDigit(c)))
             {
-                MessageBox.Show("Street cannot be numeric!",
+                MessageBox.Show("Town cannot be numeric!",
                                "Error",
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Error);
@@ -75,20 +79,11 @@ namespace CityLibrarySYS
             }
             else if (txtCounty.Text.All(c => char.IsDigit(c)))
             {
-                MessageBox.Show("Street cannot be numeric!",
+                MessageBox.Show("County cannot be numeric!",
                                "Error",
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Error);
                 txtCounty.Focus();
-                return;
-            }
-            else if (txtSupervisor.Text.All(c => char.IsDigit(c)))
-            {
-                MessageBox.Show("Street cannot be numeric!",
-                               "Error",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error);
-                txtSupervisor.Focus();
                 return;
             }
 
@@ -144,64 +139,44 @@ namespace CityLibrarySYS
 
             else
             {
-                MessageBox.Show("Room Type Added To Database",
+                MessageBox.Show("Member has been added To Members File",
                                 "Success!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-                txtName.Clear();
+                txtForename.Clear();
+                txtSurname.Clear();
                 txtStreet.Clear();
                 txtTown.Clear();
                 txtCounty.Clear();
                 txtEircode.Clear();
                 txtPhone.Clear();
                 txtEmail.Clear();
-                txtSupervisor.Clear();
             }
         }
 
         private void bACKToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void mnuBack_Click(object sender, EventArgs e)
+        {
             this.Close();
             parent.Visible = true;
-
         }
 
-        private void frmAddLibrary_Load(object sender, EventArgs e)
+        private void txtForename_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtStreet_TextChanged(object sender, EventArgs e)
+        private void lblEircode_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblTown_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTown_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCounty_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEircode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSupervisor_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void btnSubmit_Click_1(object sender, EventArgs e)
         {
 
         }

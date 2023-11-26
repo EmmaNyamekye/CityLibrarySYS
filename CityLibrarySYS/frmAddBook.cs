@@ -13,9 +13,17 @@ namespace CityLibrarySYS
 {
     public partial class frmAddBook : Form
     {
+        frmMainManu parent;
+
         public frmAddBook()
         {
             InitializeComponent();
+        }
+
+        public frmAddBook(frmMainManu parent)
+        {
+            InitializeComponent();
+            this.parent = parent;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -25,7 +33,7 @@ namespace CityLibrarySYS
                 cboGenre.Text.Equals("") || txtPublication.Text.Equals("") || txtDescription.Text.Equals("") ||
                 cboLibraryID.Text.Equals(""))
             {
-                MessageBox.Show("All Fiels Must Be Entered!",
+                MessageBox.Show("All Fields Must Be Entered!",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -33,6 +41,12 @@ namespace CityLibrarySYS
             }
 
             
+        }
+
+        private void mnuBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Visible = true;
         }
     }
 }
