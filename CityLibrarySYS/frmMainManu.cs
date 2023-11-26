@@ -46,7 +46,9 @@ namespace CityLibrarySYS
 
         private void mnuUpdateLibrary_Click(object sender, EventArgs e)
         {
-            
+            frmUpdateLibrary nextForm = new frmUpdateLibrary(this);
+            this.Hide();
+            nextForm.Show();
         }
 
         private void mnuAddMember_Click(object sender, EventArgs e)

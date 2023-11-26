@@ -144,7 +144,7 @@ namespace CityLibrarySYS
 
             else
             {
-                MessageBox.Show("Room Type Added To Database",
+                MessageBox.Show("Library Has Been Added To The Libraries File",
                                 "Success!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
