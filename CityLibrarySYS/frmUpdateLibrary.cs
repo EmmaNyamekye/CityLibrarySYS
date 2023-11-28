@@ -27,15 +27,7 @@ namespace CityLibrarySYS
 
         private void updateLibrary_Load(object sender, EventArgs e)
         {
-            // Disable text boxes
-            txtName.Enabled = false;
-            txtStreet.Enabled = false;
-            txtTown.Enabled = false;
-            txtCounty.Enabled = false;
-            txtEircode.Enabled = false;
-            txtPhone.Enabled = false;
-            txtEmail.Enabled = false;
-            txtSupervisor.Enabled = false;
+            
         }
 
         private void mnuBack_Click(object sender, EventArgs e)
@@ -46,21 +38,135 @@ namespace CityLibrarySYS
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            // Display success message
-            MessageBox.Show("Library details updated successfully!",
-                "Success!",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            
+            //Validate if all fields are entered
+            if (txtName.Text.Equals("") || txtStreet.Text.Equals("") || txtTown.Text.Equals("") ||
+                txtCounty.Text.Equals("") || txtEircode.Text.Equals("") || txtPhone.Text.Equals("") ||
+                txtEmail.Text.Equals("") || txtSupervisor.Equals(""))
+            {
+                MessageBox.Show("All Fields Must Be Entered!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
 
-            // Clear text boxes
-            txtName.Clear();
-            txtStreet.Clear();
-            txtTown.Clear();
-            txtCounty.Clear();
-            txtEircode.Clear();
-            txtPhone.Clear();
-            txtEmail.Clear();
-            txtSupervisor.Clear();
+            //Validate if Name, Street, Town, County and Supervisor are Not Numeric
+            else if (txtName.Text.All(c => char.IsDigit(c)))
+            {
+                MessageBox.Show("Name cannot be numeric!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtName.Focus();
+                return;
+            }
+            else if (txtStreet.Text.All(c => char.IsDigit(c)))
+            {
+                MessageBox.Show("Street cannot be numeric!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtStreet.Focus();
+                return;
+            }
+            else if (txtTown.Text.All(c => char.IsDigit(c)))
+            {
+                MessageBox.Show("Street cannot be numeric!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtTown.Focus();
+                return;
+            }
+            else if (txtCounty.Text.All(c => char.IsDigit(c)))
+            {
+                MessageBox.Show("Street cannot be numeric!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtCounty.Focus();
+                return;
+            }
+            else if (txtSupervisor.Text.All(c => char.IsDigit(c)))
+            {
+                MessageBox.Show("Street cannot be numeric!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtSupervisor.Focus();
+                return;
+            }
+
+            ///Validate if Eircode is valid
+            string eircode = txtEircode.Text;
+
+            //Define Pattern for Eircode Validation
+            string eircodePattern = @"(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$"; ;
+            /*
+             Title: Validation for Irish Eircode
+             Author: Asunez
+             Site ownwer/sponcer: Stackoverflow
+             Date: Oct 29, 2015
+             Edited: Mar 26, 2021 by user Andrew
+             Availability: https://stackoverflow.com/questions/33391412/validation-for-irish-eircode
+             (Accessed 25/11/2023)*/
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(eircode, eircodePattern))
+            {
+                MessageBox.Show("Invalid Eircode format!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                txtEircode.Focus();
+                return;
+            }
+
+            //Validate if Phone is numeric and starts with '06'
+            else if (!txtPhone.Text.All(char.IsDigit) || !txtPhone.Text.StartsWith("06"))
+            {
+                MessageBox.Show("Phone number is invalid! Phone has to be all digits and start with 06",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                txtPhone.Focus();
+                return;
+            }
+
+            // Validate if email is valid
+            string email = txtEmail.Text;
+
+            // Define Pattern for email validation
+            string emailPattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(email, emailPattern))
+            {
+                MessageBox.Show("Invalid email format!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                txtEmail.Focus();
+                return;
+            }
+
+            else
+            {
+                MessageBox.Show("Library Has Been Update Into The Libraries File!",
+                                "Success!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                txtName.Clear();
+                txtStreet.Clear();
+                txtTown.Clear();
+                txtCounty.Clear();
+                txtEircode.Clear();
+                txtPhone.Clear();
+                txtEmail.Clear();
+                txtSupervisor.Clear();
+                cboLibraryID.Items.Clear(); // does not clear ???
+
+                grpUpdate.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,14 +174,7 @@ namespace CityLibrarySYS
             if (cboLibraryID.SelectedIndex != -1)
             {
                 // Enable text boxes
-                txtName.Enabled = true;
-                txtStreet.Enabled = true;
-                txtTown.Enabled = true;
-                txtCounty.Enabled = true;
-                txtEircode.Enabled = true;
-                txtPhone.Enabled = true;
-                txtEmail.Enabled = true;
-                txtSupervisor.Enabled = true;
+                grpUpdate.Visible = true;
 
                 if (cboLibraryID.SelectedIndex == 0)
                 {
@@ -83,7 +182,7 @@ namespace CityLibrarySYS
                     txtStreet.Text = "Maple Avenue";
                     txtTown.Text = "Galway City";
                     txtCounty.Text = "Galway";
-                    txtEircode.Text = "H91LMN";
+                    txtEircode.Text = "A65F4E2";
                     txtPhone.Text = "0655512345";
                     txtEmail.Text = "central.library@city.library.ie";
                     txtSupervisor.Text = "John Smith";
@@ -94,7 +193,7 @@ namespace CityLibrarySYS
                     txtStreet.Text = "Main Street";
                     txtTown.Text = "Ennis";
                     txtCounty.Text = "Clare";
-                    txtEircode.Text = "V95XZY";
+                    txtEircode.Text = "V93E0X2";
                     txtPhone.Text = "0655812345";
                     txtEmail.Text = "county.library@city.library.ie";
                     txtSupervisor.Text = "Zelda Hyrule";
@@ -105,7 +204,7 @@ namespace CityLibrarySYS
                     txtStreet.Text = "High Street";
                     txtTown.Text = "Limerick";
                     txtCounty.Text = "Limerick";
-                    txtEircode.Text = "V94ABP";
+                    txtEircode.Text = "D04V4X7";
                     txtPhone.Text = "0655912345";
                     txtEmail.Text = "reading.haven@city.library.ie";
                     txtSupervisor.Text = "Maria Rossi";
@@ -116,7 +215,7 @@ namespace CityLibrarySYS
                     txtStreet.Text = "Church Street";
                     txtTown.Text = "Kilrush";
                     txtCounty.Text = "Clare";
-                    txtEircode.Text = "V93FGH";
+                    txtEircode.Text = "D08VF8H";
                     txtPhone.Text = "0655712345";
                     txtEmail.Text = "village.library@city.library.ie";
                     txtSupervisor.Text = "Max Mustermann";
@@ -127,134 +226,10 @@ namespace CityLibrarySYS
                     txtStreet.Text = "Riverside Avenue";
                     txtTown.Text = "Castleconnell";
                     txtCounty.Text = "Limerick";
-                    txtEircode.Text = "V92TYN";
+                    txtEircode.Text = "A65F4E2";
                     txtPhone.Text = "0655591234";
                     txtEmail.Text = "riverbank.library@city.library.ie";
                     txtSupervisor.Text = "Luigi Bros";
-                }
-                //Validate if all fields are entered
-                if (txtName.Text.Equals("") || txtStreet.Text.Equals("") || txtTown.Text.Equals("") ||
-                    txtCounty.Text.Equals("") || txtEircode.Text.Equals("") || txtPhone.Text.Equals("") ||
-                    txtEmail.Text.Equals("") || txtSupervisor.Equals(""))
-                {
-                    MessageBox.Show("All Fields Must Be Entered!",
-                                    "Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                    return;
-                }
-
-                //Validate if Name, Street, Town, County and Supervisor are Not Numeric
-                else if (txtName.Text.All(c => char.IsDigit(c)))
-                {
-                    MessageBox.Show("Name cannot be numeric!",
-                                   "Error",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
-                    txtName.Focus();
-                    return;
-                }
-                else if (txtStreet.Text.All(c => char.IsDigit(c)))
-                {
-                    MessageBox.Show("Street cannot be numeric!",
-                                   "Error",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
-                    txtStreet.Focus();
-                    return;
-                }
-                else if (txtTown.Text.All(c => char.IsDigit(c)))
-                {
-                    MessageBox.Show("Street cannot be numeric!",
-                                   "Error",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
-                    txtTown.Focus();
-                    return;
-                }
-                else if (txtCounty.Text.All(c => char.IsDigit(c)))
-                {
-                    MessageBox.Show("Street cannot be numeric!",
-                                   "Error",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
-                    txtCounty.Focus();
-                    return;
-                }
-                else if (txtSupervisor.Text.All(c => char.IsDigit(c)))
-                {
-                    MessageBox.Show("Street cannot be numeric!",
-                                   "Error",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
-                    txtSupervisor.Focus();
-                    return;
-                }
-
-                //Validate if Eircode is valid
-                string eircode = txtEircode.Text;
-
-                //Define Pattern for Eircode Validation
-                string eircodePattern = @"^[AC-Y]{1}[0-9]{1}[0-9W]{1}[ \-]?[0-9AC-Y]{4}$";
-                /*
-                 Title: Validation for Irish Eircode
-                 Author:
-                 Site ownwer/sponcer:
-                 Date:
-                 Availability: 
-                 (Accessed 25/11/2023)*/
-
-                if (!System.Text.RegularExpressions.Regex.IsMatch(eircode, eircodePattern))
-                {
-                    MessageBox.Show("Invalid Eircode format!",
-                                    "Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                    txtEircode.Focus();
-                    return;
-                }
-
-                //Validate if Phone is numeric and starts with '06'
-                else if (txtPhone.Text.All(char.IsDigit) || !txtPhone.Text.StartsWith("06"))
-                {
-                    MessageBox.Show("Phone number is invalid! Phone has to be all digits and start with 06",
-                                    "Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                    txtPhone.Focus();
-                    return;
-                }
-
-                // Validate if email is valid
-                string email = txtEmail.Text;
-
-                // Define Pattern for email validation
-                string emailPattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
-
-                if (!System.Text.RegularExpressions.Regex.IsMatch(email, emailPattern))
-                {
-                    MessageBox.Show("Invalid email format!",
-                                    "Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                    txtEmail.Focus();
-                    return;
-                }
-
-                else
-                {
-                    MessageBox.Show("Library Has Been Update Into The Libraries File!",
-                                    "Success!",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                    txtName.Clear();
-                    txtStreet.Clear();
-                    txtTown.Clear();
-                    txtCounty.Clear();
-                    txtEircode.Clear();
-                    txtPhone.Clear();
-                    txtEmail.Clear();
-                    txtSupervisor.Clear();
                 }
             }
 

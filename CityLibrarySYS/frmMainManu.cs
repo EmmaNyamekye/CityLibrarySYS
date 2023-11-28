@@ -99,5 +99,40 @@ namespace CityLibrarySYS
             this.Hide();
             nextForm.Show();
         }
+
+        private void mnuReserveBook_Click(object sender, EventArgs e)
+        {
+            frmReserveBook nextForm = new frmReserveBook(this);
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void mnuCollectBook_Click(object sender, EventArgs e)
+        {
+            frmCollectBook nextForm = new frmCollectBook(this);
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void mnuReturnBook_Click(object sender, EventArgs e)
+        {
+            frmReturnBook nextForm = new frmReturnBook(this);
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void mnuLibraryPopularity_Click(object sender, EventArgs e)
+        {
+            frmLibraryPopularity nextForm = new frmLibraryPopularity(this);
+            this.Hide();
+            nextForm.Show();
+        }
+
+        private void mnuGenrePopularity_Click(object sender, EventArgs e)
+        {
+            frmGenrePopularity nextForm = new frmGenrePopularity(this);
+            this.Hide();
+            nextForm.Show();
+        }
     }
 }

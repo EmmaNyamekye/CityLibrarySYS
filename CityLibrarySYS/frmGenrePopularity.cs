@@ -7,19 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CityLibrarySYS
 {
-    public partial class frmUpdateMember : Form
+    public partial class frmGenrePopularity : Form
     {
         frmMainManu parent;
 
-        public frmUpdateMember()
+        public frmGenrePopularity()
         {
             InitializeComponent();
         }
 
-        public frmUpdateMember(frmMainManu parent)
+        public frmGenrePopularity(frmMainManu parent)
         {
             InitializeComponent();
             this.parent = parent;
@@ -29,11 +30,6 @@ namespace CityLibrarySYS
         {
             this.Close();
             parent.Visible = true;
-        }
-
-        private void lblMemberId_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -96,13 +96,14 @@ namespace CityLibrarySYS
             string eircode = txtEircode.Text;
 
             //Define Pattern for Eircode Validation
-            string eircodePattern = @"^[AC-Y]{1}[0-9]{1}[0-9W]{1}[ \-]?[0-9AC-Y]{4}$";
+            string eircodePattern = @"(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$"; ;
             /*
              Title: Validation for Irish Eircode
-             Author:
-             Site ownwer/sponcer:
-             Date:
-             Availability: 
+             Author: Asunez
+             Site ownwer/sponcer: Stackoverflow
+             Date: Oct 29, 2015
+             Edited: Mar 26, 2021 by user Andrew
+             Availability: https://stackoverflow.com/questions/33391412/validation-for-irish-eircode
              (Accessed 25/11/2023)*/
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(eircode, eircodePattern))
@@ -116,7 +117,7 @@ namespace CityLibrarySYS
             }
 
             //Validate if Phone is numeric and starts with '06'
-            else if (txtPhone.Text.All(char.IsDigit) || !txtPhone.Text.StartsWith("06"))
+            else if (!txtPhone.Text.All(char.IsDigit) || !txtPhone.Text.StartsWith("06"))
             {
                 MessageBox.Show("Phone number is invalid! Phone has to be all digits and start with 06",
                                 "Error",

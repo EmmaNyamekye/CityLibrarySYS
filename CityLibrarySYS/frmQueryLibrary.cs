@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CityLibrarySYS
@@ -39,66 +40,63 @@ namespace CityLibrarySYS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            grpLibraryInfo.Visible = true;
             
+            if (cboLibraryID.SelectedIndex == 0)
+            {
+                lblLibraryInfo.Text = "Name: City Central Library" +
+                    "\n\nAddress: Maple Avenue, Galway City, Galway, A65F4E2" +
+                    "\n\nPhone number: 0655512345" +
+                    "\n\nEmail: central.library@city.library.ie" +
+                    "\n\nSupervisor: John Smith";
+            }
+            else if (cboLibraryID.SelectedIndex == 1)
+            {
+                lblLibraryInfo.Text = "Name: County Library" +
+                    "\n\nAddress: Main Street, Ennis, Clare, V93E0X2" +
+                    "\n\nPhone number: 0655812345" +
+                    "\n\nEmail: county.library@city.library.ie" +
+                    "\n\nSupervisor: Zelda Hyrule";
+            }
+            else if (cboLibraryID.SelectedIndex == 2)
+            {
+                lblLibraryInfo.Text = "Name: Suburb Reading Haven" +
+                    "\n\nAddress: High Street, Limerick, Limerick, D04V4X7" +
+                    "\n\nPhone number: 0655912345" +
+                    "\n\nEmail: reading.haven@city.library.ie" +
+                    "\n\nSupervisor: Maria Rossi";
+            }
+            else if (cboLibraryID.SelectedIndex == 3)
+            {
+                lblLibraryInfo.Text = "Name: Village Library" +
+                    "\n\nAddress: Church Street, Kilrush, Clare, A65F4E2" +
+                    "\n\nPhone number: 0655712345" +
+                    "\n\nEmail: village.library@city.library.ie" +
+                    "\n\nSupervisor: Max Mustermann";
+            }
+            else if (cboLibraryID.SelectedIndex == 4)
+            {
+                lblLibraryInfo.Text = "Name: Riverbank Library" +
+                    "\n\nAddress: Riverside Avenue, Castleconnell, Limerick, A65F4E2" +
+                    "\n\nPhone number: 0655591234" +
+                    "\n\nEmail:riverbank.library@city.library.ie" +
+                    "\n\nSupervisor: Luigi Bros";
+            }
         }
 
         private void rtbLibraryInfo_TextChanged(object sender, EventArgs e)
         {
-            int selectedIndex = cboLibraryID.SelectedIndex;
+            
+        }
 
-            // Clear grpLibraryInfo controls
-            grpLibraryInfo.Controls.Clear();
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("End of the Query!",
+                                "Success!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
 
-            switch (selectedIndex)
-            {
-                case 0:
-                    // Display information for City Central Library
-                    grpLibraryInfo.Text = "City Central Library";
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Address: Maple Avenue, Galway City" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Phone: 0655512345" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Email: central.library@city.library.ie" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Supervisor: John Smith" });
-                    break;
-                case 1:
-                    // Display information for County Library
-                    grpLibraryInfo.Text = "County Library";
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Address: Main Street, Ennis, Clare" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Phone: 0655812345" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Email: county.library@city.library.ie" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Supervisor: Zelda Hyrule" });
-                    break;
-                case 2:
-                    // Display information for Suburb Reading Haven
-                    grpLibraryInfo.Text = "Suburb Reading Haven";
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Address: High Street, Limerick" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Phone: 0655912345" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Email: reading.haven@city.library.ie" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Supervisor: Maria Rossi" });
-                    break;
-                case 3:
-                    // Display information for Village Library
-                    grpLibraryInfo.Text = "Village Library";
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Address: Church Street, Kilrush, Clare" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Phone: 0655712345" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Email: village.library@city.library.ie" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Supervisor: Max Mustermann" });
-                    break;
-                case 4:
-                    // Display information for Riverbank Library
-                    grpLibraryInfo.Text = "Riverbank Library";
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Address: Riverside Avenue, Castleconnell, Limerick" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Phone: 0655591234" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Email: riverbank.library@city.library.ie" });
-                    grpLibraryInfo.Controls.Add(new Label() { Text = "Supervisor: Luigi Bros" });
-                    break;
-                default:
-                    grpLibraryInfo.Text = "";
-                    grpLibraryInfo.Controls.Clear();
-                    break;
-            }
-
-            // Update grpLibraryInfo group box
-            grpLibraryInfo.Update();
+            grpLibraryInfo.Visible = false;
         }
     }
 }
