@@ -11,16 +11,16 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CityLibrarySYS
 {
-    public partial class frmReserveBook : Form
+    public partial class lblResult1 : Form
     {
         frmMainManu parent;
 
-        public frmReserveBook()
+        public lblResult1()
         {
             InitializeComponent();
         }
 
-        public frmReserveBook(frmMainManu parent)
+        public lblResult1(frmMainManu parent)
         {
             InitializeComponent();
             this.parent = parent;
@@ -30,6 +30,11 @@ namespace CityLibrarySYS
         {
             this.Close();
             parent.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

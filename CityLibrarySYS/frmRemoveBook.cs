@@ -92,5 +92,15 @@ namespace CityLibrarySYS
                 }
             }
         }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Book has been removed from the Books File",
+                            "Success!",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+            grpBookInfo.Visible = false;
+        }
     }
 }

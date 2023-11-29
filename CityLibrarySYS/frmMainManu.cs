@@ -102,7 +102,7 @@ namespace CityLibrarySYS
 
         private void mnuReserveBook_Click(object sender, EventArgs e)
         {
-            frmReserveBook nextForm = new frmReserveBook(this);
+            lblResult1 nextForm = new lblResult1(this);
             this.Hide();
             nextForm.Show();
         }
