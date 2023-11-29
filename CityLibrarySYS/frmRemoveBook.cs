@@ -31,5 +31,66 @@ namespace CityLibrarySYS
             this.Close();
             parent.Visible = true;
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtBookId.Text.Length < 8 && (txtBookId.Text != "A0000000" ||
+                txtBookId.Text != "A0000001" || txtBookId.Text != "A0000002"
+                || txtBookId.Text != "A0000002"))
+            {
+                MessageBox.Show("Invalid BookId!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                txtBookId.Focus();
+                return;
+            }
+            else
+            {
+                // Enable text boxes
+                grpBookInfo.Visible = true;
+
+                if (txtBookId.Text == "A0000000")
+                {
+                    lblBookInfo.Text = "Title: Animal Farm" +
+                        "\n\nAuthor: George Orwell" +
+                        "\n\nGenre: Novel" +
+                        "\n\nDescription: Animal Farm is a beast fable, in the form of a satirical allegorical novella." +
+                        "\n\nPublication: 17/08/1945" +
+                        "\n\nISBN: 9788129116123" +
+                        "\n\nLibrary Location: City Central Library";
+                }
+                else if (txtBookId.Text == "A0000001")
+                {
+                    lblBookInfo.Text = "Title: Percy Jackson & the Olympians" +
+                        "\n\nAuthor: Rick Riordan" +
+                        "\n\nGenre: Finction" +
+                        "\n\nDescription: Twelve-year-old Percy Jackson is on the most dangerous quest of his life." +
+                        "\n\nPublication: 28/06/2005" +
+                        "\n\nISBN: 9781368051477" +
+                        "\n\nLibrary Location: County Library";
+                }
+                else if (txtBookId.Text == "A0000002")
+                {
+                    lblBookInfo.Text = "Title: The Surgeon" +
+                        "\n\nAuthor: Tess Gerritsen" +
+                        "\n\nGenre: Crime" +
+                        "\n\nDescription: A killer who targets lone women, who breaks into their apartments and performs terrifying ritualistic acts of torture on them before finishing them off." +
+                        "\n\nPublication: 01/01/2001" +
+                        "\n\nISBN: 9780739420416" +
+                        "\n\nLibrary Location: County Library";
+                }
+                else if (txtBookId.Text == "A0000003")
+                {
+                    lblBookInfo.Text = "Title: To Kill a Mockingbird" +
+                        "\n\nAuthor: Harper Lee" +
+                        "\n\nGenre: Novel" +
+                        "\n\nDescription: Set in small-town Alabama, the novel is a bildungsroman, or coming-of-age story, and chronicles the childhood of Scout and Jem Finch as their father Atticus defends a Black man falsely accused of rape." +
+                        "\n\nPublication: 11/07/1960" +
+                        "\n\nISBN: 9780099419785" +
+                        "\n\nLibrary Location: Suburb Reading Haven";
+                }
+            }
+        }
     }
 }

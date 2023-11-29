@@ -54,7 +54,7 @@
             // 
             this.txtDescription.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(483, 249);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.MaxLength = 200;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -95,7 +95,9 @@
             "Autobiography",
             "Self-Help",
             "Science",
-            "Philosophy"});
+            "Philosophy",
+            "Novella",
+            "Crime"});
             this.cboGenre.Location = new System.Drawing.Point(60, 378);
             this.cboGenre.Name = "cboGenre";
             this.cboGenre.Size = new System.Drawing.Size(350, 25);
@@ -116,7 +118,7 @@
             // 
             this.txtAuthor.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAuthor.Location = new System.Drawing.Point(60, 309);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.txtAuthor.MaxLength = 35;
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(350, 24);
@@ -148,7 +150,7 @@
             // 
             this.txtISBN.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtISBN.Location = new System.Drawing.Point(60, 189);
-            this.txtISBN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtISBN.Margin = new System.Windows.Forms.Padding(2);
             this.txtISBN.MaxLength = 13;
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(350, 24);
@@ -169,7 +171,7 @@
             // 
             this.txtTitle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.Location = new System.Drawing.Point(60, 249);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitle.MaxLength = 25;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(350, 24);
@@ -237,7 +239,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnSubmit.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(400, 460);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(10);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(100, 40);
             this.btnSubmit.TabIndex = 8;
@@ -261,7 +263,7 @@
             this.dtpPublication.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpPublication.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpPublication.Location = new System.Drawing.Point(633, 189);
-            this.dtpPublication.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpPublication.Margin = new System.Windows.Forms.Padding(2);
             this.dtpPublication.MaxDate = new System.DateTime(5000, 1, 1, 0, 0, 0, 0);
             this.dtpPublication.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpPublication.Name = "dtpPublication";

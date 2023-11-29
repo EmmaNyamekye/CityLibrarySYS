@@ -33,7 +33,6 @@
             this.mnuBackStrip = new System.Windows.Forms.MenuStrip();
             this.mnuBack = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.cboLibraryID = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grpUpdate = new System.Windows.Forms.GroupBox();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -55,6 +54,7 @@
             this.lblTown = new System.Windows.Forms.Label();
             this.txtStreet = new System.Windows.Forms.TextBox();
             this.lblStreet = new System.Windows.Forms.Label();
+            this.txtMemberId = new System.Windows.Forms.TextBox();
             this.mnuBackStrip.SuspendLayout();
             this.grpUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -106,21 +106,7 @@
             this.btnSearch.TabIndex = 82;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // cboLibraryID
-            // 
-            this.cboLibraryID.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboLibraryID.FormattingEnabled = true;
-            this.cboLibraryID.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05"});
-            this.cboLibraryID.Location = new System.Drawing.Point(357, 125);
-            this.cboLibraryID.Name = "cboLibraryID";
-            this.cboLibraryID.Size = new System.Drawing.Size(150, 24);
-            this.cboLibraryID.TabIndex = 81;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label1
             // 
@@ -174,6 +160,7 @@
             this.btnSubmit.TabIndex = 95;
             this.btnSubmit.Text = "SUBMIT";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtEmail
             // 
@@ -363,15 +350,25 @@
             this.lblStreet.TabIndex = 85;
             this.lblStreet.Text = "Street";
             // 
+            // txtMemberId
+            // 
+            this.txtMemberId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMemberId.Location = new System.Drawing.Point(357, 125);
+            this.txtMemberId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMemberId.MaxLength = 15;
+            this.txtMemberId.Name = "txtMemberId";
+            this.txtMemberId.Size = new System.Drawing.Size(150, 23);
+            this.txtMemberId.TabIndex = 96;
+            // 
             // frmUpdateMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.txtMemberId);
             this.Controls.Add(this.grpUpdate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.cboLibraryID);
             this.Controls.Add(this.mnuBackStrip);
             this.Controls.Add(this.lblMemberId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -391,7 +388,6 @@
         private System.Windows.Forms.MenuStrip mnuBackStrip;
         private System.Windows.Forms.ToolStripMenuItem mnuBack;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ComboBox cboLibraryID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpUpdate;
         private System.Windows.Forms.Button btnSubmit;
@@ -413,5 +409,6 @@
         private System.Windows.Forms.Label lblTown;
         private System.Windows.Forms.TextBox txtStreet;
         private System.Windows.Forms.Label lblStreet;
+        private System.Windows.Forms.TextBox txtMemberId;
     }
 }

@@ -99,14 +99,14 @@ namespace CityLibrarySYS
                 return;
             }
 
-            // Validate if Title and Author are valid
+            // Validate if Title, Author and Description are valid
             else if  (txtTitle.Text.All(char.IsDigit))
             {
                 MessageBox.Show("Invalid title! Title must not be numeric!",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-                    txtTitle.Focus();
+                txtTitle.Focus();
                 return;
             }
 
@@ -120,6 +120,16 @@ namespace CityLibrarySYS
                 return;
             }
 
+            else if (txtDescription.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("Invalid description! Description must not be numeric!",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                txtDescription.Focus();
+                return;
+            }
+
             else
             {
                 MessageBox.Show("Book has been added to Books File",
@@ -130,7 +140,7 @@ namespace CityLibrarySYS
                 txtTitle.Clear();
                 txtAuthor.Clear();
                 cboGenre.Items.Clear();
-                dtpPublication.Value = DateTime.MinValue;
+                dtpPublication.Text = "";
                 txtDescription.Clear();
                 cboLibraryID.Items.Clear();
             }

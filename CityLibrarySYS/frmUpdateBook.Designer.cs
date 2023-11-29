@@ -35,11 +35,10 @@
             this.mnuBackStrip = new System.Windows.Forms.MenuStrip();
             this.mnuBack = new System.Windows.Forms.ToolStripMenuItem();
             this.grpUpdate = new System.Windows.Forms.GroupBox();
-            this.cboLibraryID = new System.Windows.Forms.ComboBox();
             this.dtpPublication = new System.Windows.Forms.DateTimePicker();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboLibraryId = new System.Windows.Forms.ComboBox();
             this.cboGenre = new System.Windows.Forms.ComboBox();
             this.lblGenre = new System.Windows.Forms.Label();
             this.txtAuthor = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblPublication = new System.Windows.Forms.Label();
+            this.txtBookId = new System.Windows.Forms.TextBox();
             this.mnuBackStrip.SuspendLayout();
             this.grpUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -71,10 +71,10 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnSearch.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(525, 125);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 30);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 100;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -119,7 +119,7 @@
             this.grpUpdate.Controls.Add(this.dtpPublication);
             this.grpUpdate.Controls.Add(this.btnSubmit);
             this.grpUpdate.Controls.Add(this.txtDescription);
-            this.grpUpdate.Controls.Add(this.comboBox1);
+            this.grpUpdate.Controls.Add(this.cboLibraryId);
             this.grpUpdate.Controls.Add(this.cboGenre);
             this.grpUpdate.Controls.Add(this.lblGenre);
             this.grpUpdate.Controls.Add(this.txtAuthor);
@@ -133,29 +133,14 @@
             this.grpUpdate.Controls.Add(this.lblPublication);
             this.grpUpdate.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpUpdate.Location = new System.Drawing.Point(40, 170);
-            this.grpUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.grpUpdate.Name = "grpUpdate";
-            this.grpUpdate.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpUpdate.Padding = new System.Windows.Forms.Padding(2);
             this.grpUpdate.Size = new System.Drawing.Size(820, 370);
             this.grpUpdate.TabIndex = 101;
             this.grpUpdate.TabStop = false;
             this.grpUpdate.Text = "Update";
             this.grpUpdate.Visible = false;
-            // 
-            // cboLibraryID
-            // 
-            this.cboLibraryID.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboLibraryID.FormattingEnabled = true;
-            this.cboLibraryID.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05"});
-            this.cboLibraryID.Location = new System.Drawing.Point(357, 130);
-            this.cboLibraryID.Name = "cboLibraryID";
-            this.cboLibraryID.Size = new System.Drawing.Size(150, 24);
-            this.cboLibraryID.TabIndex = 2;
             // 
             // dtpPublication
             // 
@@ -180,6 +165,7 @@
             this.btnSubmit.TabIndex = 80;
             this.btnSubmit.Text = "SUBMIT";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click_1);
             // 
             // txtDescription
             // 
@@ -192,20 +178,20 @@
             this.txtDescription.Size = new System.Drawing.Size(350, 100);
             this.txtDescription.TabIndex = 78;
             // 
-            // comboBox1
+            // cboLibraryId
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboLibraryId.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLibraryId.FormattingEnabled = true;
+            this.cboLibraryId.Items.AddRange(new object[] {
             "01",
             "02",
             "03",
             "04",
             "05"});
-            this.comboBox1.Location = new System.Drawing.Point(597, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 25);
-            this.comboBox1.TabIndex = 79;
+            this.cboLibraryId.Location = new System.Drawing.Point(597, 248);
+            this.cboLibraryId.Name = "cboLibraryId";
+            this.cboLibraryId.Size = new System.Drawing.Size(200, 25);
+            this.cboLibraryId.TabIndex = 79;
             // 
             // cboGenre
             // 
@@ -339,19 +325,29 @@
             this.lblPublication.TabIndex = 82;
             this.lblPublication.Text = "Publication";
             // 
+            // txtBookId
+            // 
+            this.txtBookId.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookId.Location = new System.Drawing.Point(357, 130);
+            this.txtBookId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBookId.MaxLength = 13;
+            this.txtBookId.Name = "txtBookId";
+            this.txtBookId.Size = new System.Drawing.Size(150, 24);
+            this.txtBookId.TabIndex = 88;
+            // 
             // frmUpdateBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.cboLibraryID);
+            this.Controls.Add(this.txtBookId);
             this.Controls.Add(this.grpUpdate);
             this.Controls.Add(this.mnuBackStrip);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblBookId);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUpdateBook";
             this.Text = "Update Book";
             this.Load += new System.EventHandler(this.frmUpdateBook_Load);
@@ -372,11 +368,10 @@
         private System.Windows.Forms.MenuStrip mnuBackStrip;
         private System.Windows.Forms.ToolStripMenuItem mnuBack;
         private System.Windows.Forms.GroupBox grpUpdate;
-        private System.Windows.Forms.ComboBox cboLibraryID;
         private System.Windows.Forms.DateTimePicker dtpPublication;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboLibraryId;
         private System.Windows.Forms.ComboBox cboGenre;
         private System.Windows.Forms.Label lblGenre;
         private System.Windows.Forms.TextBox txtAuthor;
@@ -388,5 +383,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblPublication;
+        private System.Windows.Forms.TextBox txtBookId;
     }
 }
