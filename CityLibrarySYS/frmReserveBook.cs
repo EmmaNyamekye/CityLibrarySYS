@@ -36,5 +36,49 @@ namespace CityLibrarySYS
         {
 
         }
+
+        private void btnSearchMember_Click(object sender, EventArgs e)
+        {
+            if (txtMemberId.Text != "A000000" || txtMemberId.Text != "A000001" ||
+                txtMemberId.Text != "A000002" || txtMemberId.Text != "A000003")
+            {
+                MessageBox.Show("Invalid MemberId!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                txtMemberId.Focus();
+                return;
+            }
+            else
+            {
+                // Enable text boxes
+                grpMemberInfo.Visible = true;
+
+                if (txtMemberId.Text == "A000000")
+                {
+                    lblMemberInfo.Text = "Name: Sophia Loren        Phone: 0612345678" +
+                        "\n\nAddress:  Galway Street 1, A65F4E2, Galway, Galway City" +
+                        "\n\nEmail: not.sophia.loren@gmail.it";
+                }
+                else if (txtMemberId.Text == "A000001")
+                {
+                    lblMemberInfo.Text = "Name: Mario Rossi         Phone: 0687654321" +
+                        "\n\nAddress: Tenth Street 2, A65F4E1, Limerick, Munster" +
+                        "\n\nEmail: mariorossin1@gmail.com";
+                }
+                else if (txtMemberId.Text == "A000002")
+                {
+                    lblMemberInfo.Text = "Name: Luigi Bros          Phone: 0611223344" +
+                        "\n\nAddress: Bros Street 3, A65F4E3, Shannon, Munster" +
+                        "\n\nEmail: luigibros@yahoo.com";
+                }
+                else if (txtMemberId.Text == "A000003")
+                {
+                    lblMemberInfo.Text = "Name: Mario Bros          Phone: 0611113333" +
+                        "\n\nAdddress: Clare Street 5, A65F4E7, Kilrush, Clare" +
+                        "\n\nEmail: mariobros1@gmail.com";
+                }
+            }
+        }
     }
 }
