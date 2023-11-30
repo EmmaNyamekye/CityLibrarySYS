@@ -41,10 +41,15 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpCart = new System.Windows.Forms.GroupBox();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.grpResults = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mnuBackStrip.SuspendLayout();
             this.grpMemberInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuBackStrip
@@ -150,6 +155,7 @@
             this.btnSearchMember.Text = "SEARCH";
             this.btnSearchMember.UseVisualStyleBackColor = false;
             this.btnSearchMember.Visible = false;
+            this.btnSearchMember.Click += new System.EventHandler(this.btnSearchMember_Click);
             // 
             // lblTitle
             // 
@@ -189,17 +195,6 @@
             this.btnConfirm.Visible = false;
             this.btnConfirm.Click += new System.EventHandler(this.button1_Click);
             // 
-            // grpResults
-            // 
-            this.grpResults.Location = new System.Drawing.Point(23, 214);
-            this.grpResults.Margin = new System.Windows.Forms.Padding(2);
-            this.grpResults.Name = "grpResults";
-            this.grpResults.Padding = new System.Windows.Forms.Padding(2);
-            this.grpResults.Size = new System.Drawing.Size(850, 150);
-            this.grpResults.TabIndex = 124;
-            this.grpResults.TabStop = false;
-            this.grpResults.Visible = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
@@ -213,13 +208,50 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // dgvResults
+            // 
+            this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
+            this.colTitle,
+            this.colAuthor,
+            this.colLocation});
+            this.dgvResults.Location = new System.Drawing.Point(29, 212);
+            this.dgvResults.Name = "dgvResults";
+            this.dgvResults.Size = new System.Drawing.Size(843, 150);
+            this.dgvResults.TabIndex = 0;
+            this.dgvResults.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // colId
+            // 
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
+            // 
+            // colTitle
+            // 
+            this.colTitle.HeaderText = "Title";
+            this.colTitle.Name = "colTitle";
+            this.colTitle.Width = 250;
+            // 
+            // colAuthor
+            // 
+            this.colAuthor.HeaderText = "Author";
+            this.colAuthor.Name = "colAuthor";
+            this.colAuthor.Width = 250;
+            // 
+            // colLocation
+            // 
+            this.colLocation.HeaderText = "Location";
+            this.colLocation.Name = "colLocation";
+            this.colLocation.Width = 200;
+            // 
             // lblResult1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.dgvResults);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.grpResults);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.grpCart);
             this.Controls.Add(this.txtTitle);
@@ -237,6 +269,7 @@
             this.mnuBackStrip.PerformLayout();
             this.grpMemberInfo.ResumeLayout(false);
             this.grpMemberInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +289,11 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox grpCart;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.GroupBox grpResults;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvResults;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAuthor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLocation;
     }
 }
