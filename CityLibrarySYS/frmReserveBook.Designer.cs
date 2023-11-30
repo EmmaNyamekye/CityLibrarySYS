@@ -33,16 +33,16 @@
             this.mnuBack = new System.Windows.Forms.ToolStripMenuItem();
             this.txtMemberId = new System.Windows.Forms.TextBox();
             this.lblReserveBook = new System.Windows.Forms.Label();
-            this.btnSearchMember = new System.Windows.Forms.Button();
             this.lblMemberId = new System.Windows.Forms.Label();
             this.grpMemberInfo = new System.Windows.Forms.GroupBox();
             this.lblMemberInfo = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
-            this.btnSearchTitle = new System.Windows.Forms.Button();
+            this.btnSearchMember = new System.Windows.Forms.Button();
             this.lblTitleName = new System.Windows.Forms.Label();
             this.grpCart = new System.Windows.Forms.GroupBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.grpResults = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.mnuBackStrip.SuspendLayout();
             this.grpMemberInfo.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,7 @@
             // 
             this.txtMemberId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMemberId.Location = new System.Drawing.Point(128, 103);
-            this.txtMemberId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMemberId.Margin = new System.Windows.Forms.Padding(2);
             this.txtMemberId.MaxLength = 15;
             this.txtMemberId.Name = "txtMemberId";
             this.txtMemberId.Size = new System.Drawing.Size(150, 23);
@@ -92,19 +92,6 @@
             this.lblReserveBook.TabIndex = 99;
             this.lblReserveBook.Text = "Reserve Book";
             // 
-            // btnSearchMember
-            // 
-            this.btnSearchMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
-            this.btnSearchMember.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchMember.Location = new System.Drawing.Point(304, 98);
-            this.btnSearchMember.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.btnSearchMember.Name = "btnSearchMember";
-            this.btnSearchMember.Size = new System.Drawing.Size(100, 30);
-            this.btnSearchMember.TabIndex = 98;
-            this.btnSearchMember.Text = "SEARCH";
-            this.btnSearchMember.UseVisualStyleBackColor = false;
-            this.btnSearchMember.Click += new System.EventHandler(this.btnSearchMember_Click);
-            // 
             // lblMemberId
             // 
             this.lblMemberId.AutoSize = true;
@@ -120,13 +107,14 @@
             // 
             this.grpMemberInfo.Controls.Add(this.lblMemberInfo);
             this.grpMemberInfo.Location = new System.Drawing.Point(508, 47);
-            this.grpMemberInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMemberInfo.Margin = new System.Windows.Forms.Padding(2);
             this.grpMemberInfo.Name = "grpMemberInfo";
-            this.grpMemberInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMemberInfo.Padding = new System.Windows.Forms.Padding(2);
             this.grpMemberInfo.Size = new System.Drawing.Size(350, 100);
             this.grpMemberInfo.TabIndex = 101;
             this.grpMemberInfo.TabStop = false;
             this.grpMemberInfo.Text = "Member Info";
+            this.grpMemberInfo.Visible = false;
             // 
             // lblMemberInfo
             // 
@@ -143,23 +131,25 @@
             // 
             this.txtTitle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.Location = new System.Drawing.Point(128, 158);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitle.MaxLength = 13;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(582, 24);
             this.txtTitle.TabIndex = 110;
+            this.txtTitle.Visible = false;
             // 
-            // btnSearchTitle
+            // btnSearchMember
             // 
-            this.btnSearchTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
-            this.btnSearchTitle.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchTitle.Location = new System.Drawing.Point(733, 156);
-            this.btnSearchTitle.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.btnSearchTitle.Name = "btnSearchTitle";
-            this.btnSearchTitle.Size = new System.Drawing.Size(100, 30);
-            this.btnSearchTitle.TabIndex = 108;
-            this.btnSearchTitle.Text = "SEARCH";
-            this.btnSearchTitle.UseVisualStyleBackColor = false;
+            this.btnSearchMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
+            this.btnSearchMember.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchMember.Location = new System.Drawing.Point(733, 156);
+            this.btnSearchMember.Margin = new System.Windows.Forms.Padding(10);
+            this.btnSearchMember.Name = "btnSearchMember";
+            this.btnSearchMember.Size = new System.Drawing.Size(100, 30);
+            this.btnSearchMember.TabIndex = 108;
+            this.btnSearchMember.Text = "SEARCH";
+            this.btnSearchMember.UseVisualStyleBackColor = false;
+            this.btnSearchMember.Visible = false;
             // 
             // lblTitleName
             // 
@@ -171,57 +161,74 @@
             this.lblTitleName.Size = new System.Drawing.Size(37, 17);
             this.lblTitleName.TabIndex = 109;
             this.lblTitleName.Text = "Title";
+            this.lblTitleName.Visible = false;
             // 
             // grpCart
             // 
             this.grpCart.Location = new System.Drawing.Point(458, 385);
-            this.grpCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpCart.Margin = new System.Windows.Forms.Padding(2);
             this.grpCart.Name = "grpCart";
-            this.grpCart.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpCart.Padding = new System.Windows.Forms.Padding(2);
             this.grpCart.Size = new System.Drawing.Size(400, 150);
             this.grpCart.TabIndex = 118;
             this.grpCart.TabStop = false;
             this.grpCart.Text = "Book Cart";
+            this.grpCart.Visible = false;
             // 
             // btnConfirm
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnConfirm.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.Location = new System.Drawing.Point(716, 505);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(10);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(122, 30);
             this.btnConfirm.TabIndex = 122;
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Visible = false;
             this.btnConfirm.Click += new System.EventHandler(this.button1_Click);
             // 
             // grpResults
             // 
             this.grpResults.Location = new System.Drawing.Point(23, 220);
-            this.grpResults.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpResults.Margin = new System.Windows.Forms.Padding(2);
             this.grpResults.Name = "grpResults";
-            this.grpResults.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpResults.Padding = new System.Windows.Forms.Padding(2);
             this.grpResults.Size = new System.Drawing.Size(850, 150);
             this.grpResults.TabIndex = 124;
             this.grpResults.TabStop = false;
             this.grpResults.Text = "groupBox1";
+            this.grpResults.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
+            this.button1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(317, 100);
+            this.button1.Margin = new System.Windows.Forms.Padding(10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 30);
+            this.button1.TabIndex = 125;
+            this.button1.Text = "SEARCH";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lblResult1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.grpResults);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.grpCart);
             this.Controls.Add(this.txtTitle);
-            this.Controls.Add(this.btnSearchTitle);
+            this.Controls.Add(this.btnSearchMember);
             this.Controls.Add(this.lblTitleName);
             this.Controls.Add(this.grpMemberInfo);
             this.Controls.Add(this.txtMemberId);
             this.Controls.Add(this.lblReserveBook);
-            this.Controls.Add(this.btnSearchMember);
             this.Controls.Add(this.lblMemberId);
             this.Controls.Add(this.mnuBackStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -242,15 +249,15 @@
         private System.Windows.Forms.ToolStripMenuItem mnuBack;
         private System.Windows.Forms.TextBox txtMemberId;
         private System.Windows.Forms.Label lblReserveBook;
-        private System.Windows.Forms.Button btnSearchMember;
         private System.Windows.Forms.Label lblMemberId;
         private System.Windows.Forms.GroupBox grpMemberInfo;
         private System.Windows.Forms.Label lblMemberInfo;
         private System.Windows.Forms.TextBox txtTitle;
-        private System.Windows.Forms.Button btnSearchTitle;
+        private System.Windows.Forms.Button btnSearchMember;
         private System.Windows.Forms.Label lblTitleName;
         private System.Windows.Forms.GroupBox grpCart;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.GroupBox grpResults;
+        private System.Windows.Forms.Button button1;
     }
 }

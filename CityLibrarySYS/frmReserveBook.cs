@@ -37,19 +37,10 @@ namespace CityLibrarySYS
 
         }
 
-        private void btnSearchMember_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            if (txtMemberId.Text != "A000000" || txtMemberId.Text != "A000001" ||
-                txtMemberId.Text != "A000002" || txtMemberId.Text != "A000003")
-            {
-                MessageBox.Show("Invalid MemberId!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtMemberId.Focus();
-                return;
-            }
-            else
+            if (txtMemberId.Text == "A000000" || txtMemberId.Text == "A000001" ||
+                txtMemberId.Text == "A000002" || txtMemberId.Text == "A000003")
             {
                 // Enable text boxes
                 grpMemberInfo.Visible = true;
@@ -78,6 +69,16 @@ namespace CityLibrarySYS
                         "\n\nAdddress: Clare Street 5, A65F4E7, Kilrush, Clare" +
                         "\n\nEmail: mariobros1@gmail.com";
                 }
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid MemberId!",
+                                 "Error",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+                txtMemberId.Focus();
+                return;
             }
         }
     }
