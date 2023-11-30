@@ -32,7 +32,7 @@
             this.mnuBackStrip = new System.Windows.Forms.MenuStrip();
             this.mnuBack = new System.Windows.Forms.ToolStripMenuItem();
             this.txtMemberId = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblReserveBook = new System.Windows.Forms.Label();
             this.btnSearchMember = new System.Windows.Forms.Button();
             this.lblMemberId = new System.Windows.Forms.Label();
             this.grpMemberInfo = new System.Windows.Forms.GroupBox();
@@ -41,15 +41,10 @@
             this.btnSearchTitle = new System.Windows.Forms.Button();
             this.lblTitleName = new System.Windows.Forms.Label();
             this.grpCart = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnNo = new System.Windows.Forms.Button();
-            this.btnYes = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.grpConfirm = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.grpResults = new System.Windows.Forms.GroupBox();
             this.mnuBackStrip.SuspendLayout();
             this.grpMemberInfo.SuspendLayout();
-            this.grpConfirm.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuBackStrip
@@ -86,16 +81,16 @@
             this.txtMemberId.Size = new System.Drawing.Size(150, 23);
             this.txtMemberId.TabIndex = 100;
             // 
-            // label1
+            // lblReserveBook
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 32);
-            this.label1.TabIndex = 99;
-            this.label1.Text = "Reserve Book";
+            this.lblReserveBook.AutoSize = true;
+            this.lblReserveBook.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReserveBook.Location = new System.Drawing.Point(33, 47);
+            this.lblReserveBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReserveBook.Name = "lblReserveBook";
+            this.lblReserveBook.Size = new System.Drawing.Size(199, 32);
+            this.lblReserveBook.TabIndex = 99;
+            this.lblReserveBook.Text = "Reserve Book";
             // 
             // btnSearchMember
             // 
@@ -124,11 +119,11 @@
             // grpMemberInfo
             // 
             this.grpMemberInfo.Controls.Add(this.lblMemberInfo);
-            this.grpMemberInfo.Location = new System.Drawing.Point(464, 46);
+            this.grpMemberInfo.Location = new System.Drawing.Point(508, 47);
             this.grpMemberInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpMemberInfo.Name = "grpMemberInfo";
             this.grpMemberInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpMemberInfo.Size = new System.Drawing.Size(368, 87);
+            this.grpMemberInfo.Size = new System.Drawing.Size(350, 100);
             this.grpMemberInfo.TabIndex = 101;
             this.grpMemberInfo.TabStop = false;
             this.grpMemberInfo.Text = "Member Info";
@@ -137,7 +132,7 @@
             // 
             this.lblMemberInfo.AutoSize = true;
             this.lblMemberInfo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemberInfo.Location = new System.Drawing.Point(4, 17);
+            this.lblMemberInfo.Location = new System.Drawing.Point(15, 20);
             this.lblMemberInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMemberInfo.Name = "lblMemberInfo";
             this.lblMemberInfo.Size = new System.Drawing.Size(14, 13);
@@ -179,102 +174,53 @@
             // 
             // grpCart
             // 
-            this.grpCart.Location = new System.Drawing.Point(509, 397);
+            this.grpCart.Location = new System.Drawing.Point(458, 385);
             this.grpCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpCart.Name = "grpCart";
             this.grpCart.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpCart.Size = new System.Drawing.Size(329, 96);
+            this.grpCart.Size = new System.Drawing.Size(400, 150);
             this.grpCart.TabIndex = 118;
             this.grpCart.TabStop = false;
             this.grpCart.Text = "Book Cart";
             // 
-            // label3
+            // btnConfirm
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 29);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 16);
-            this.label3.TabIndex = 104;
-            this.label3.Text = "0";
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
+            this.btnConfirm.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.Location = new System.Drawing.Point(716, 505);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(122, 30);
+            this.btnConfirm.TabIndex = 122;
+            this.btnConfirm.Text = "CONFIRM";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnNo
+            // grpResults
             // 
-            this.btnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
-            this.btnNo.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNo.Location = new System.Drawing.Point(208, 106);
-            this.btnNo.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(100, 30);
-            this.btnNo.TabIndex = 120;
-            this.btnNo.Text = "NO";
-            this.btnNo.UseVisualStyleBackColor = false;
-            // 
-            // btnYes
-            // 
-            this.btnYes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
-            this.btnYes.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYes.Location = new System.Drawing.Point(68, 106);
-            this.btnYes.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(100, 30);
-            this.btnYes.TabIndex = 121;
-            this.btnYes.Text = "YES";
-            this.btnYes.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
-            this.button1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(509, 505);
-            this.button1.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(329, 30);
-            this.button1.TabIndex = 122;
-            this.button1.Text = "NO";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // grpConfirm
-            // 
-            this.grpConfirm.Controls.Add(this.btnYes);
-            this.grpConfirm.Controls.Add(this.btnNo);
-            this.grpConfirm.Controls.Add(this.label3);
-            this.grpConfirm.Location = new System.Drawing.Point(43, 386);
-            this.grpConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpConfirm.Name = "grpConfirm";
-            this.grpConfirm.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpConfirm.Size = new System.Drawing.Size(380, 149);
-            this.grpConfirm.TabIndex = 123;
-            this.grpConfirm.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(20, 196);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(838, 177);
-            this.groupBox1.TabIndex = 124;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.grpResults.Location = new System.Drawing.Point(23, 220);
+            this.grpResults.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpResults.Name = "grpResults";
+            this.grpResults.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpResults.Size = new System.Drawing.Size(850, 150);
+            this.grpResults.TabIndex = 124;
+            this.grpResults.TabStop = false;
+            this.grpResults.Text = "groupBox1";
             // 
             // lblResult1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grpConfirm);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.grpResults);
+            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.grpCart);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.btnSearchTitle);
             this.Controls.Add(this.lblTitleName);
             this.Controls.Add(this.grpMemberInfo);
             this.Controls.Add(this.txtMemberId);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblReserveBook);
             this.Controls.Add(this.btnSearchMember);
             this.Controls.Add(this.lblMemberId);
             this.Controls.Add(this.mnuBackStrip);
@@ -285,8 +231,6 @@
             this.mnuBackStrip.PerformLayout();
             this.grpMemberInfo.ResumeLayout(false);
             this.grpMemberInfo.PerformLayout();
-            this.grpConfirm.ResumeLayout(false);
-            this.grpConfirm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +241,7 @@
         private System.Windows.Forms.MenuStrip mnuBackStrip;
         private System.Windows.Forms.ToolStripMenuItem mnuBack;
         private System.Windows.Forms.TextBox txtMemberId;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblReserveBook;
         private System.Windows.Forms.Button btnSearchMember;
         private System.Windows.Forms.Label lblMemberId;
         private System.Windows.Forms.GroupBox grpMemberInfo;
@@ -306,11 +250,7 @@
         private System.Windows.Forms.Button btnSearchTitle;
         private System.Windows.Forms.Label lblTitleName;
         private System.Windows.Forms.GroupBox grpCart;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnNo;
-        private System.Windows.Forms.Button btnYes;
-        private System.Windows.Forms.GroupBox grpConfirm;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.GroupBox grpResults;
     }
 }
