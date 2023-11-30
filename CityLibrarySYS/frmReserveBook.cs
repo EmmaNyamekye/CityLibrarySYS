@@ -44,6 +44,9 @@ namespace CityLibrarySYS
             {
                 // Enable text boxes
                 grpMemberInfo.Visible = true;
+                lblTitle.Visible = true;
+                txtTitle.Visible = true;
+                btnSearchMember.Visible = true;
 
                 if (txtMemberId.Text == "A000000")
                 {

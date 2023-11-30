@@ -38,7 +38,7 @@
             this.lblMemberInfo = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.btnSearchMember = new System.Windows.Forms.Button();
-            this.lblTitleName = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.grpCart = new System.Windows.Forms.GroupBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.grpResults = new System.Windows.Forms.GroupBox();
@@ -151,17 +151,17 @@
             this.btnSearchMember.UseVisualStyleBackColor = false;
             this.btnSearchMember.Visible = false;
             // 
-            // lblTitleName
+            // lblTitle
             // 
-            this.lblTitleName.AutoSize = true;
-            this.lblTitleName.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleName.Location = new System.Drawing.Point(44, 162);
-            this.lblTitleName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitleName.Name = "lblTitleName";
-            this.lblTitleName.Size = new System.Drawing.Size(37, 17);
-            this.lblTitleName.TabIndex = 109;
-            this.lblTitleName.Text = "Title";
-            this.lblTitleName.Visible = false;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(44, 162);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(37, 17);
+            this.lblTitle.TabIndex = 109;
+            this.lblTitle.Text = "Title";
+            this.lblTitle.Visible = false;
             // 
             // grpCart
             // 
@@ -224,7 +224,7 @@
             this.Controls.Add(this.grpCart);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.btnSearchMember);
-            this.Controls.Add(this.lblTitleName);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.grpMemberInfo);
             this.Controls.Add(this.txtMemberId);
             this.Controls.Add(this.lblReserveBook);
@@ -253,7 +253,7 @@
         private System.Windows.Forms.Label lblMemberInfo;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Button btnSearchMember;
-        private System.Windows.Forms.Label lblTitleName;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox grpCart;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.GroupBox grpResults;
