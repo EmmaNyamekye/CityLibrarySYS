@@ -216,7 +216,7 @@
             this.colTitle,
             this.colAuthor,
             this.colLocation});
-            this.dgvResults.Location = new System.Drawing.Point(29, 212);
+            this.dgvResults.Location = new System.Drawing.Point(29, 208);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.Size = new System.Drawing.Size(843, 150);
             this.dgvResults.TabIndex = 0;
