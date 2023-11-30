@@ -191,7 +191,7 @@
             // 
             // grpResults
             // 
-            this.grpResults.Location = new System.Drawing.Point(23, 220);
+            this.grpResults.Location = new System.Drawing.Point(23, 214);
             this.grpResults.Margin = new System.Windows.Forms.Padding(2);
             this.grpResults.Name = "grpResults";
             this.grpResults.Padding = new System.Windows.Forms.Padding(2);
