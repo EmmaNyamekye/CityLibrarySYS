@@ -198,7 +198,6 @@
             this.grpResults.Size = new System.Drawing.Size(850, 150);
             this.grpResults.TabIndex = 124;
             this.grpResults.TabStop = false;
-            this.grpResults.Text = "groupBox1";
             this.grpResults.Visible = false;
             // 
             // button1
