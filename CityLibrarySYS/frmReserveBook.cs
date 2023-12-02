@@ -91,11 +91,47 @@ namespace CityLibrarySYS
         }
 
         private void btnSearchMember_Click(object sender, EventArgs e)
-        {
-            if (txtTitle.Text == "Animal" || txtTitle.Text == "Farm")
+        { 
+            if (txtTitle.Text.ToLower().Contains("farm"))
             {
-                //
+                dgvResults.Visible = true;
+                dgvResults.Rows.Clear();
+                dgvResults.ReadOnly = true;
+                dgvResults.Rows.Add("A0000000", "Animal Farm", "George Orwell", "City Central Library");
+                dgvResults.Rows.Add("A0003456", "Farm Life", "Jane Doe", "Town Library");
             }
+            else if (txtTitle.Text.ToLower().Contains("the"))
+            {
+                dgvResults.Visible = true;
+                dgvResults.Rows.Clear();
+                dgvResults.Rows.Add("A0000101", "The Martian", "Andy Weir", "County Library");
+                dgvResults.Rows.Add("A0002100", "The Firm", "John Grisham", "Riverbank Library");
+                dgvResults.Rows.Add("A0002340", "The Inferno", "Dante Alighieri", "Village Library");
+                dgvResults.Rows.Add("A0015678", "The Great Gatsby", "F. Scott Fitzgerald", "County Library");
+                dgvResults.Rows.Add("A0017890", "Alexander the Great", "Robin Lane Fox", "National Library");
+            }
+            else if (txtTitle.Text.ToLower().Contains("great"))
+            {
+                dgvResults.Visible = true;
+                dgvResults.Rows.Clear();
+                dgvResults.Rows.Add("A0012345", "Great Expectations", "Charles Dickens", "City Library");
+                dgvResults.Rows.Add("A0015678", "The Great Gatsby", "F. Scott Fitzgerald", "County Library");
+                dgvResults.Rows.Add("A0017890", "Alexander the Great", "Robin Lane Fox", "National Library");
+            }
+            else
+            {
+                dgvResults.Visible = false;
+                dgvResults.Rows.Clear();
+                MessageBox.Show("No Book found with this title!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                            txtTitle.Focus();
+                            return;
+            }
+
+            
+
         }
     }
 }

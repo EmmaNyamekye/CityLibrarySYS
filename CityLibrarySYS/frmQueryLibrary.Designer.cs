@@ -46,10 +46,10 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(530, 125);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(10);
+            this.btnSearch.Location = new System.Drawing.Point(707, 154);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 30);
+            this.btnSearch.Size = new System.Drawing.Size(133, 37);
             this.btnSearch.TabIndex = 84;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -60,24 +60,24 @@
             this.cboLibraryID.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLibraryID.FormattingEnabled = true;
             this.cboLibraryID.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05"});
-            this.cboLibraryID.Location = new System.Drawing.Point(360, 130);
+            "City Central Library",
+            "County Library",
+            "Suburb Reading Haven",
+            "Village Library",
+            "Riverbank Library"});
+            this.cboLibraryID.Location = new System.Drawing.Point(480, 160);
+            this.cboLibraryID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboLibraryID.Name = "cboLibraryID";
-            this.cboLibraryID.Size = new System.Drawing.Size(150, 24);
+            this.cboLibraryID.Size = new System.Drawing.Size(199, 26);
             this.cboLibraryID.TabIndex = 81;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(80, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 32);
+            this.label1.Size = new System.Drawing.Size(252, 41);
             this.label1.TabIndex = 83;
             this.label1.Text = "Query Library";
             // 
@@ -85,10 +85,9 @@
             // 
             this.lblLibaryId.AutoSize = true;
             this.lblLibaryId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLibaryId.Location = new System.Drawing.Point(270, 135);
-            this.lblLibaryId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLibaryId.Location = new System.Drawing.Point(360, 166);
             this.lblLibaryId.Name = "lblLibaryId";
-            this.lblLibaryId.Size = new System.Drawing.Size(70, 16);
+            this.lblLibaryId.Size = new System.Drawing.Size(95, 20);
             this.lblLibaryId.TabIndex = 82;
             this.lblLibaryId.Text = "Library ID";
             // 
@@ -100,8 +99,8 @@
             this.mnuBack});
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
-            this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.mnuBackStrip.Size = new System.Drawing.Size(884, 30);
+            this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.mnuBackStrip.Size = new System.Drawing.Size(1179, 34);
             this.mnuBackStrip.TabIndex = 85;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -112,7 +111,7 @@
             this.mnuBack.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuBack.Margin = new System.Windows.Forms.Padding(3);
             this.mnuBack.Name = "mnuBack";
-            this.mnuBack.Size = new System.Drawing.Size(53, 20);
+            this.mnuBack.Size = new System.Drawing.Size(71, 24);
             this.mnuBack.Text = "BACK";
             this.mnuBack.Click += new System.EventHandler(this.mnuBack_Click);
             // 
@@ -121,11 +120,11 @@
             this.grpLibraryInfo.Controls.Add(this.btnOk);
             this.grpLibraryInfo.Controls.Add(this.lblLibraryInfo);
             this.grpLibraryInfo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpLibraryInfo.Location = new System.Drawing.Point(120, 200);
-            this.grpLibraryInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.grpLibraryInfo.Location = new System.Drawing.Point(160, 246);
+            this.grpLibraryInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpLibraryInfo.Name = "grpLibraryInfo";
-            this.grpLibraryInfo.Padding = new System.Windows.Forms.Padding(2);
-            this.grpLibraryInfo.Size = new System.Drawing.Size(650, 300);
+            this.grpLibraryInfo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpLibraryInfo.Size = new System.Drawing.Size(867, 369);
             this.grpLibraryInfo.TabIndex = 86;
             this.grpLibraryInfo.TabStop = false;
             this.grpLibraryInfo.Text = "Library Information";
@@ -136,10 +135,10 @@
             // 
             this.btnOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnOk.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(285, 240);
-            this.btnOk.Margin = new System.Windows.Forms.Padding(10);
+            this.btnOk.Location = new System.Drawing.Point(380, 295);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(80, 30);
+            this.btnOk.Size = new System.Drawing.Size(107, 37);
             this.btnOk.TabIndex = 12;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = false;
@@ -149,17 +148,18 @@
             // 
             this.lblLibraryInfo.AutoSize = true;
             this.lblLibraryInfo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLibraryInfo.Location = new System.Drawing.Point(90, 50);
+            this.lblLibraryInfo.Location = new System.Drawing.Point(120, 62);
+            this.lblLibraryInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLibraryInfo.Name = "lblLibraryInfo";
-            this.lblLibraryInfo.Size = new System.Drawing.Size(18, 18);
+            this.lblLibraryInfo.Size = new System.Drawing.Size(25, 25);
             this.lblLibraryInfo.TabIndex = 1;
             this.lblLibraryInfo.Text = "0";
             // 
             // frmQueryLibrary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(1179, 690);
             this.Controls.Add(this.mnuBackStrip);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cboLibraryID);
@@ -167,6 +167,7 @@
             this.Controls.Add(this.lblLibaryId);
             this.Controls.Add(this.grpLibraryInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmQueryLibrary";
             this.Text = "Query Library";
             this.mnuBackStrip.ResumeLayout(false);
