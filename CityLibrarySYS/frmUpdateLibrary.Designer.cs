@@ -294,9 +294,9 @@
             "County Library",
             "Suburb Reading Haven",
             "Village Library",
-            "\"Riverbank Library"});
+            "Riverbank Library"});
             this.cboLibraryID.Location = new System.Drawing.Point(480, 160);
-            this.cboLibraryID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboLibraryID.Margin = new System.Windows.Forms.Padding(4);
             this.cboLibraryID.Name = "cboLibraryID";
             this.cboLibraryID.Size = new System.Drawing.Size(199, 26);
             this.cboLibraryID.TabIndex = 1;
@@ -357,7 +357,7 @@
             this.Controls.Add(this.mnuBackStrip);
             this.Controls.Add(this.lblLibaryId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUpdateLibrary";
             this.Text = "Update Library";
             this.Load += new System.EventHandler(this.updateLibrary_Load);
