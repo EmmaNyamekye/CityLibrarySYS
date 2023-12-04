@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,24 +94,26 @@ namespace CityLibrarySYS
                 dgvResults.Visible = true;
                 dgvResults.Rows.Clear();
                 dgvResults.Rows.Add("A0002340", "The Inferno", "Dante Alighieri", "Village Library");
-                dgvResults.Rows.Add("A0015678", "The Great Gatsby", "F. Scott Fitzgerald", "County Library");
-                dgvResults.Rows.Add("A0017890", "Alexander the Great", "Robin Lane Fox", "National Library");
+                dgvResults.Rows.Add("A0015678", "The Fault in Our Stars", "John Green", "County Library");
+                dgvResults.Rows.Add("A0017890", "The Book Thief", "Markus Zusak", "National Library");
 
                 chkBook1.Visible = true;
                 chkBook2.Visible = true;
                 chkBook3.Visible = true;
+                grpCart.Visible = true;
             }
             else if (txtTitle.Text.ToLower().Contains("great"))
             {
                 dgvResults.Visible = true;
                 dgvResults.Rows.Clear();
                 dgvResults.Rows.Add("A0012345", "Great Expectations", "Charles Dickens", "City Library");
-                dgvResults.Rows.Add("A0015678", "The Great Gatsby", "F. Scott Fitzgerald", "County Library");
-                dgvResults.Rows.Add("A0017890", "Alexander the Great", "Robin Lane Fox", "National Library");
+                dgvResults.Rows.Add("A0015678", "Sometimes a Great Notion", "Ken Kesey", "County Library");
+                dgvResults.Rows.Add("A0017890", "Great Lakes Shipwrecks and Survivals", "William Ratigan", "National Library");
 
                 chkBook1.Visible = true;
                 chkBook2.Visible = true;
                 chkBook3.Visible = true;
+                grpCart.Visible = true;
             }
             else
             {
@@ -127,20 +130,52 @@ namespace CityLibrarySYS
 
         private void chkBook1_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBook1.Checked)
+            if (txtTitle.Text.ToLower().Contains("the") && chkBook1.Checked)
             {
                 dgvCheckOut.Visible = true;
-                dgvCheckOut.Rows.Add("Animal Farm", "George Orwell");
+                dgvCheckOut.Rows.Add("The Inferno", "Dante Alighieri");
+            }
+ 
+            else if (txtTitle.Text.ToLower().Contains("great") && chkBook1.Checked)
+            {
+                dgvCheckOut.Visible = true;
+                dgvCheckOut.Rows.Add("Great Expectations", "Charles Dickens");
             }
         }
 
         private void chkBook2_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBook2.Checked)
+            if (txtTitle.Text.ToLower().Contains("the") && chkBook1.Checked)
             {
                 dgvCheckOut.Visible = true;
-                dgvCheckOut.Rows.Add("Farm Life", "Jane Doe");
+                dgvCheckOut.Rows.Add("The Fault in Our Stars", "John Green");
             }
+
+            else if (txtTitle.Text.ToLower().Contains("great") && chkBook1.Checked)
+            {
+                dgvCheckOut.Visible = true;
+                dgvCheckOut.Rows.Add("Sometimes a Great Notion", "Ken Kesey");
+            }
+        }
+
+        private void chkBook3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtTitle.Text.ToLower().Contains("the") && chkBook1.Checked)
+            {
+                dgvCheckOut.Visible = true;
+                dgvCheckOut.Rows.Add("The Book Thief", "Markus Zusak");
+            }
+
+            else if (txtTitle.Text.ToLower().Contains("great") && chkBook1.Checked)
+            {
+                dgvCheckOut.Visible = true;
+                dgvCheckOut.Rows.Add("Great Lakes Shipwrecks and Survivals", "William Ratigan");
+            }
+        }
+
+        private void dgvCheckOut_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //dgvCheckOut.Rows.Remove();
         }
     }
 }

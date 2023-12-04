@@ -180,11 +180,11 @@
             // grpCart
             // 
             this.grpCart.Controls.Add(this.dgvCheckOut);
-            this.grpCart.Location = new System.Drawing.Point(433, 385);
+            this.grpCart.Location = new System.Drawing.Point(458, 385);
             this.grpCart.Margin = new System.Windows.Forms.Padding(2);
             this.grpCart.Name = "grpCart";
             this.grpCart.Padding = new System.Windows.Forms.Padding(2);
-            this.grpCart.Size = new System.Drawing.Size(405, 150);
+            this.grpCart.Size = new System.Drawing.Size(380, 150);
             this.grpCart.TabIndex = 118;
             this.grpCart.TabStop = false;
             this.grpCart.Text = "Book Cart";
@@ -196,11 +196,12 @@
             this.dgvCheckOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTitleCheckOut,
             this.colAuthorCheckOut});
-            this.dgvCheckOut.Location = new System.Drawing.Point(16, 18);
+            this.dgvCheckOut.Location = new System.Drawing.Point(18, 18);
             this.dgvCheckOut.Name = "dgvCheckOut";
             this.dgvCheckOut.Size = new System.Drawing.Size(345, 98);
             this.dgvCheckOut.TabIndex = 0;
             this.dgvCheckOut.Visible = false;
+            this.dgvCheckOut.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCheckOut_CellContentClick);
             // 
             // colTitleCheckOut
             // 
@@ -229,7 +230,6 @@
             this.btnConfirm.TabIndex = 122;
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Visible = false;
             this.btnConfirm.Click += new System.EventHandler(this.button1_Click);
             // 
             // button1
@@ -327,6 +327,7 @@
             this.chkBook3.TabIndex = 128;
             this.chkBook3.UseVisualStyleBackColor = true;
             this.chkBook3.Visible = false;
+            this.chkBook3.CheckedChanged += new System.EventHandler(this.chkBook3_CheckedChanged);
             // 
             // lblResult1
             // 
