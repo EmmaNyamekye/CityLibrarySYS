@@ -40,24 +40,24 @@
             this.btnSearchMember = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpCart = new System.Windows.Forms.GroupBox();
+            this.dgvCheckOut = new System.Windows.Forms.DataGridView();
+            this.colTitleCheckOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAuthorCheckOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvResults = new System.Windows.Forms.DataGridView();
-            this.chkBook1 = new System.Windows.Forms.CheckBox();
-            this.chkBook2 = new System.Windows.Forms.CheckBox();
-            this.chkBook3 = new System.Windows.Forms.CheckBox();
-            this.dgvCheckOut = new System.Windows.Forms.DataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTitleCheckOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAuthorCheckOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chkBook1 = new System.Windows.Forms.CheckBox();
+            this.chkBook2 = new System.Windows.Forms.CheckBox();
+            this.chkBook3 = new System.Windows.Forms.CheckBox();
             this.mnuBackStrip.SuspendLayout();
             this.grpMemberInfo.SuspendLayout();
             this.grpCart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuBackStrip
@@ -87,7 +87,7 @@
             // txtMemberId
             // 
             this.txtMemberId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMemberId.Location = new System.Drawing.Point(128, 103);
+            this.txtMemberId.Location = new System.Drawing.Point(140, 115);
             this.txtMemberId.Margin = new System.Windows.Forms.Padding(2);
             this.txtMemberId.MaxLength = 15;
             this.txtMemberId.Name = "txtMemberId";
@@ -98,7 +98,7 @@
             // 
             this.lblReserveBook.AutoSize = true;
             this.lblReserveBook.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReserveBook.Location = new System.Drawing.Point(33, 47);
+            this.lblReserveBook.Location = new System.Drawing.Point(40, 50);
             this.lblReserveBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReserveBook.Name = "lblReserveBook";
             this.lblReserveBook.Size = new System.Drawing.Size(199, 32);
@@ -109,7 +109,7 @@
             // 
             this.lblMemberId.AutoSize = true;
             this.lblMemberId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemberId.Location = new System.Drawing.Point(35, 108);
+            this.lblMemberId.Location = new System.Drawing.Point(45, 120);
             this.lblMemberId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMemberId.Name = "lblMemberId";
             this.lblMemberId.Size = new System.Drawing.Size(77, 16);
@@ -119,11 +119,11 @@
             // grpMemberInfo
             // 
             this.grpMemberInfo.Controls.Add(this.lblMemberInfo);
-            this.grpMemberInfo.Location = new System.Drawing.Point(433, 45);
+            this.grpMemberInfo.Location = new System.Drawing.Point(435, 45);
             this.grpMemberInfo.Margin = new System.Windows.Forms.Padding(2);
             this.grpMemberInfo.Name = "grpMemberInfo";
             this.grpMemberInfo.Padding = new System.Windows.Forms.Padding(2);
-            this.grpMemberInfo.Size = new System.Drawing.Size(388, 100);
+            this.grpMemberInfo.Size = new System.Drawing.Size(400, 100);
             this.grpMemberInfo.TabIndex = 101;
             this.grpMemberInfo.TabStop = false;
             this.grpMemberInfo.Text = "Member Info";
@@ -143,11 +143,11 @@
             // txtTitle
             // 
             this.txtTitle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.Location = new System.Drawing.Point(128, 158);
+            this.txtTitle.Location = new System.Drawing.Point(117, 178);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitle.MaxLength = 13;
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(582, 24);
+            this.txtTitle.Size = new System.Drawing.Size(590, 24);
             this.txtTitle.TabIndex = 110;
             this.txtTitle.Visible = false;
             // 
@@ -155,7 +155,7 @@
             // 
             this.btnSearchMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnSearchMember.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchMember.Location = new System.Drawing.Point(733, 156);
+            this.btnSearchMember.Location = new System.Drawing.Point(738, 176);
             this.btnSearchMember.Margin = new System.Windows.Forms.Padding(10);
             this.btnSearchMember.Name = "btnSearchMember";
             this.btnSearchMember.Size = new System.Drawing.Size(100, 30);
@@ -169,7 +169,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(44, 162);
+            this.lblTitle.Location = new System.Drawing.Point(45, 181);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(37, 17);
@@ -190,6 +190,34 @@
             this.grpCart.Text = "Book Cart";
             this.grpCart.Visible = false;
             // 
+            // dgvCheckOut
+            // 
+            this.dgvCheckOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCheckOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colTitleCheckOut,
+            this.colAuthorCheckOut});
+            this.dgvCheckOut.Location = new System.Drawing.Point(16, 18);
+            this.dgvCheckOut.Name = "dgvCheckOut";
+            this.dgvCheckOut.Size = new System.Drawing.Size(345, 98);
+            this.dgvCheckOut.TabIndex = 0;
+            this.dgvCheckOut.Visible = false;
+            // 
+            // colTitleCheckOut
+            // 
+            this.colTitleCheckOut.Frozen = true;
+            this.colTitleCheckOut.HeaderText = "Title";
+            this.colTitleCheckOut.Name = "colTitleCheckOut";
+            this.colTitleCheckOut.ReadOnly = true;
+            this.colTitleCheckOut.Width = 150;
+            // 
+            // colAuthorCheckOut
+            // 
+            this.colAuthorCheckOut.Frozen = true;
+            this.colAuthorCheckOut.HeaderText = "Author";
+            this.colAuthorCheckOut.Name = "colAuthorCheckOut";
+            this.colAuthorCheckOut.ReadOnly = true;
+            this.colAuthorCheckOut.Width = 150;
+            // 
             // btnConfirm
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
@@ -208,7 +236,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.button1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(269, 99);
+            this.button1.Location = new System.Drawing.Point(280, 110);
             this.button1.Margin = new System.Windows.Forms.Padding(10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 30);
@@ -225,56 +253,12 @@
             this.colTitle,
             this.colAuthor,
             this.colLocation});
-            this.dgvResults.Location = new System.Drawing.Point(46, 199);
+            this.dgvResults.Location = new System.Drawing.Point(45, 230);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.RowHeadersWidth = 51;
-            this.dgvResults.Size = new System.Drawing.Size(775, 151);
+            this.dgvResults.Size = new System.Drawing.Size(775, 120);
             this.dgvResults.TabIndex = 0;
             this.dgvResults.Visible = false;
-            // 
-            // chkBook1
-            // 
-            this.chkBook1.AutoSize = true;
-            this.chkBook1.Location = new System.Drawing.Point(823, 226);
-            this.chkBook1.Name = "chkBook1";
-            this.chkBook1.Size = new System.Drawing.Size(15, 14);
-            this.chkBook1.TabIndex = 126;
-            this.chkBook1.UseVisualStyleBackColor = true;
-            this.chkBook1.Visible = false;
-            this.chkBook1.CheckedChanged += new System.EventHandler(this.chkBook1_CheckedChanged);
-            // 
-            // chkBook2
-            // 
-            this.chkBook2.AutoSize = true;
-            this.chkBook2.Location = new System.Drawing.Point(823, 247);
-            this.chkBook2.Name = "chkBook2";
-            this.chkBook2.Size = new System.Drawing.Size(15, 14);
-            this.chkBook2.TabIndex = 127;
-            this.chkBook2.UseVisualStyleBackColor = true;
-            this.chkBook2.Visible = false;
-            this.chkBook2.CheckedChanged += new System.EventHandler(this.chkBook2_CheckedChanged);
-            // 
-            // chkBook3
-            // 
-            this.chkBook3.AutoSize = true;
-            this.chkBook3.Location = new System.Drawing.Point(823, 269);
-            this.chkBook3.Name = "chkBook3";
-            this.chkBook3.Size = new System.Drawing.Size(15, 14);
-            this.chkBook3.TabIndex = 128;
-            this.chkBook3.UseVisualStyleBackColor = true;
-            this.chkBook3.Visible = false;
-            // 
-            // dgvCheckOut
-            // 
-            this.dgvCheckOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCheckOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colTitleCheckOut,
-            this.colAuthorCheckOut});
-            this.dgvCheckOut.Location = new System.Drawing.Point(16, 18);
-            this.dgvCheckOut.Name = "dgvCheckOut";
-            this.dgvCheckOut.Size = new System.Drawing.Size(345, 98);
-            this.dgvCheckOut.TabIndex = 0;
-            this.dgvCheckOut.Visible = false;
             // 
             // colId
             // 
@@ -312,21 +296,37 @@
             this.colLocation.ReadOnly = true;
             this.colLocation.Width = 200;
             // 
-            // colTitleCheckOut
+            // chkBook1
             // 
-            this.colTitleCheckOut.Frozen = true;
-            this.colTitleCheckOut.HeaderText = "Title";
-            this.colTitleCheckOut.Name = "colTitleCheckOut";
-            this.colTitleCheckOut.ReadOnly = true;
-            this.colTitleCheckOut.Width = 150;
+            this.chkBook1.AutoSize = true;
+            this.chkBook1.Location = new System.Drawing.Point(823, 257);
+            this.chkBook1.Name = "chkBook1";
+            this.chkBook1.Size = new System.Drawing.Size(15, 14);
+            this.chkBook1.TabIndex = 126;
+            this.chkBook1.UseVisualStyleBackColor = true;
+            this.chkBook1.Visible = false;
+            this.chkBook1.CheckedChanged += new System.EventHandler(this.chkBook1_CheckedChanged);
             // 
-            // colAuthorCheckOut
+            // chkBook2
             // 
-            this.colAuthorCheckOut.Frozen = true;
-            this.colAuthorCheckOut.HeaderText = "Author";
-            this.colAuthorCheckOut.Name = "colAuthorCheckOut";
-            this.colAuthorCheckOut.ReadOnly = true;
-            this.colAuthorCheckOut.Width = 150;
+            this.chkBook2.AutoSize = true;
+            this.chkBook2.Location = new System.Drawing.Point(823, 278);
+            this.chkBook2.Name = "chkBook2";
+            this.chkBook2.Size = new System.Drawing.Size(15, 14);
+            this.chkBook2.TabIndex = 127;
+            this.chkBook2.UseVisualStyleBackColor = true;
+            this.chkBook2.Visible = false;
+            this.chkBook2.CheckedChanged += new System.EventHandler(this.chkBook2_CheckedChanged);
+            // 
+            // chkBook3
+            // 
+            this.chkBook3.AutoSize = true;
+            this.chkBook3.Location = new System.Drawing.Point(823, 300);
+            this.chkBook3.Name = "chkBook3";
+            this.chkBook3.Size = new System.Drawing.Size(15, 14);
+            this.chkBook3.TabIndex = 128;
+            this.chkBook3.UseVisualStyleBackColor = true;
+            this.chkBook3.Visible = false;
             // 
             // lblResult1
             // 
@@ -356,8 +356,8 @@
             this.grpMemberInfo.ResumeLayout(false);
             this.grpMemberInfo.PerformLayout();
             this.grpCart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
