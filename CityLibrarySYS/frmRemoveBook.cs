@@ -101,6 +101,7 @@ namespace CityLibrarySYS
                             MessageBoxIcon.Information);
 
             grpBookInfo.Visible = false;
+            txtBookId.Text = "";
         }
     }
 }

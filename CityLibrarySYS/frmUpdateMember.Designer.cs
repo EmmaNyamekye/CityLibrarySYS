@@ -355,7 +355,7 @@
             this.txtMemberId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMemberId.Location = new System.Drawing.Point(357, 125);
             this.txtMemberId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMemberId.MaxLength = 15;
+            this.txtMemberId.MaxLength = 7;
             this.txtMemberId.Name = "txtMemberId";
             this.txtMemberId.Size = new System.Drawing.Size(150, 23);
             this.txtMemberId.TabIndex = 96;

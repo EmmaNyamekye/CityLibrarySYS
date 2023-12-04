@@ -47,6 +47,10 @@
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chk = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.mnuBackStrip.SuspendLayout();
             this.grpMemberInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
@@ -60,8 +64,8 @@
             this.mnuBack});
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
-            this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnuBackStrip.Size = new System.Drawing.Size(1179, 34);
+            this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.mnuBackStrip.Size = new System.Drawing.Size(884, 30);
             this.mnuBackStrip.TabIndex = 77;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -72,27 +76,28 @@
             this.mnuBack.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuBack.Margin = new System.Windows.Forms.Padding(3);
             this.mnuBack.Name = "mnuBack";
-            this.mnuBack.Size = new System.Drawing.Size(71, 24);
+            this.mnuBack.Size = new System.Drawing.Size(53, 20);
             this.mnuBack.Text = "BACK";
             this.mnuBack.Click += new System.EventHandler(this.mnuBack_Click);
             // 
             // txtMemberId
             // 
             this.txtMemberId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMemberId.Location = new System.Drawing.Point(171, 127);
-            this.txtMemberId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMemberId.Location = new System.Drawing.Point(128, 103);
+            this.txtMemberId.Margin = new System.Windows.Forms.Padding(2);
             this.txtMemberId.MaxLength = 15;
             this.txtMemberId.Name = "txtMemberId";
-            this.txtMemberId.Size = new System.Drawing.Size(150, 27);
+            this.txtMemberId.Size = new System.Drawing.Size(114, 23);
             this.txtMemberId.TabIndex = 100;
             // 
             // lblReserveBook
             // 
             this.lblReserveBook.AutoSize = true;
             this.lblReserveBook.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReserveBook.Location = new System.Drawing.Point(44, 58);
+            this.lblReserveBook.Location = new System.Drawing.Point(33, 47);
+            this.lblReserveBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReserveBook.Name = "lblReserveBook";
-            this.lblReserveBook.Size = new System.Drawing.Size(251, 41);
+            this.lblReserveBook.Size = new System.Drawing.Size(199, 32);
             this.lblReserveBook.TabIndex = 99;
             this.lblReserveBook.Text = "Reserve Book";
             // 
@@ -100,20 +105,21 @@
             // 
             this.lblMemberId.AutoSize = true;
             this.lblMemberId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemberId.Location = new System.Drawing.Point(47, 133);
+            this.lblMemberId.Location = new System.Drawing.Point(35, 108);
+            this.lblMemberId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMemberId.Name = "lblMemberId";
-            this.lblMemberId.Size = new System.Drawing.Size(105, 20);
+            this.lblMemberId.Size = new System.Drawing.Size(77, 16);
             this.lblMemberId.TabIndex = 97;
             this.lblMemberId.Text = "Member ID";
             // 
             // grpMemberInfo
             // 
             this.grpMemberInfo.Controls.Add(this.lblMemberInfo);
-            this.grpMemberInfo.Location = new System.Drawing.Point(577, 55);
-            this.grpMemberInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpMemberInfo.Location = new System.Drawing.Point(433, 45);
+            this.grpMemberInfo.Margin = new System.Windows.Forms.Padding(2);
             this.grpMemberInfo.Name = "grpMemberInfo";
-            this.grpMemberInfo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpMemberInfo.Size = new System.Drawing.Size(517, 123);
+            this.grpMemberInfo.Padding = new System.Windows.Forms.Padding(2);
+            this.grpMemberInfo.Size = new System.Drawing.Size(388, 100);
             this.grpMemberInfo.TabIndex = 101;
             this.grpMemberInfo.TabStop = false;
             this.grpMemberInfo.Text = "Member Info";
@@ -123,20 +129,21 @@
             // 
             this.lblMemberInfo.AutoSize = true;
             this.lblMemberInfo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemberInfo.Location = new System.Drawing.Point(20, 25);
+            this.lblMemberInfo.Location = new System.Drawing.Point(15, 20);
+            this.lblMemberInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMemberInfo.Name = "lblMemberInfo";
-            this.lblMemberInfo.Size = new System.Drawing.Size(17, 17);
+            this.lblMemberInfo.Size = new System.Drawing.Size(14, 13);
             this.lblMemberInfo.TabIndex = 102;
             this.lblMemberInfo.Text = "0";
             // 
             // txtTitle
             // 
             this.txtTitle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.Location = new System.Drawing.Point(171, 194);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTitle.Location = new System.Drawing.Point(128, 158);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitle.MaxLength = 13;
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(775, 28);
+            this.txtTitle.Size = new System.Drawing.Size(582, 24);
             this.txtTitle.TabIndex = 110;
             this.txtTitle.Visible = false;
             // 
@@ -144,10 +151,10 @@
             // 
             this.btnSearchMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnSearchMember.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchMember.Location = new System.Drawing.Point(977, 192);
-            this.btnSearchMember.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnSearchMember.Location = new System.Drawing.Point(733, 156);
+            this.btnSearchMember.Margin = new System.Windows.Forms.Padding(10);
             this.btnSearchMember.Name = "btnSearchMember";
-            this.btnSearchMember.Size = new System.Drawing.Size(133, 37);
+            this.btnSearchMember.Size = new System.Drawing.Size(100, 30);
             this.btnSearchMember.TabIndex = 108;
             this.btnSearchMember.Text = "SEARCH";
             this.btnSearchMember.UseVisualStyleBackColor = false;
@@ -158,20 +165,21 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(59, 199);
+            this.lblTitle.Location = new System.Drawing.Point(44, 162);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(46, 20);
+            this.lblTitle.Size = new System.Drawing.Size(37, 17);
             this.lblTitle.TabIndex = 109;
             this.lblTitle.Text = "Title";
             this.lblTitle.Visible = false;
             // 
             // grpCart
             // 
-            this.grpCart.Location = new System.Drawing.Point(611, 474);
-            this.grpCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpCart.Location = new System.Drawing.Point(338, 385);
+            this.grpCart.Margin = new System.Windows.Forms.Padding(2);
             this.grpCart.Name = "grpCart";
-            this.grpCart.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpCart.Size = new System.Drawing.Size(533, 185);
+            this.grpCart.Padding = new System.Windows.Forms.Padding(2);
+            this.grpCart.Size = new System.Drawing.Size(500, 150);
             this.grpCart.TabIndex = 118;
             this.grpCart.TabStop = false;
             this.grpCart.Text = "Book Cart";
@@ -181,10 +189,10 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnConfirm.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(955, 622);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnConfirm.Location = new System.Drawing.Point(716, 505);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(10);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(163, 37);
+            this.btnConfirm.Size = new System.Drawing.Size(122, 30);
             this.btnConfirm.TabIndex = 122;
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -195,10 +203,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.button1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(359, 122);
-            this.button1.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.button1.Location = new System.Drawing.Point(269, 99);
+            this.button1.Margin = new System.Windows.Forms.Padding(10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 37);
+            this.button1.Size = new System.Drawing.Size(100, 30);
             this.button1.TabIndex = 125;
             this.button1.Text = "SEARCH";
             this.button1.UseVisualStyleBackColor = false;
@@ -212,14 +220,12 @@
             this.colTitle,
             this.colAuthor,
             this.colLocation});
-            this.dgvResults.Location = new System.Drawing.Point(62, 245);
-            this.dgvResults.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvResults.Location = new System.Drawing.Point(46, 199);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.RowHeadersWidth = 51;
-            this.dgvResults.Size = new System.Drawing.Size(1048, 170);
+            this.dgvResults.Size = new System.Drawing.Size(775, 151);
             this.dgvResults.TabIndex = 0;
             this.dgvResults.Visible = false;
-            this.dgvResults.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // colId
             // 
@@ -249,11 +255,51 @@
             this.colLocation.Name = "colLocation";
             this.colLocation.Width = 200;
             // 
+            // chk
+            // 
+            this.chk.AutoSize = true;
+            this.chk.Location = new System.Drawing.Point(823, 226);
+            this.chk.Name = "chk";
+            this.chk.Size = new System.Drawing.Size(15, 14);
+            this.chk.TabIndex = 126;
+            this.chk.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(823, 247);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 127;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(823, 269);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 128;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(823, 291);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(15, 14);
+            this.checkBox4.TabIndex = 129;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
             // lblResult1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 690);
+            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.chk);
             this.Controls.Add(this.dgvResults);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnConfirm);
@@ -267,7 +313,6 @@
             this.Controls.Add(this.lblMemberId);
             this.Controls.Add(this.mnuBackStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "lblResult1";
             this.Text = "Reserve Book";
             this.mnuBackStrip.ResumeLayout(false);
@@ -300,5 +345,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAuthor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocation;
+        private System.Windows.Forms.CheckBox chk;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
     }
 }

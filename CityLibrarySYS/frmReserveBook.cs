@@ -86,11 +86,6 @@ namespace CityLibrarySYS
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void btnSearchMember_Click(object sender, EventArgs e)
         { 
             if (txtTitle.Text.ToLower().Contains("farm"))
@@ -105,7 +100,6 @@ namespace CityLibrarySYS
             {
                 dgvResults.Visible = true;
                 dgvResults.Rows.Clear();
-                dgvResults.Rows.Add("A0000101", "The Martian", "Andy Weir", "County Library");
                 dgvResults.Rows.Add("A0002100", "The Firm", "John Grisham", "Riverbank Library");
                 dgvResults.Rows.Add("A0002340", "The Inferno", "Dante Alighieri", "Village Library");
                 dgvResults.Rows.Add("A0015678", "The Great Gatsby", "F. Scott Fitzgerald", "County Library");
@@ -134,5 +128,9 @@ namespace CityLibrarySYS
             
 
         }
+
+        
+
+        
     }
 }

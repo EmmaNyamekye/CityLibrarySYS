@@ -52,52 +52,8 @@ namespace CityLibrarySYS
                 return;
             }
 
-            // Validate if ISBN is valid
-
-            else if (txtISBN.Text.Length != 10 && txtISBN.Text.Length != 13)
-            {
-                MessageBox.Show("Invalid ISBN length! ISBN must be between 10 and 13 digits long!",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return;
-            }
-
-            else if (!txtISBN.Text.All(char.IsDigit))
-            {
-                MessageBox.Show("Invalid ISBN format! ISBN must be all digits!",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return;
-            }
-
-            int checksum = 0;
-
-            for (int i = 0; i < txtISBN.Text.Length - 1; i++)
-            {
-                int digit = int.Parse(txtISBN.Text[i].ToString());
-
-                if (i % 2 == 0)
-                {
-                    checksum += digit * 10;
-                }
-                else
-                {
-                    checksum += digit * 3;
-                }
-            }
-
-            checksum = 10 - checksum % 10;
-
-            if (int.Parse(txtISBN.Text[txtISBN.Text.Length - 1].ToString()) != checksum)
-            {
-                MessageBox.Show("Invalid ISBN! Invalid final value!",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return;
-            }
+            // Validate if ISBN is valid ???
+            
 
             // Validate if Title, Author and Description are valid
             else if  (txtTitle.Text.All(char.IsDigit))

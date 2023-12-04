@@ -38,7 +38,7 @@ namespace CityLibrarySYS
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            
+
             //Validate if all fields are entered
             if (txtName.Text.Equals("") || txtStreet.Text.Equals("") || txtTown.Text.Equals("") ||
                 txtCounty.Text.Equals("") || txtEircode.Text.Equals("") || txtPhone.Text.Equals("") ||
@@ -48,6 +48,27 @@ namespace CityLibrarySYS
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
+                return;
+            }
+
+            //Validate phone and eircode lenght
+            else if (txtPhone.Text.Length != 10)
+            {
+                MessageBox.Show("Phone msut be 10 characters long!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtPhone.Focus();
+                return;
+            }
+
+            else if (txtEircode.Text.Length != 7)
+            {
+                MessageBox.Show("Ericode msut be 7 characters long!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtEircode.Focus();
                 return;
             }
 
@@ -98,19 +119,21 @@ namespace CityLibrarySYS
                 return;
             }
 
-            ///Validate if Eircode is valid
+            //Validate if Eircode is valid
             string eircode = txtEircode.Text;
 
             //Define Pattern for Eircode Validation
             string eircodePattern = @"(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$"; ;
+
             /*
-             Title: Validation for Irish Eircode
-             Author: Asunez
-             Site ownwer/sponcer: Stackoverflow
-             Date: Oct 29, 2015
-             Edited: Mar 26, 2021 by user Andrew
-             Availability: https://stackoverflow.com/questions/33391412/validation-for-irish-eircode
-             (Accessed 25/11/2023)*/
+            Title: Validation for Irish Eircode
+            Author: Asunez
+            Site ownwer/sponcer: Stackoverflow
+            Date: Oct 29, 2015
+            Code version: edited Mar 26, 2021 by user Andrew
+            Availability: https://stackoverflow.com/questions/33391412/validation-for-irish-eircode
+            (Accessed 25/11/2023)
+            Modified: No*/
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(eircode, eircodePattern))
             {
@@ -151,7 +174,7 @@ namespace CityLibrarySYS
 
             else
             {
-                MessageBox.Show("Library Has Been Update Into The Libraries File!",
+                MessageBox.Show("Library " + txtName.Text + " Has Been Updated Into The Libraries File",
                                 "Success!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
@@ -163,10 +186,9 @@ namespace CityLibrarySYS
                 txtPhone.Clear();
                 txtEmail.Clear();
                 txtSupervisor.Clear();
-                cboLibraryID.Items.Clear(); // does not clear ???
-
-                grpUpdate.Visible = false;
+                cboLibraryID.Text = "";
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

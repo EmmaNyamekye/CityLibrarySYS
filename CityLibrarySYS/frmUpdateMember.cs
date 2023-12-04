@@ -120,6 +120,27 @@ namespace CityLibrarySYS
                 return;
             }
 
+            //Validate phone and eircode lenght
+            else if (txtPhone.Text.Length != 10)
+            {
+                MessageBox.Show("Phone msut be 10 characters long!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtPhone.Focus();
+                return;
+            }
+
+            else if (txtEircode.Text.Length != 7)
+            {
+                MessageBox.Show("Ericode msut be 7 characters long!",
+                               "Error",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Error);
+                txtEircode.Focus();
+                return;
+            }
+
             // Validate if fields are not numeric
             else if (txtForename.Text.All(c => char.IsDigit(c)))
             {
@@ -172,14 +193,16 @@ namespace CityLibrarySYS
 
             //Define Pattern for Eircode Validation
             string eircodePattern = @"(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$"; ;
+
             /*
-             Title: Validation for Irish Eircode
-             Author: Asunez
-             Site ownwer/sponcer: Stackoverflow
-             Date: Oct 29, 2015
-             Edited: Mar 26, 2021 by user Andrew
-             Availability: https://stackoverflow.com/questions/33391412/validation-for-irish-eircode
-             (Accessed 25/11/2023)*/
+            Title: Validation for Irish Eircode
+            Author: Asunez
+            Site ownwer/sponcer: Stackoverflow
+            Date: Oct 29, 2015
+            Code version: edited Mar 26, 2021 by user Andrew
+            Availability: https://stackoverflow.com/questions/33391412/validation-for-irish-eircode
+            (Accessed 25/11/2023)
+            Modified: No*/
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(eircode, eircodePattern))
             {
@@ -220,7 +243,7 @@ namespace CityLibrarySYS
 
             else
             {
-                MessageBox.Show("Member has been added To Members File",
+                MessageBox.Show(txtForename.Text + " " + txtSurname.Text + " Has Been Updated Into The Members File",
                                 "Success!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
@@ -232,6 +255,7 @@ namespace CityLibrarySYS
                 txtEircode.Clear();
                 txtPhone.Clear();
                 txtEmail.Clear();
+                txtMemberId.Clear();
             }
         }
     }

@@ -58,7 +58,7 @@
             // 
             this.txtCounty.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCounty.Location = new System.Drawing.Point(480, 198);
-            this.txtCounty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCounty.Margin = new System.Windows.Forms.Padding(2);
             this.txtCounty.MaxLength = 15;
             this.txtCounty.Name = "txtCounty";
             this.txtCounty.Size = new System.Drawing.Size(350, 23);
@@ -90,7 +90,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(480, 328);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(350, 23);
@@ -111,7 +111,7 @@
             // 
             this.txtForename.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtForename.Location = new System.Drawing.Point(60, 188);
-            this.txtForename.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtForename.Margin = new System.Windows.Forms.Padding(2);
             this.txtForename.MaxLength = 15;
             this.txtForename.Name = "txtForename";
             this.txtForename.Size = new System.Drawing.Size(350, 23);
@@ -133,7 +133,7 @@
             // 
             this.txtSurname.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.Location = new System.Drawing.Point(60, 248);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtSurname.MaxLength = 15;
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(350, 23);
@@ -165,7 +165,7 @@
             // 
             this.txtEircode.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEircode.Location = new System.Drawing.Point(560, 258);
-            this.txtEircode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEircode.Margin = new System.Windows.Forms.Padding(2);
             this.txtEircode.MaxLength = 7;
             this.txtEircode.Name = "txtEircode";
             this.txtEircode.Size = new System.Drawing.Size(270, 23);
@@ -187,7 +187,7 @@
             // 
             this.txtTown.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTown.Location = new System.Drawing.Point(63, 408);
-            this.txtTown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTown.Margin = new System.Windows.Forms.Padding(2);
             this.txtTown.MaxLength = 15;
             this.txtTown.Name = "txtTown";
             this.txtTown.Size = new System.Drawing.Size(347, 23);
@@ -209,7 +209,7 @@
             // 
             this.txtStreet.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStreet.Location = new System.Drawing.Point(63, 348);
-            this.txtStreet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStreet.Margin = new System.Windows.Forms.Padding(2);
             this.txtStreet.MaxLength = 25;
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(347, 23);
@@ -263,7 +263,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(480, 388);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.MaxLength = 35;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(350, 23);
@@ -274,7 +274,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnSubmit.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(400, 460);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(10);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(100, 40);
             this.btnSubmit.TabIndex = 76;
@@ -289,9 +289,9 @@
             this.label1.Location = new System.Drawing.Point(60, 70);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 32);
+            this.label1.Size = new System.Drawing.Size(245, 32);
             this.label1.TabIndex = 77;
-            this.label1.Text = "Add New Member";
+            this.label1.Text = "Register Member";
             // 
             // frmRegisterMember
             // 
