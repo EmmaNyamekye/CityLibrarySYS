@@ -40,9 +40,6 @@
             this.btnSearchMember = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpCart = new System.Windows.Forms.GroupBox();
-            this.dgvCheckOut = new System.Windows.Forms.DataGridView();
-            this.colTitleCheckOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAuthorCheckOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvResults = new System.Windows.Forms.DataGridView();
@@ -54,10 +51,10 @@
             this.chkBook2 = new System.Windows.Forms.CheckBox();
             this.chkBook3 = new System.Windows.Forms.CheckBox();
             this.chkBook4 = new System.Windows.Forms.CheckBox();
+            this.lblBookCart = new System.Windows.Forms.Label();
             this.mnuBackStrip.SuspendLayout();
             this.grpMemberInfo.SuspendLayout();
             this.grpCart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCheckOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,7 +177,7 @@
             // 
             // grpCart
             // 
-            this.grpCart.Controls.Add(this.dgvCheckOut);
+            this.grpCart.Controls.Add(this.lblBookCart);
             this.grpCart.Controls.Add(this.btnConfirm);
             this.grpCart.Location = new System.Drawing.Point(458, 385);
             this.grpCart.Margin = new System.Windows.Forms.Padding(2);
@@ -191,33 +188,6 @@
             this.grpCart.TabStop = false;
             this.grpCart.Text = "Book Cart";
             this.grpCart.Visible = false;
-            // 
-            // dgvCheckOut
-            // 
-            this.dgvCheckOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCheckOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colTitleCheckOut,
-            this.colAuthorCheckOut});
-            this.dgvCheckOut.Location = new System.Drawing.Point(18, 18);
-            this.dgvCheckOut.Name = "dgvCheckOut";
-            this.dgvCheckOut.Size = new System.Drawing.Size(345, 98);
-            this.dgvCheckOut.TabIndex = 0;
-            // 
-            // colTitleCheckOut
-            // 
-            this.colTitleCheckOut.Frozen = true;
-            this.colTitleCheckOut.HeaderText = "Title";
-            this.colTitleCheckOut.Name = "colTitleCheckOut";
-            this.colTitleCheckOut.ReadOnly = true;
-            this.colTitleCheckOut.Width = 150;
-            // 
-            // colAuthorCheckOut
-            // 
-            this.colAuthorCheckOut.Frozen = true;
-            this.colAuthorCheckOut.HeaderText = "Author";
-            this.colAuthorCheckOut.Name = "colAuthorCheckOut";
-            this.colAuthorCheckOut.ReadOnly = true;
-            this.colAuthorCheckOut.Width = 150;
             // 
             // btnConfirm
             // 
@@ -340,6 +310,15 @@
             this.chkBook4.Visible = false;
             this.chkBook4.CheckedChanged += new System.EventHandler(this.chkBook4_CheckedChanged);
             // 
+            // lblBookCart
+            // 
+            this.lblBookCart.AutoSize = true;
+            this.lblBookCart.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookCart.Location = new System.Drawing.Point(10, 25);
+            this.lblBookCart.Name = "lblBookCart";
+            this.lblBookCart.Size = new System.Drawing.Size(0, 16);
+            this.lblBookCart.TabIndex = 123;
+            // 
             // lblResult1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,7 +347,7 @@
             this.grpMemberInfo.ResumeLayout(false);
             this.grpMemberInfo.PerformLayout();
             this.grpCart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCheckOut)).EndInit();
+            this.grpCart.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -394,13 +373,11 @@
         private System.Windows.Forms.CheckBox chkBook1;
         private System.Windows.Forms.CheckBox chkBook2;
         private System.Windows.Forms.CheckBox chkBook3;
-        private System.Windows.Forms.DataGridView dgvCheckOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAuthor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTitleCheckOut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAuthorCheckOut;
         private System.Windows.Forms.CheckBox chkBook4;
+        private System.Windows.Forms.Label lblBookCart;
     }
 }

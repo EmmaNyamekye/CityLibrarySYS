@@ -5,10 +5,12 @@ using System.Data;
 using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CityLibrarySYS
@@ -126,53 +128,77 @@ namespace CityLibrarySYS
 
         private void chkBook1_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBook1.Checked)
+            if (chkBook1.Checked && !lblBookCart.Text.Contains("The Book Thief"))
             {
                 grpCart.Visible = true;
-                dgvCheckOut.Rows.Add("The Book Thief", "Markus Zusak");
+                lblBookCart.Text += "The Book Thief,  Markus Zusak\n";
             }
-            else
+            else if (chkBook1.Checked && lblBookCart.Text.Contains("The Book Thief"))
             {
-                if (dgvCheckOut.Columns.Contains("The Book Thief"))
+                lblBookCart.Text += "";
+            }
+            else if (chkBook1.Checked == false && lblBookCart.Text.Contains("The Book Thief"))
+            {
+                String text = "The Book Thief,  Markus Zusak";
+                int thisPosition = lblBookCart.Text.IndexOf("B");
+                var theString = new StringBuilder(lblBookCart.Text);
+
+                for (int i = thisPosition; i < thisPosition+text.Length; i++)
                 {
-                    //string text = "The Book Thief";
-                    //int position = dgvCheckOut.Rows.IndexOf(text);
-                    //dgvCheckOut.Rows.Remove(position);
+                    theString.Remove(i, 1);
                 }
             }
         }
 
         private void chkBook2_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBook2.Checked)
+            if (chkBook2.Checked && !lblBookCart.Text.Contains("The Fault in Our Stars"))
             {
                 grpCart.Visible = true;
-                dgvCheckOut.Rows.Add("The Fault in Our Stars", "John Green");
+                lblBookCart.Text += "The Fault in Our Stars,  John Green\n\n";
             }
-            else
-                dgvCheckOut.Rows.RemoveAt(1);
+            else if (chkBook2.Checked && lblBookCart.Text.Contains("The Fault in Our Stars"))
+            {
+                lblBookCart.Text += "";
+            }
+            else if (!chkBook2.Checked && lblBookCart.Text.Contains("The Fault in Our Stars"))
+            {
+                lblBookCart.Text.Replace("The Fault in Our Stars,  John Green", "");
+            }
         }
 
         private void chkBook3_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBook3.Checked)
+            if (chkBook3.Checked && !lblBookCart.Text.Contains("The Inferno"))
             {
                 grpCart.Visible = true;
-                dgvCheckOut.Rows.Add("The Inferno", "Dante Alighieri");
+                lblBookCart.Text += "The Inferno,  Dante Alighieri\n\n";
             }
-            else
-                dgvCheckOut.Rows.RemoveAt(2);
+            else if (chkBook3.Checked && lblBookCart.Text.Contains("The Inferno"))
+            {
+                lblBookCart.Text += "";
+            }
+            else if (!chkBook3.Checked && lblBookCart.Text.Contains("The Inferno"))
+            {
+                lblBookCart.Text.Replace("The Inferno,  Dante Alighieri", "");
+            }
         }
 
         private void chkBook4_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBook4.Checked)
+            if (chkBook4.Checked && !lblBookCart.Text.Contains("Oliver Twist"))
             {
                 grpCart.Visible = true;
-                dgvCheckOut.Rows.Add("The Inferno", "Dante Alighieri");
+                lblBookCart.Text += "Oliver Twist or, The Parish Boys Progress,  Charles Dickens\n\n";
             }
-            else
-                dgvCheckOut.Rows.RemoveAt(3);
+            else if (chkBook4.Checked && lblBookCart.Text.Contains("Oliver Twist or, The Parish Boys Progress"))
+            {
+                lblBookCart.Text += "";
+            }
+            else if (!chkBook4.Checked && lblBookCart.Text.Contains("Oliver Twist"))
+            {
+                lblBookCart.Text.Replace("Oliver Twist or, The Parish Boys Progress,  Charles Dickens", "");
+            }
         }
     }
 }
