@@ -37,11 +37,11 @@
             this.grpMemberInfo = new System.Windows.Forms.GroupBox();
             this.lblMemberInfo = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
-            this.btnSearchMember = new System.Windows.Forms.Button();
+            this.btnSearchTitle = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpCart = new System.Windows.Forms.GroupBox();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMemberID = new System.Windows.Forms.Button();
             this.dgvResults = new System.Windows.Forms.DataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -149,19 +149,19 @@
             this.txtTitle.TabIndex = 110;
             this.txtTitle.Visible = false;
             // 
-            // btnSearchMember
+            // btnSearchTitle
             // 
-            this.btnSearchMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
-            this.btnSearchMember.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchMember.Location = new System.Drawing.Point(738, 176);
-            this.btnSearchMember.Margin = new System.Windows.Forms.Padding(10);
-            this.btnSearchMember.Name = "btnSearchMember";
-            this.btnSearchMember.Size = new System.Drawing.Size(100, 30);
-            this.btnSearchMember.TabIndex = 108;
-            this.btnSearchMember.Text = "SEARCH";
-            this.btnSearchMember.UseVisualStyleBackColor = false;
-            this.btnSearchMember.Visible = false;
-            this.btnSearchMember.Click += new System.EventHandler(this.btnSearchMember_Click);
+            this.btnSearchTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
+            this.btnSearchTitle.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchTitle.Location = new System.Drawing.Point(738, 176);
+            this.btnSearchTitle.Margin = new System.Windows.Forms.Padding(10);
+            this.btnSearchTitle.Name = "btnSearchTitle";
+            this.btnSearchTitle.Size = new System.Drawing.Size(100, 30);
+            this.btnSearchTitle.TabIndex = 108;
+            this.btnSearchTitle.Text = "SEARCH";
+            this.btnSearchTitle.UseVisualStyleBackColor = false;
+            this.btnSearchTitle.Visible = false;
+            this.btnSearchTitle.Click += new System.EventHandler(this.btnSearchMember_Click);
             // 
             // lblTitle
             // 
@@ -188,6 +188,7 @@
             this.grpCart.TabStop = false;
             this.grpCart.Text = "Book Cart";
             this.grpCart.Visible = false;
+            this.grpCart.Enter += new System.EventHandler(this.grpCart_Enter);
             // 
             // btnConfirm
             // 
@@ -202,18 +203,18 @@
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // btnMemberID
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
-            this.button1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(280, 110);
-            this.button1.Margin = new System.Windows.Forms.Padding(10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
-            this.button1.TabIndex = 125;
-            this.button1.Text = "SEARCH";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnMemberID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
+            this.btnMemberID.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMemberID.Location = new System.Drawing.Point(280, 110);
+            this.btnMemberID.Margin = new System.Windows.Forms.Padding(10);
+            this.btnMemberID.Name = "btnMemberID";
+            this.btnMemberID.Size = new System.Drawing.Size(100, 30);
+            this.btnMemberID.TabIndex = 125;
+            this.btnMemberID.Text = "SEARCH";
+            this.btnMemberID.UseVisualStyleBackColor = false;
+            this.btnMemberID.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // dgvResults
             // 
@@ -314,7 +315,7 @@
             // 
             this.lblBookCart.AutoSize = true;
             this.lblBookCart.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookCart.Location = new System.Drawing.Point(10, 25);
+            this.lblBookCart.Location = new System.Drawing.Point(25, 25);
             this.lblBookCart.Name = "lblBookCart";
             this.lblBookCart.Size = new System.Drawing.Size(0, 16);
             this.lblBookCart.TabIndex = 123;
@@ -329,10 +330,10 @@
             this.Controls.Add(this.chkBook2);
             this.Controls.Add(this.chkBook1);
             this.Controls.Add(this.dgvResults);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMemberID);
             this.Controls.Add(this.grpCart);
             this.Controls.Add(this.txtTitle);
-            this.Controls.Add(this.btnSearchMember);
+            this.Controls.Add(this.btnSearchTitle);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.grpMemberInfo);
             this.Controls.Add(this.txtMemberId);
@@ -364,11 +365,11 @@
         private System.Windows.Forms.GroupBox grpMemberInfo;
         private System.Windows.Forms.Label lblMemberInfo;
         private System.Windows.Forms.TextBox txtTitle;
-        private System.Windows.Forms.Button btnSearchMember;
+        private System.Windows.Forms.Button btnSearchTitle;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox grpCart;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMemberID;
         private System.Windows.Forms.DataGridView dgvResults;
         private System.Windows.Forms.CheckBox chkBook1;
         private System.Windows.Forms.CheckBox chkBook2;
