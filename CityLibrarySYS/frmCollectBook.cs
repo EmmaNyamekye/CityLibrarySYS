@@ -249,7 +249,7 @@ namespace CityLibrarySYS
             if (lblBookCart.Text != "")
             {
                 MessageBox.Show("These Books Have Now Been Marked as Collected!",
-                                "Information",
+                                "Information", 
                                  MessageBoxButtons.OK,
                                  MessageBoxIcon.Information);
                 grpMemberInfo.Visible = false;
