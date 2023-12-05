@@ -53,6 +53,15 @@ namespace CityLibrarySYS
                 chkBook3.Visible = false;
                 chkBook4.Visible = false;
                 grpCart.Visible = false;
+                btnConfirm.Visible = false;
+                txtMemberId.Text = string.Empty;
+                txtTitle.Text = string.Empty;
+                dgvResults.Rows.Clear();
+                chkBook1.Checked = false;
+                chkBook2.Checked = false;
+                chkBook3.Checked = false;
+                chkBook4.Checked = false;
+                lblBookCart.Text = string.Empty;
             }
         }
 
@@ -270,7 +279,8 @@ namespace CityLibrarySYS
         {
             if (lblBookCart.Text == "")
             {
-                grpCart.Visible=false;
+                grpCart.Visible = false;
+                //Message
             }
         }
     }

@@ -194,10 +194,10 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnConfirm.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(258, 120);
+            this.btnConfirm.Location = new System.Drawing.Point(270, 110);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(10);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(122, 30);
+            this.btnConfirm.Size = new System.Drawing.Size(100, 30);
             this.btnConfirm.TabIndex = 122;
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = false;
