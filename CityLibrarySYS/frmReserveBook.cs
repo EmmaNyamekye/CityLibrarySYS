@@ -35,7 +35,7 @@ namespace CityLibrarySYS
             parent.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
             if(lblBookCart.Text != "")
             {
@@ -52,8 +52,6 @@ namespace CityLibrarySYS
                 chkBook2.Visible = false;
                 chkBook3.Visible = false;
                 chkBook4.Visible = false;
-                grpCart.Visible = false;
-                btnConfirm.Visible = false;
                 txtMemberId.Text = string.Empty;
                 txtTitle.Text = string.Empty;
                 dgvResults.Rows.Clear();
@@ -62,6 +60,16 @@ namespace CityLibrarySYS
                 chkBook3.Checked = false;
                 chkBook4.Checked = false;
                 lblBookCart.Text = string.Empty;
+                grpBookCart.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("No Books in the Book Cart!",
+                                 "Error",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+                grpBookCart.Visible = false;
+                return;
             }
         }
 
@@ -113,11 +121,12 @@ namespace CityLibrarySYS
                 lblTitle.Visible = false;
                 txtTitle.Visible = false;
                 btnSearchTitle.Visible = false;
+                grpBookCart.Visible = false;
                 return;
             }
         }
 
-        private void btnSearchMember_Click(object sender, EventArgs e)
+        private void btnSearchTitle_Click(object sender, EventArgs e)
         { 
             if (txtTitle.Text.ToLower().Contains("the"))
             {
@@ -132,7 +141,7 @@ namespace CityLibrarySYS
                 chkBook2.Visible = true;
                 chkBook3.Visible = true;
                 chkBook4.Visible = true;
-                grpCart.Visible = true;
+                grpBookCart.Visible = true;
             }
             else
             {
@@ -141,22 +150,23 @@ namespace CityLibrarySYS
                 chkBook2.Visible = false;
                 chkBook3.Visible = false;
                 chkBook4.Visible = false;
+                grpBookCart.Visible = false;
                 dgvResults.Rows.Clear();
                 MessageBox.Show("No Book found with this title!",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
-                            txtTitle.Focus();
-                            return;
+                txtTitle.Focus();
+                return;
             }
         }
 
         private void chkBook1_CheckedChanged(object sender, EventArgs e)
         {
-            grpCart.Visible = true;
+            grpBookCart.Visible = true;
             if (chkBook1.Checked && !lblBookCart.Text.Contains("The Book Thief"))
             {
-                grpCart.Visible = true;
+                grpBookCart.Visible = true;
                 lblBookCart.Text += "\nThe Book Thief,  Markus Zusak";
             }
             else if (chkBook1.Checked && lblBookCart.Text.Contains("The Book Thief"))
@@ -184,10 +194,10 @@ namespace CityLibrarySYS
 
         private void chkBook2_CheckedChanged(object sender, EventArgs e)
         {
-            grpCart.Visible = true;
+            grpBookCart.Visible = true;
             if (chkBook2.Checked && !lblBookCart.Text.Contains("The Fault in Our Stars"))
             {
-                grpCart.Visible = true;
+                grpBookCart.Visible = true;
                 lblBookCart.Text += "\nThe Fault in Our Stars,  John Green";
             }
             else if (chkBook2.Checked && lblBookCart.Text.Contains("The Fault in Our Stars"))
@@ -215,10 +225,10 @@ namespace CityLibrarySYS
 
         private void chkBook3_CheckedChanged(object sender, EventArgs e)
         {
-            grpCart.Visible = true;
+            grpBookCart.Visible = true;
             if (chkBook3.Checked && !lblBookCart.Text.Contains("The Inferno"))
             {
-                grpCart.Visible = true;
+                grpBookCart.Visible = true;
                 lblBookCart.Text += "\nThe Inferno,  Dante Alighieri";
             }
             else if (chkBook3.Checked && lblBookCart.Text.Contains("The Inferno"))
@@ -246,10 +256,10 @@ namespace CityLibrarySYS
 
         private void chkBook4_CheckedChanged(object sender, EventArgs e)
         {
-            grpCart.Visible = true;
+            grpBookCart.Visible = true;
             if (chkBook4.Checked && !lblBookCart.Text.Contains("Oliver Twist"))
             {
-                grpCart.Visible = true;
+                grpBookCart.Visible = true;
                 lblBookCart.Text += "\nOliver Twist,  Charles Dickens";
             }
             else if (chkBook4.Checked && lblBookCart.Text.Contains("Oliver Twist"))
@@ -272,15 +282,6 @@ namespace CityLibrarySYS
                     }
                     lblBookCart.Text = theString.ToString();
                 }
-            }
-        }
-
-        private void grpCart_Enter(object sender, EventArgs e)
-        {
-            if (lblBookCart.Text == "")
-            {
-                grpCart.Visible = false;
-                //Message
             }
         }
     }
