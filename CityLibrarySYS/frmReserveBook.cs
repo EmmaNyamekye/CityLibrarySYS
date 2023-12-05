@@ -16,7 +16,6 @@ namespace CityLibrarySYS
     public partial class lblResult1 : Form
     {
         frmMainManu parent;
-
         public lblResult1()
         {
             InitializeComponent();
