@@ -83,6 +83,10 @@ namespace CityLibrarySYS
                                  MessageBoxButtons.OK,
                                  MessageBoxIcon.Error);
                 txtMemberId.Focus();
+                grpMemberInfo.Visible = false;
+                lblTitle.Visible = false;
+                txtTitle.Visible = false;
+                btnSearchMember.Visible = false;
                 return;
             }
         }
@@ -93,31 +97,24 @@ namespace CityLibrarySYS
             {
                 dgvResults.Visible = true;
                 dgvResults.Rows.Clear();
-                dgvResults.Rows.Add("A0002340", "The Inferno", "Dante Alighieri", "Village Library");
+                dgvResults.Rows.Add("A0002340", "The Book Thief", "Markus Zusak", "National Library");
                 dgvResults.Rows.Add("A0015678", "The Fault in Our Stars", "John Green", "County Library");
-                dgvResults.Rows.Add("A0017890", "The Book Thief", "Markus Zusak", "National Library");
+                dgvResults.Rows.Add("A0017890", "The Inferno", "Dante Alighieri", "Village Library");
+                dgvResults.Rows.Add("A0017892", "Oliver Twist or, The Parish Boys Progress", "Charles Dickens", "Village Library");
 
                 chkBook1.Visible = true;
                 chkBook2.Visible = true;
                 chkBook3.Visible = true;
-                grpCart.Visible = true;
-            }
-            else if (txtTitle.Text.ToLower().Contains("great"))
-            {
-                dgvResults.Visible = true;
-                dgvResults.Rows.Clear();
-                dgvResults.Rows.Add("A0012345", "Great Expectations", "Charles Dickens", "City Library");
-                dgvResults.Rows.Add("A0015678", "Sometimes a Great Notion", "Ken Kesey", "County Library");
-                dgvResults.Rows.Add("A0017890", "Great Lakes Shipwrecks and Survivals", "William Ratigan", "National Library");
-
-                chkBook1.Visible = true;
-                chkBook2.Visible = true;
-                chkBook3.Visible = true;
+                chkBook4.Visible = true;
                 grpCart.Visible = true;
             }
             else
             {
                 dgvResults.Visible = false;
+                chkBook1.Visible = false;
+                chkBook2.Visible = false;
+                chkBook3.Visible = false;
+                chkBook4.Visible = false;
                 dgvResults.Rows.Clear();
                 MessageBox.Show("No Book found with this title!",
                                 "Error",
@@ -130,52 +127,53 @@ namespace CityLibrarySYS
 
         private void chkBook1_CheckedChanged(object sender, EventArgs e)
         {
-            if (txtTitle.Text.ToLower().Contains("the") && chkBook1.Checked)
+            if (chkBook1.Checked)
             {
-                dgvCheckOut.Visible = true;
-                dgvCheckOut.Rows.Add("The Inferno", "Dante Alighieri");
+                grpCart.Visible = true;
+                dgvCheckOut.Rows.Add("The Book Thief", "Markus Zusak");
             }
- 
-            else if (txtTitle.Text.ToLower().Contains("great") && chkBook1.Checked)
+            else
             {
-                dgvCheckOut.Visible = true;
-                dgvCheckOut.Rows.Add("Great Expectations", "Charles Dickens");
+                if (dgvCheckOut.Columns.Contains("The Book Thief"))
+                {
+                    //string text = "The Book Thief";
+                    //int position = dgvCheckOut.Rows.IndexOf(text);
+                    //dgvCheckOut.Rows.Remove(position);
+                }
             }
         }
 
         private void chkBook2_CheckedChanged(object sender, EventArgs e)
         {
-            if (txtTitle.Text.ToLower().Contains("the") && chkBook1.Checked)
+            if (chkBook2.Checked)
             {
-                dgvCheckOut.Visible = true;
+                grpCart.Visible = true;
                 dgvCheckOut.Rows.Add("The Fault in Our Stars", "John Green");
             }
-
-            else if (txtTitle.Text.ToLower().Contains("great") && chkBook1.Checked)
-            {
-                dgvCheckOut.Visible = true;
-                dgvCheckOut.Rows.Add("Sometimes a Great Notion", "Ken Kesey");
-            }
+            else
+                dgvCheckOut.Rows.RemoveAt(1);
         }
 
         private void chkBook3_CheckedChanged(object sender, EventArgs e)
         {
-            if (txtTitle.Text.ToLower().Contains("the") && chkBook1.Checked)
+            if (chkBook3.Checked)
             {
-                dgvCheckOut.Visible = true;
-                dgvCheckOut.Rows.Add("The Book Thief", "Markus Zusak");
+                grpCart.Visible = true;
+                dgvCheckOut.Rows.Add("The Inferno", "Dante Alighieri");
             }
-
-            else if (txtTitle.Text.ToLower().Contains("great") && chkBook1.Checked)
-            {
-                dgvCheckOut.Visible = true;
-                dgvCheckOut.Rows.Add("Great Lakes Shipwrecks and Survivals", "William Ratigan");
-            }
+            else
+                dgvCheckOut.Rows.RemoveAt(2);
         }
 
-        private void dgvCheckOut_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void chkBook4_CheckedChanged(object sender, EventArgs e)
         {
-            //dgvCheckOut.Rows.Remove();
+            if (chkBook4.Checked)
+            {
+                grpCart.Visible = true;
+                dgvCheckOut.Rows.Add("The Inferno", "Dante Alighieri");
+            }
+            else
+                dgvCheckOut.Rows.RemoveAt(3);
         }
     }
 }

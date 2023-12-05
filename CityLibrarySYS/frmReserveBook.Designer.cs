@@ -53,6 +53,7 @@
             this.chkBook1 = new System.Windows.Forms.CheckBox();
             this.chkBook2 = new System.Windows.Forms.CheckBox();
             this.chkBook3 = new System.Windows.Forms.CheckBox();
+            this.chkBook4 = new System.Windows.Forms.CheckBox();
             this.mnuBackStrip.SuspendLayout();
             this.grpMemberInfo.SuspendLayout();
             this.grpCart.SuspendLayout();
@@ -89,10 +90,10 @@
             this.txtMemberId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMemberId.Location = new System.Drawing.Point(140, 115);
             this.txtMemberId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMemberId.MaxLength = 15;
+            this.txtMemberId.MaxLength = 7;
             this.txtMemberId.Name = "txtMemberId";
             this.txtMemberId.Size = new System.Drawing.Size(114, 23);
-            this.txtMemberId.TabIndex = 100;
+            this.txtMemberId.TabIndex = 1;
             // 
             // lblReserveBook
             // 
@@ -180,6 +181,7 @@
             // grpCart
             // 
             this.grpCart.Controls.Add(this.dgvCheckOut);
+            this.grpCart.Controls.Add(this.btnConfirm);
             this.grpCart.Location = new System.Drawing.Point(458, 385);
             this.grpCart.Margin = new System.Windows.Forms.Padding(2);
             this.grpCart.Name = "grpCart";
@@ -200,8 +202,6 @@
             this.dgvCheckOut.Name = "dgvCheckOut";
             this.dgvCheckOut.Size = new System.Drawing.Size(345, 98);
             this.dgvCheckOut.TabIndex = 0;
-            this.dgvCheckOut.Visible = false;
-            this.dgvCheckOut.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCheckOut_CellContentClick);
             // 
             // colTitleCheckOut
             // 
@@ -223,7 +223,7 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnConfirm.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(716, 505);
+            this.btnConfirm.Location = new System.Drawing.Point(258, 120);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(10);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(122, 30);
@@ -329,17 +329,28 @@
             this.chkBook3.Visible = false;
             this.chkBook3.CheckedChanged += new System.EventHandler(this.chkBook3_CheckedChanged);
             // 
+            // chkBook4
+            // 
+            this.chkBook4.AutoSize = true;
+            this.chkBook4.Location = new System.Drawing.Point(823, 320);
+            this.chkBook4.Name = "chkBook4";
+            this.chkBook4.Size = new System.Drawing.Size(15, 14);
+            this.chkBook4.TabIndex = 129;
+            this.chkBook4.UseVisualStyleBackColor = true;
+            this.chkBook4.Visible = false;
+            this.chkBook4.CheckedChanged += new System.EventHandler(this.chkBook4_CheckedChanged);
+            // 
             // lblResult1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.chkBook4);
             this.Controls.Add(this.chkBook3);
             this.Controls.Add(this.chkBook2);
             this.Controls.Add(this.chkBook1);
             this.Controls.Add(this.dgvResults);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.grpCart);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.btnSearchMember);
@@ -390,5 +401,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitleCheckOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAuthorCheckOut;
+        private System.Windows.Forms.CheckBox chkBook4;
     }
 }
