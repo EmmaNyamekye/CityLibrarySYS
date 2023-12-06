@@ -77,6 +77,12 @@
     <Compile Include="frmLibraryPopularity.Designer.cs">
       <DependentUpon>frmLibraryPopularity.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPayLateFine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayLateFine.Designer.cs">
+      <DependentUpon>frmPayLateFine.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegisterMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLibraryPopularity.resx">
       <DependentUpon>frmLibraryPopularity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayLateFine.resx">
+      <DependentUpon>frmPayLateFine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterMember.resx">
       <DependentUpon>frmRegisterMember.cs</DependentUpon>

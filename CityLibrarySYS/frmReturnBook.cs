@@ -232,7 +232,32 @@ namespace CityLibrarySYS
         {
             if (!lblBookCart.Text.Contains("The Inferno"))
             {
-                //
+                MessageBox.Show("These Books Have Now Been Returned!",
+                                 "Information",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+                txtMemberId.Text = "";
+                lblMemberInfo.Text = "";
+                lblBookCart.Text = "";
+                grpMemberInfo.Visible = false;
+                grpBookCart.Visible = false;
+                dgvResults.Visible = false;
+                chkBook1.Visible = false;
+                chkBook2.Visible = false;
+            }
+            else if (lblBookCart.Text == "")
+            {
+                MessageBox.Show("Books Must Be Added To The Book Cart To Proceed!",
+                                 "Error",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("The Inferno by Dante Alighieri Is Late!",
+                                 "Error",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
             }
         }
     }
