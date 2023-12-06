@@ -151,38 +151,7 @@ namespace CityLibrarySYS
             }
         }
 
-        private void chkBook2_CheckedChanged(object sender, EventArgs e)
-        {
-            grpBookCart.Visible = true;
-            if (chkBook2.Checked && !lblBookCart.Text.Contains("The Fault in Our Stars"))
-            {
-                grpBookCart.Visible = true;
-                lblBookCart.Text += "\nThe Fault in Our Stars,  John Green";
-            }
-            else if (chkBook2.Checked && lblBookCart.Text.Contains("The Fault in Our Stars"))
-            {
-                lblBookCart.Text += "";
-            }
-            else if (!chkBook2.Checked && lblBookCart.Text.Contains("The Fault in Our Stars"))
-            {
-                String text = "\nThe Fault in Our Stars,  John Green";
-                int thisPosition = lblBookCart.Text.IndexOf(text);
-
-
-                if (thisPosition != -1)
-                {
-                    var theString = new StringBuilder(lblBookCart.Text);
-
-                    for (int i = thisPosition + text.Length - 1; i >= thisPosition; i--)
-                    {
-                        theString.Remove(i, 1);
-                    }
-                    lblBookCart.Text = theString.ToString();
-                }
-            }
-        }
-
-        private void chkBook3_CheckedChanged(object sender, EventArgs e)
+        private void chkBook3_CheckedChanged_1(object sender, EventArgs e)
         {
             grpBookCart.Visible = true;
             if (chkBook3.Checked && !lblBookCart.Text.Contains("The Inferno"))
@@ -213,7 +182,7 @@ namespace CityLibrarySYS
             }
         }
 
-        private void chkBook4_CheckedChanged(object sender, EventArgs e)
+        private void chkBook4_CheckedChanged_1(object sender, EventArgs e)
         {
             grpBookCart.Visible = true;
             if (chkBook4.Checked && !lblBookCart.Text.Contains("Oliver Twist"))
@@ -248,7 +217,7 @@ namespace CityLibrarySYS
         {
             if (lblBookCart.Text != "")
             {
-                MessageBox.Show("These Books Have Now Been Marked as Collected!",
+                MessageBox.Show("These Books Have Now Been Collected!",
                                 "Information", 
                                  MessageBoxButtons.OK,
                                  MessageBoxIcon.Information);
@@ -281,5 +250,38 @@ namespace CityLibrarySYS
                 return;
             }
         }
+
+        private void chkBook2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            grpBookCart.Visible = true;
+            if (chkBook2.Checked && !lblBookCart.Text.Contains("The Fault in Our Stars"))
+            {
+                grpBookCart.Visible = true;
+                lblBookCart.Text += "\nThe Fault in Our Stars,  John Green";
+            }
+            else if (chkBook2.Checked && lblBookCart.Text.Contains("The Fault in Our Stars"))
+            {
+                lblBookCart.Text += "";
+            }
+            else if (!chkBook2.Checked && lblBookCart.Text.Contains("The Fault in Our Stars"))
+            {
+                String text = "\nThe Fault in Our Stars,  John Green";
+                int thisPosition = lblBookCart.Text.IndexOf(text);
+
+
+                if (thisPosition != -1)
+                {
+                    var theString = new StringBuilder(lblBookCart.Text);
+
+                    for (int i = thisPosition + text.Length - 1; i >= thisPosition; i--)
+                    {
+                        theString.Remove(i, 1);
+                    }
+                    lblBookCart.Text = theString.ToString();
+                }
+            }
+        }
+
+        
     }
 }

@@ -35,44 +35,6 @@ namespace CityLibrarySYS
             parent.Visible = true;
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
-        {
-            if(lblBookCart.Text != "")
-            {
-                MessageBox.Show("This Books Have Now Been Reserved!",
-                                "Information",
-                                 MessageBoxButtons.OK,
-                                 MessageBoxIcon.Information);
-                grpMemberInfo.Visible = false;
-                lblTitle.Visible = false;
-                txtTitle.Visible = false;
-                btnSearchTitle.Visible = false;
-                dgvResults.Visible = false;
-                chkBook1.Visible = false;
-                chkBook2.Visible = false;
-                chkBook3.Visible = false;
-                chkBook4.Visible = false;
-                txtMemberId.Text = string.Empty;
-                txtTitle.Text = string.Empty;
-                dgvResults.Rows.Clear();
-                chkBook1.Checked = false;
-                chkBook2.Checked = false;
-                chkBook3.Checked = false;
-                chkBook4.Checked = false;
-                lblBookCart.Text = string.Empty;
-                grpBookCart.Visible = false;
-            }
-            else
-            {
-                MessageBox.Show("No Books in the Book Cart!",
-                                 "Error",
-                                 MessageBoxButtons.OK,
-                                 MessageBoxIcon.Error);
-                grpBookCart.Visible = false;
-                return;
-            }
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (txtMemberId.Text == "A000000" || txtMemberId.Text == "A000001" ||
@@ -122,41 +84,6 @@ namespace CityLibrarySYS
                 txtTitle.Visible = false;
                 btnSearchTitle.Visible = false;
                 grpBookCart.Visible = false;
-                return;
-            }
-        }
-
-        private void btnSearchTitle_Click(object sender, EventArgs e)
-        { 
-            if (txtTitle.Text.ToLower().Contains("the"))
-            {
-                dgvResults.Visible = true;
-                dgvResults.Rows.Clear();
-                dgvResults.Rows.Add("A0002340", "The Book Thief", "Markus Zusak", "National Library");
-                dgvResults.Rows.Add("A0015678", "The Fault in Our Stars", "John Green", "County Library");
-                dgvResults.Rows.Add("A0017890", "The Inferno", "Dante Alighieri", "Village Library");
-                dgvResults.Rows.Add("A0017892", "Oliver Twist or, The Parish Boys Progress", "Charles Dickens", "Village Library");
-
-                chkBook1.Visible = true;
-                chkBook2.Visible = true;
-                chkBook3.Visible = true;
-                chkBook4.Visible = true;
-                grpBookCart.Visible = true;
-            }
-            else
-            {
-                dgvResults.Visible = false;
-                chkBook1.Visible = false;
-                chkBook2.Visible = false;
-                chkBook3.Visible = false;
-                chkBook4.Visible = false;
-                grpBookCart.Visible = false;
-                dgvResults.Rows.Clear();
-                MessageBox.Show("No Book found with this title!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtTitle.Focus();
                 return;
             }
         }
@@ -282,6 +209,79 @@ namespace CityLibrarySYS
                     }
                     lblBookCart.Text = theString.ToString();
                 }
+            }
+        }
+
+        private void btnSearchTitle_Click_1(object sender, EventArgs e)
+        {
+            if (txtTitle.Text.ToLower().Contains("the"))
+            {
+                dgvResults.Visible = true;
+                dgvResults.Rows.Clear();
+                dgvResults.Rows.Add("A0002340", "The Book Thief", "Markus Zusak", "National Library");
+                dgvResults.Rows.Add("A0015678", "The Fault in Our Stars", "John Green", "County Library");
+                dgvResults.Rows.Add("A0017890", "The Inferno", "Dante Alighieri", "Village Library");
+                dgvResults.Rows.Add("A0017892", "Oliver Twist or, The Parish Boys Progress", "Charles Dickens", "Village Library");
+
+                chkBook1.Visible = true;
+                chkBook2.Visible = true;
+                chkBook3.Visible = true;
+                chkBook4.Visible = true;
+                grpBookCart.Visible = true;
+            }
+            else
+            {
+                dgvResults.Visible = false;
+                chkBook1.Visible = false;
+                chkBook2.Visible = false;
+                chkBook3.Visible = false;
+                chkBook4.Visible = false;
+                grpBookCart.Visible = false;
+                dgvResults.Rows.Clear();
+                MessageBox.Show("No Book found with this title!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                txtTitle.Focus();
+                return;
+            }
+        }
+
+        private void btnConfirm_Click_1(object sender, EventArgs e)
+        {
+            if (lblBookCart.Text != "")
+            {
+                MessageBox.Show("These Books Have Now Been Reserved!",
+                                "Information",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+                grpMemberInfo.Visible = false;
+                lblTitle.Visible = false;
+                txtTitle.Visible = false;
+                btnSearchTitle.Visible = false;
+                dgvResults.Visible = false;
+                chkBook1.Visible = false;
+                chkBook2.Visible = false;
+                chkBook3.Visible = false;
+                chkBook4.Visible = false;
+                txtMemberId.Text = string.Empty;
+                txtTitle.Text = string.Empty;
+                dgvResults.Rows.Clear();
+                chkBook1.Checked = false;
+                chkBook2.Checked = false;
+                chkBook3.Checked = false;
+                chkBook4.Checked = false;
+                lblBookCart.Text = string.Empty;
+                grpBookCart.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("No Books in the Book Cart!",
+                                 "Error",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+                grpBookCart.Visible = false;
+                return;
             }
         }
     }
