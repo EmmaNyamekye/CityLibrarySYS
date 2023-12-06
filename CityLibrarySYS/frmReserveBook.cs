@@ -105,7 +105,6 @@ namespace CityLibrarySYS
                 String text = "\nThe Book Thief,  Markus Zusak";
                 int thisPosition = lblBookCart.Text.IndexOf(text);
 
-
                 if (thisPosition != -1)
                 {
                     var theString = new StringBuilder(lblBookCart.Text);
@@ -135,7 +134,6 @@ namespace CityLibrarySYS
             {
                 String text = "\nThe Fault in Our Stars,  John Green";
                 int thisPosition = lblBookCart.Text.IndexOf(text);
-
 
                 if (thisPosition != -1)
                 {
@@ -167,7 +165,6 @@ namespace CityLibrarySYS
                 String text = "\nThe Inferno,  Dante Alighieri";
                 int thisPosition = lblBookCart.Text.IndexOf(text);
 
-
                 if (thisPosition != -1)
                 {
                     var theString = new StringBuilder(lblBookCart.Text);
@@ -198,7 +195,6 @@ namespace CityLibrarySYS
                 String text = "\nOliver Twist,  Charles Dickens";
                 int thisPosition = lblBookCart.Text.IndexOf(text);
 
-
                 if (thisPosition != -1)
                 {
                     var theString = new StringBuilder(lblBookCart.Text);
@@ -221,7 +217,7 @@ namespace CityLibrarySYS
                 dgvResults.Rows.Add("A0002340", "The Book Thief", "Markus Zusak", "National Library");
                 dgvResults.Rows.Add("A0015678", "The Fault in Our Stars", "John Green", "County Library");
                 dgvResults.Rows.Add("A0017890", "The Inferno", "Dante Alighieri", "Village Library");
-                dgvResults.Rows.Add("A0017892", "Oliver Twist or, The Parish Boys Progress", "Charles Dickens", "Village Library");
+                dgvResults.Rows.Add("A0017892", "Oliver Twist", "Charles Dickens", "Village Library");
 
                 chkBook1.Visible = true;
                 chkBook2.Visible = true;
