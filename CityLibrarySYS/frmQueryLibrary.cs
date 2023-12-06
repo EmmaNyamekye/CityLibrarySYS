@@ -87,6 +87,7 @@ namespace CityLibrarySYS
                                 MessageBoxIcon.Information);
 
             grpLibraryInfo.Visible = false;
+            cboLibraryID.Text = "";
         }
     }
 }

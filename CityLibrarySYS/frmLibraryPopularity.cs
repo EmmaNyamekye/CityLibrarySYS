@@ -102,6 +102,7 @@ namespace CityLibrarySYS
                             MessageBoxIcon.Information);
             chtLibraryPopularity.Visible = false;
             btnConfirm.Visible = false;
+            cboMonth.Text = "";
         }
     }
 }

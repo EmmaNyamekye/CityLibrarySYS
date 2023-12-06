@@ -123,17 +123,7 @@ namespace CityLibrarySYS
             string eircode = txtEircode.Text;
 
             //Define Pattern for Eircode Validation
-            string eircodePattern = @"(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$"; ;
-
-            /*
-            Title: Validation for Irish Eircode
-            Author: Asunez
-            Site ownwer/sponcer: Stackoverflow
-            Date: Oct 29, 2015
-            Code version: edited Mar 26, 2021 by user Andrew
-            Availability: https://stackoverflow.com/questions/33391412/validation-for-irish-eircode
-            (Accessed 25/11/2023)
-            Modified: No*/
+            string eircodePattern = @"(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$";
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(eircode, eircodePattern))
             {

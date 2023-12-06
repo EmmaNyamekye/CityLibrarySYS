@@ -31,11 +31,6 @@ namespace CityLibrarySYS
             parent.Visible = true;
         }
 
-        private void lblMemberId_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtMemberId.Text.Length < 7 && (txtMemberId.Text != "A000000" ||
@@ -120,10 +115,10 @@ namespace CityLibrarySYS
                 return;
             }
 
-            //Validate phone and eircode lenght
+            //Validate phone and eircode length
             else if (txtPhone.Text.Length != 10)
             {
-                MessageBox.Show("Phone msut be 10 characters long!",
+                MessageBox.Show("Phone must be 10 characters long!",
                                "Error",
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Error);
@@ -133,7 +128,7 @@ namespace CityLibrarySYS
 
             else if (txtEircode.Text.Length != 7)
             {
-                MessageBox.Show("Ericode msut be 7 characters long!",
+                MessageBox.Show("Ericode must be 7 characters long!",
                                "Error",
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Error);
@@ -192,21 +187,11 @@ namespace CityLibrarySYS
             string eircode = txtEircode.Text;
 
             //Define Pattern for Eircode Validation
-            string eircodePattern = @"(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$"; ;
-
-            /*
-            Title: Validation for Irish Eircode
-            Author: Asunez
-            Site ownwer/sponcer: Stackoverflow
-            Date: Oct 29, 2015
-            Code version: edited Mar 26, 2021 by user Andrew
-            Availability: https://stackoverflow.com/questions/33391412/validation-for-irish-eircode
-            (Accessed 25/11/2023)
-            Modified: No*/
+            string eircodePattern = @"(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ -]?[0-9AC-FHKNPRTV-Y]{4}$";
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(eircode, eircodePattern))
             {
-                MessageBox.Show("Invalid Eircode format!",
+                MessageBox.Show("Invalid Eircode format! Eircode must be all capital letters with no spaces",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);

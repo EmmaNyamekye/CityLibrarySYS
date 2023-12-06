@@ -116,7 +116,6 @@
             this.txtForename.Name = "txtForename";
             this.txtForename.Size = new System.Drawing.Size(350, 23);
             this.txtForename.TabIndex = 1;
-            this.txtForename.TextChanged += new System.EventHandler(this.txtForename_TextChanged);
             // 
             // lblForename
             // 
@@ -181,7 +180,6 @@
             this.lblEircode.Size = new System.Drawing.Size(55, 16);
             this.lblEircode.TabIndex = 59;
             this.lblEircode.Text = "Eircode";
-            this.lblEircode.Click += new System.EventHandler(this.lblEircode_Click);
             // 
             // txtTown
             // 
@@ -192,7 +190,6 @@
             this.txtTown.Name = "txtTown";
             this.txtTown.Size = new System.Drawing.Size(347, 23);
             this.txtTown.TabIndex = 5;
-            this.txtTown.TextChanged += new System.EventHandler(this.txtTown_TextChanged);
             // 
             // lblTown
             // 

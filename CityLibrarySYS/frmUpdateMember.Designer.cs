@@ -69,7 +69,6 @@
             this.lblMemberId.Size = new System.Drawing.Size(77, 16);
             this.lblMemberId.TabIndex = 57;
             this.lblMemberId.Text = "Member ID";
-            this.lblMemberId.Click += new System.EventHandler(this.lblMemberId_Click);
             // 
             // mnuBackStrip
             // 

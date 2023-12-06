@@ -26,11 +26,6 @@ namespace CityLibrarySYS
             this.parent = parent;
         }
 
-        private void txtSupervisor_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             //Validate if all fields are entered
@@ -181,6 +176,12 @@ namespace CityLibrarySYS
                 txtEmail.Clear();
                 txtSupervisor.Clear();
             }
+        }
+
+        private void mnuBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Visible = true;
         }
     }
 }

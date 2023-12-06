@@ -350,7 +350,6 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmUpdateBook";
             this.Text = "Update Book";
-            this.Load += new System.EventHandler(this.frmUpdateBook_Load);
             this.mnuBackStrip.ResumeLayout(false);
             this.mnuBackStrip.PerformLayout();
             this.grpUpdate.ResumeLayout(false);

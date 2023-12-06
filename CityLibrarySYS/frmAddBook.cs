@@ -27,11 +27,6 @@ namespace CityLibrarySYS
             this.parent = parent;
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void mnuBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -52,8 +47,16 @@ namespace CityLibrarySYS
                 return;
             }
 
-            // Validate if ISBN is valid ???
-            
+            // Validate if ISBN is valid
+            if (!isValidISBN(txtISBN.Text))
+            {
+                MessageBox.Show("Invalid ISBN! ISBN must be a valid 10-digit ISBN.",
+                      "Error",
+                      MessageBoxButtons.OK,
+                      MessageBoxIcon.Error);
+                txtISBN.Focus();
+                return;
+            }
 
             // Validate if Title, Author and Description are valid
             else if  (txtTitle.Text.All(char.IsDigit))
@@ -98,9 +101,54 @@ namespace CityLibrarySYS
                 cboGenre.Items.Clear();
                 dtpPublication.Text = "";
                 txtDescription.Clear();
-                cboLibraryID.Items.Clear();
+                cboLibraryID.Text = "";
             }
 
         }
+        static bool isValidISBN(string isbn)
+        {
+            // length must be 10 
+            int n = isbn.Length;
+            if (n != 10)
+                return false;
+
+            // Computing weighted sum of  
+            // first 9 digits 
+            int sum = 0;
+            for (int i = 0; i < 9; i++)
+            {
+                int digit = isbn[i] - '0';
+
+                if (0 > digit || 9 < digit)
+                    return false;
+
+                sum += (digit * (10 - i));
+            }
+
+            // Checking last digit. 
+            char last = isbn[9];
+            if (last != 'X' && (last < '0'
+                             || last > '9'))
+                return false;
+
+            // If last digit is 'X', add 10  
+            // to sum, else add its value. 
+            sum += ((last == 'X') ? 10 :
+                              (last - '0'));
+
+            // Return true if weighted sum  
+            // of digits is divisible by 11. 
+            return (sum % 11 == 0);
+        }
+
+        /*
+            Title: Program to check for ISBN
+            Author: dewangNautiyal
+            Site ownwer/sponcer: geeksforgeeks
+            Date: 17 Feb, 2023
+            Availability: https://www.geeksforgeeks.org/program-check-isbn/
+            (Accessed 06/12/2023)
+            Modified: No
+        */
     }
 }

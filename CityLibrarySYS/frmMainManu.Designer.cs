@@ -81,7 +81,6 @@
             this.mnuLibrary.Name = "mnuLibrary";
             this.mnuLibrary.Size = new System.Drawing.Size(63, 20);
             this.mnuLibrary.Text = "Library";
-            this.mnuLibrary.Click += new System.EventHandler(this.libraryToolStripMenuItem_Click);
             // 
             // mnuAddLibrary
             // 
@@ -229,7 +228,6 @@
             this.picWelcomeLibrary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picWelcomeLibrary.TabIndex = 1;
             this.picWelcomeLibrary.TabStop = false;
-            this.picWelcomeLibrary.Click += new System.EventHandler(this.picLibraary_Click);
             // 
             // frmMainManu
             // 
@@ -243,7 +241,6 @@
             this.MainMenuStrip = this.mnuMainManu;
             this.Name = "frmMainManu";
             this.Text = "City Library";
-            this.Load += new System.EventHandler(this.frmMainManu_Load);
             this.mnuMainManu.ResumeLayout(false);
             this.mnuMainManu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picWelcomeLibrary)).EndInit();

@@ -17,26 +17,6 @@ namespace CityLibrarySYS
             InitializeComponent();
         }
 
-        private void libraryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picLibraary_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void frmMainManu_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void addLibraryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddLibrary nextForm = new frmAddLibrary(this);
