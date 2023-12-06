@@ -45,10 +45,10 @@ namespace CityLibrarySYS
                 return;
             }
 
-            //Validate phone and eircode lenght
+            //Validate phone and eircode length
             else if (txtPhone.Text.Length != 10)
             {
-                MessageBox.Show("Phone msut be 10 characters long!",
+                MessageBox.Show("Phone must be 10 characters long!",
                                "Error",
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Error);
@@ -58,7 +58,7 @@ namespace CityLibrarySYS
 
             else if (txtEircode.Text.Length != 7)
             {
-                MessageBox.Show("Ericode msut be 7 characters long!",
+                MessageBox.Show("Ericode must be 7 characters long!",
                                "Error",
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Error);
@@ -131,7 +131,7 @@ namespace CityLibrarySYS
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(eircode, eircodePattern))
             {
-                MessageBox.Show("Invalid Eircode format!",
+                MessageBox.Show("Invalid Eircode format! Eircode must be all capital letters with no spaces",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -181,53 +181,6 @@ namespace CityLibrarySYS
                 txtEmail.Clear();
                 txtSupervisor.Clear();
             }
-        }
-
-        private void bACKToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            parent.Visible = true;
-
-        }
-
-        private void frmAddLibrary_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtStreet_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTown_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTown_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCounty_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEircode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSupervisor_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

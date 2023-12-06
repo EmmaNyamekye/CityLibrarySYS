@@ -294,7 +294,6 @@
             this.label1.Size = new System.Drawing.Size(216, 32);
             this.label1.TabIndex = 79;
             this.label1.Text = "Update Library";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cboLibraryID
             // 

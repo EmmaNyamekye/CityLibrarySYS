@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CityLibrarySYS
@@ -14,6 +16,7 @@ namespace CityLibrarySYS
     public partial class frmReturnBook : Form
     {
         frmMainManu parent;
+        public static string SetValueForLabel = "";
 
         public frmReturnBook()
         {
@@ -258,6 +261,23 @@ namespace CityLibrarySYS
                                  "Error",
                                  MessageBoxButtons.OK,
                                  MessageBoxIcon.Error);
+                this.Close();
+                SetValueForLabel = "The Inferno by Dante Alighieri Is 2 Weeks Late" +
+                                  "\n\nLate Fine Amount is €1.00 " +
+                                  "(€0.50/Late Week)" +
+                                  "\n\nWould you like to pay the late fine now?";
+                frmPayLateFine frm2 = new frmPayLateFine();
+                frm2.Show();
+
+                /*
+                 Title: How to Pass Data One Form to Another in Windows Form Application
+                 Author: Hussain Ahmed
+                 Site owner/sponsor: C# Corner
+                 Date: Oct 16, 2023
+                 Availability: https://www.c-sharpcorner.com/UploadFile/834980/how-to-pass-data-from-one-form-to-other-form-in-windows-form/ 
+                 (Accessed 06/12/2023)
+                 Modified: Variable name 
+                 */
             }
         }
     }

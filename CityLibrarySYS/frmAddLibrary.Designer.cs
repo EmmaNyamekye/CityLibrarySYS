@@ -62,7 +62,6 @@
             this.txtCounty.Name = "txtCounty";
             this.txtCounty.Size = new System.Drawing.Size(350, 23);
             this.txtCounty.TabIndex = 4;
-            this.txtCounty.TextChanged += new System.EventHandler(this.txtCounty_TextChanged);
             // 
             // lblCounty
             // 
@@ -84,7 +83,6 @@
             this.txtTown.Name = "txtTown";
             this.txtTown.Size = new System.Drawing.Size(350, 23);
             this.txtTown.TabIndex = 3;
-            this.txtTown.TextChanged += new System.EventHandler(this.txtTown_TextChanged);
             // 
             // lblTown
             // 
@@ -96,7 +94,6 @@
             this.lblTown.Size = new System.Drawing.Size(42, 16);
             this.lblTown.TabIndex = 53;
             this.lblTown.Text = "Town";
-            this.lblTown.Click += new System.EventHandler(this.lblTown_Click);
             // 
             // btnSubmit
             // 
@@ -132,7 +129,6 @@
             this.lblSupervisor.Size = new System.Drawing.Size(76, 16);
             this.lblSupervisor.TabIndex = 50;
             this.lblSupervisor.Text = "Supervisor";
-            this.lblSupervisor.Click += new System.EventHandler(this.lblSupervisor_Click);
             // 
             // lblOpeningHours
             // 
@@ -174,7 +170,6 @@
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(350, 23);
             this.txtStreet.TabIndex = 2;
-            this.txtStreet.TextChanged += new System.EventHandler(this.txtStreet_TextChanged);
             // 
             // lblStreet
             // 
@@ -196,7 +191,6 @@
             this.txtEircode.Name = "txtEircode";
             this.txtEircode.Size = new System.Drawing.Size(270, 23);
             this.txtEircode.TabIndex = 5;
-            this.txtEircode.TextChanged += new System.EventHandler(this.txtEircode_TextChanged);
             // 
             // lblEircode
             // 
@@ -273,7 +267,6 @@
             this.mnuBack.Name = "mnuBack";
             this.mnuBack.Size = new System.Drawing.Size(53, 20);
             this.mnuBack.Text = "BACK";
-            this.mnuBack.Click += new System.EventHandler(this.bACKToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -285,7 +278,6 @@
             this.label1.Size = new System.Drawing.Size(239, 32);
             this.label1.TabIndex = 58;
             this.label1.Text = "Add New Library";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmAddLibrary
             // 
@@ -316,7 +308,6 @@
             this.MainMenuStrip = this.mnuBackStrip;
             this.Name = "frmAddLibrary";
             this.Text = "Add Library";
-            this.Load += new System.EventHandler(this.frmAddLibrary_Load);
             this.mnuBackStrip.ResumeLayout(false);
             this.mnuBackStrip.PerformLayout();
             this.ResumeLayout(false);

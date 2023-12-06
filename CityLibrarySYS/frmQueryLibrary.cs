@@ -33,11 +33,6 @@ namespace CityLibrarySYS
             parent.Visible = true;
         }
 
-        private void grpLibraryInfo_Enter(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             grpLibraryInfo.Visible = true;
@@ -82,11 +77,6 @@ namespace CityLibrarySYS
                     "\n\nEmail:riverbank.library@city.library.ie" +
                     "\n\nSupervisor: Luigi Bros";
             }
-        }
-
-        private void rtbLibraryInfo_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnOk_Click(object sender, EventArgs e)
