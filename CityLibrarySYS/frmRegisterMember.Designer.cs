@@ -112,7 +112,7 @@
             this.txtForename.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtForename.Location = new System.Drawing.Point(60, 188);
             this.txtForename.Margin = new System.Windows.Forms.Padding(2);
-            this.txtForename.MaxLength = 15;
+            this.txtForename.MaxLength = 20;
             this.txtForename.Name = "txtForename";
             this.txtForename.Size = new System.Drawing.Size(350, 23);
             this.txtForename.TabIndex = 1;
@@ -133,7 +133,7 @@
             this.txtSurname.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.Location = new System.Drawing.Point(60, 248);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSurname.MaxLength = 15;
+            this.txtSurname.MaxLength = 20;
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(350, 23);
             this.txtSurname.TabIndex = 2;
