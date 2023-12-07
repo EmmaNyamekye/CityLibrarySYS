@@ -13,7 +13,7 @@ namespace CityLibrarySYS
     public partial class frmMainManu : Form
     {
         public frmMainManu()
-        {
+        { 
             InitializeComponent();
         }
 
