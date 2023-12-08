@@ -38,7 +38,7 @@ namespace CityLibrarySYS
                 cboGenre.Text = "Novel";
                 dtpPublication.Text = "17/08/1945";
                 txtDescription.Text = "Animal Farm is a beast fable, in the form of a satirical allegorical novella";
-                cboLibraryId.Text = "01";
+                cboLibraryId.Text = "City Central Library";
             }
             else if (txtBookId.Text == "A0000001")
             {
@@ -49,7 +49,7 @@ namespace CityLibrarySYS
                 cboGenre.Text = "Finction";
                 dtpPublication.Text = "28/06/2005";
                 txtDescription.Text = "Twelve-year-old Percy Jackson is on the most dangerous quest of his life.";
-                cboLibraryId.Text = "02";
+                cboLibraryId.Text = "County Library";
             }
             else if (txtBookId.Text == "A0000002")
             {
@@ -60,7 +60,7 @@ namespace CityLibrarySYS
                 cboGenre.Text = "Crime";
                 dtpPublication.Text = "01/01/2001";
                 txtDescription.Text = "A killer who targets lone women, who breaks into their apartments and performs terrifying ritualistic acts of torture on them before finishing them off.";
-                cboLibraryId.Text = "02";
+                cboLibraryId.Text = "Suburb Reading Haven";
             }
             else
             {

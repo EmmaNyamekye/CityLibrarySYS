@@ -81,7 +81,7 @@
             this.btnMemberID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnMemberID.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemberID.Location = new System.Drawing.Point(289, 134);
-            this.btnMemberID.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnMemberID.Margin = new System.Windows.Forms.Padding(10);
             this.btnMemberID.Name = "btnMemberID";
             this.btnMemberID.Size = new System.Drawing.Size(100, 30);
             this.btnMemberID.TabIndex = 144;
@@ -93,9 +93,9 @@
             // 
             this.grpMemberInfo.Controls.Add(this.lblMemberInfo);
             this.grpMemberInfo.Location = new System.Drawing.Point(430, 67);
-            this.grpMemberInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMemberInfo.Margin = new System.Windows.Forms.Padding(2);
             this.grpMemberInfo.Name = "grpMemberInfo";
-            this.grpMemberInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMemberInfo.Padding = new System.Windows.Forms.Padding(2);
             this.grpMemberInfo.Size = new System.Drawing.Size(400, 100);
             this.grpMemberInfo.TabIndex = 143;
             this.grpMemberInfo.TabStop = false;
@@ -117,7 +117,7 @@
             // 
             this.txtMemberId.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMemberId.Location = new System.Drawing.Point(150, 139);
-            this.txtMemberId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMemberId.Margin = new System.Windows.Forms.Padding(2);
             this.txtMemberId.MaxLength = 7;
             this.txtMemberId.Name = "txtMemberId";
             this.txtMemberId.Size = new System.Drawing.Size(114, 23);
@@ -150,9 +150,9 @@
             this.grpBookCart.Controls.Add(this.lblBookCart);
             this.grpBookCart.Controls.Add(this.btnConfirm);
             this.grpBookCart.Location = new System.Drawing.Point(450, 360);
-            this.grpBookCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBookCart.Margin = new System.Windows.Forms.Padding(2);
             this.grpBookCart.Name = "grpBookCart";
-            this.grpBookCart.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBookCart.Padding = new System.Windows.Forms.Padding(2);
             this.grpBookCart.Size = new System.Drawing.Size(380, 150);
             this.grpBookCart.TabIndex = 150;
             this.grpBookCart.TabStop = false;
@@ -175,7 +175,7 @@
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnConfirm.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.Location = new System.Drawing.Point(268, 108);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(10);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(100, 30);
             this.btnConfirm.TabIndex = 122;
@@ -212,6 +212,7 @@
             this.colId,
             this.colTitle,
             this.colAuthor});
+            this.dgvResults.Enabled = false;
             this.dgvResults.Location = new System.Drawing.Point(55, 200);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.RowHeadersWidth = 51;
