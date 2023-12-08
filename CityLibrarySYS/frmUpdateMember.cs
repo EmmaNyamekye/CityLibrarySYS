@@ -33,69 +33,67 @@ namespace CityLibrarySYS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtMemberId.Text != "A000000" || txtMemberId.Text != "A000001" || 
-                txtMemberId.Text != "A000002" || txtMemberId.Text != "A000003")
-                {
-                    MessageBox.Show("Invalid MemberId!",
+
+            if (txtMemberId.Text == "A000000")
+            {
+                grpUpdate.Visible = true;
+                txtForename.Text = "Sophia";
+                txtSurname.Text = "Loren";
+                dtpDateBirth.Text = "15/05/1956";
+                txtStreet.Text = "Galway Street";
+                txtTown.Text = "Galway";
+                txtCounty.Text = "Galway City";
+                txtEircode.Text = "A65F4E2";
+                txtPhone.Text = "0612345678";
+                txtEmail.Text = "not.sophia.loren@gmail.it";
+            }
+            else if (txtMemberId.Text == "A000001")
+            {
+                grpUpdate.Visible = true;
+                txtForename.Text = "Mario";
+                txtSurname.Text = "Rossi";
+                dtpDateBirth.Text = "23/06/1966";
+                txtStreet.Text = "Tenth Street";
+                txtTown.Text = "Limerick";
+                txtCounty.Text = "Munster";
+                txtEircode.Text = "A65F4E1";
+                txtPhone.Text = "0687654321";
+                txtEmail.Text = "mariorossin1@gmail.com";
+            }
+            else if (txtMemberId.Text == "A000002")
+            {
+                grpUpdate.Visible = true;
+                txtForename.Text = "Luigi";
+                txtSurname.Text = "Bros";
+                dtpDateBirth.Text = "06/09/1986";
+                txtStreet.Text = "Bros Street";
+                txtTown.Text = "Shannon";
+                txtCounty.Text = "Munster";
+                txtEircode.Text = "A65F4E3";
+                txtPhone.Text = "0611223344";
+                txtEmail.Text = "luigibros@yahoo.com";
+            }
+            else if (txtMemberId.Text == "A000003")
+            {
+                grpUpdate.Visible = true;
+                txtForename.Text = "Mario";
+                txtSurname.Text = "Bros";
+                dtpDateBirth.Text = "25/02/1956";
+                txtStreet.Text = "Clare Street";
+                txtTown.Text = "Kilrush";
+                txtCounty.Text = "Clare";
+                txtEircode.Text = "A65F4E7";
+                txtPhone.Text = "0611113333";
+                txtEmail.Text = "mariobros1@gmail.com";
+            }
+            else
+            {
+                MessageBox.Show("Invalid MemberId!",
                                     "Error",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
-                    txtMemberId.Focus();
-                    return;
-                }
-            else
-            {
-                // Enable text boxes
-                grpUpdate.Visible = true;
-
-                if (txtMemberId.Text == "A000000")
-                {
-                    txtForename.Text = "Sophia";
-                    txtSurname.Text = "Loren";
-                    dtpDateBirth.Text = "15/05/1956";
-                    txtStreet.Text = "Galway Street";
-                    txtTown.Text = "Galway";
-                    txtCounty.Text = "Galway City";
-                    txtEircode.Text = "A65F4E2";
-                    txtPhone.Text = "0612345678";
-                    txtEmail.Text = "not.sophia.loren@gmail.it";
-                }
-                else if (txtMemberId.Text == "A000001")
-                {
-                    txtForename.Text = "Mario";
-                    txtSurname.Text = "Rossi";
-                    dtpDateBirth.Text = "23/06/1966";
-                    txtStreet.Text = "Tenth Street";
-                    txtTown.Text = "Limerick";
-                    txtCounty.Text = "Munster";
-                    txtEircode.Text = "A65F4E1";
-                    txtPhone.Text = "0687654321";
-                    txtEmail.Text = "mariorossin1@gmail.com";
-                }
-                else if (txtMemberId.Text == "A000002")
-                {
-                    txtForename.Text = "Luigi";
-                    txtSurname.Text = "Bros";
-                    dtpDateBirth.Text = "06/09/1986";
-                    txtStreet.Text = "Bros Street";
-                    txtTown.Text = "Shannon";
-                    txtCounty.Text = "Munster";
-                    txtEircode.Text = "A65F4E3";
-                    txtPhone.Text = "0611223344";
-                    txtEmail.Text = "luigibros@yahoo.com";
-                }
-                else if (txtMemberId.Text == "A000003")
-                {
-                    txtForename.Text = "Mario";
-                    txtSurname.Text = "Bros";
-                    dtpDateBirth.Text = "25/02/1956";
-                    txtStreet.Text = "Clare Street";
-                    txtTown.Text = "Kilrush";
-                    txtCounty.Text = "Clare";
-                    txtEircode.Text = "A65F4E7";
-                    txtPhone.Text = "0611113333";
-                    txtEmail.Text = "mariobros1@gmail.com";
-                }
+                txtMemberId.Focus();
+                return;
             }
 
         }
@@ -240,6 +238,7 @@ namespace CityLibrarySYS
                 txtPhone.Clear();
                 txtEmail.Clear();
                 txtMemberId.Clear();
+                grpUpdate.Visible = false;
             }
         }
     }

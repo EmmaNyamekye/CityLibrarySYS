@@ -177,6 +177,7 @@ namespace CityLibrarySYS
                 txtEmail.Clear();
                 txtSupervisor.Clear();
                 cboLibraryID.Text = "";
+                grpUpdate.Visible = false;  
             }
 
         }

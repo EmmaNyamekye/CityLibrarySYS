@@ -34,54 +34,54 @@ namespace CityLibrarySYS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtMemberId.Text != "A000000" || txtMemberId.Text != "A000001" || 
-                txtMemberId.Text != "A000002" || txtMemberId.Text != "A000003")
+
+            if (txtMemberId.Text == "A000000")
             {
-                MessageBox.Show("Invalid MemberId!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtMemberId.Focus();
-                return;
+                grpMemberInfo.Visible = true;
+                lblMemberInfo.Text = "Name: Sophia Loren" +
+                    "\n\nDate of Birth: 15/05/1956" +
+                    "\n\nAddress: Galway Street, Galway, Galway City, A65F4E2" +
+                    "\n\nPhone number: 0612345678" +
+                    "\n\nEmail: not.sophia.loren@gmail.it";
+            }
+            else if (txtMemberId.Text == "A000001")
+            {
+                grpMemberInfo.Visible = true;
+                lblMemberInfo.Text = "Name: Mario Rossi" +
+                    "\n\nDate of Birth: 23/06/1966" +
+                    "\n\nAddress: Tenth Street, Limerick, Munster, A65F4E1" +
+                    "\n\nPhone number: 0687654321" +
+                    "\n\nEmail: mariorossin1@gmail.com";
+            }
+            else if (txtMemberId.Text == "A000002")
+            {
+                grpMemberInfo.Visible = true;
+                lblMemberInfo.Text = "Name: Luigi Bros" +
+                    "\n\nDate of Birth: 06/09/1986" +
+                    "\n\nAddress: Bros Street, Shannon, Munster, A65F4E3" +
+                    "\n\nPhone number: 0611223344" +
+                    "\n\nEmail: luigibros@yahoo.com";
+            }
+            else if (txtMemberId.Text == "A000003")
+            {
+                grpMemberInfo.Visible = true;
+                lblMemberInfo.Text = "Name: Mario Bros" +
+                    "\n\nDate of Birth: 25/02/1956" +
+                    "\n\nAddress: Clare Street, Kilrush, Clare, A65F4E3" +
+                    "\n\nPhone number: 0611113333" +
+                    "\n\nEmail: mariobros1@gmail.com";
             }
             else
             {
-                // Enable text boxes
-                grpMemberInfo.Visible = true;
-
-                if (txtMemberId.Text == "A000000")
-                {
-                    lblMemberInfo.Text = "Name: Sophia Loren" +
-                        "\n\nDate of Birth: 15/05/1956" +
-                        "\n\nAddress: Galway Street, Galway, Galway City, A65F4E2" +
-                        "\n\nPhone number: 0612345678" +
-                        "\n\nEmail: not.sophia.loren@gmail.it";
-                }
-                else if (txtMemberId.Text == "A000001")
-                {
-                    lblMemberInfo.Text = "Name: Mario Rossi" +
-                        "\n\nDate of Birth: 23/06/1966" +
-                        "\n\nAddress: Tenth Street, Limerick, Munster, A65F4E1" +
-                        "\n\nPhone number: 0687654321" +
-                        "\n\nEmail: mariorossin1@gmail.com";
-                }
-                else if (txtMemberId.Text == "A000002")
-                {
-                    lblMemberInfo.Text = "Name: Luigi Bros" +
-                        "\n\nDate of Birth: 06/09/1986" +
-                        "\n\nAddress: Bros Street, Shannon, Munster, A65F4E3" +
-                        "\n\nPhone number: 0611223344" +
-                        "\n\nEmail: luigibros@yahoo.com";
-                }
-                else if (txtMemberId.Text == "A000003")
-                {
-                    lblMemberInfo.Text = "Name: Mario Bros" +
-                        "\n\nDate of Birth: 25/02/1956" +
-                        "\n\nAddress: Clare Street, Kilrush, Clare, A65F4E3" +
-                        "\n\nPhone number: 0611113333" +
-                        "\n\nEmail: mariobros1@gmail.com";
-                }
+                MessageBox.Show("Invalid MemberId!",
+                                    "Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                txtMemberId.Focus();
+                grpMemberInfo.Visible = false;
+                return;
             }
+      
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -91,6 +91,7 @@ namespace CityLibrarySYS
                             "Success!",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+            txtMemberId.Text = "";
             grpMemberInfo.Visible = false;
         }
     }

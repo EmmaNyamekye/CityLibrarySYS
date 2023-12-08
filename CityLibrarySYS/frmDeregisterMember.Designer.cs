@@ -123,7 +123,7 @@
             this.txtMemberId.MaxLength = 7;
             this.txtMemberId.Name = "txtMemberId";
             this.txtMemberId.Size = new System.Drawing.Size(150, 23);
-            this.txtMemberId.TabIndex = 109;
+            this.txtMemberId.TabIndex = 1;
             // 
             // btnSearch
             // 
@@ -133,7 +133,7 @@
             this.btnSearch.Margin = new System.Windows.Forms.Padding(10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 30);
-            this.btnSearch.TabIndex = 108;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);

@@ -34,23 +34,10 @@ namespace CityLibrarySYS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtBookId.Text != "A0000000" || txtBookId.Text != "A0000001" || 
-                txtBookId.Text != "A0000002" || txtBookId.Text != "A0000002")
-            {
-                MessageBox.Show("Invalid BookId!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtBookId.Focus();
-                return;
-            }
-            else
-            {
-                // Enable text boxes
-                grpBookInfo.Visible = true;
 
                 if (txtBookId.Text == "A0000000")
                 {
+                    grpBookInfo.Visible = true;
                     lblBookInfo.Text = "Title: Animal Farm" +
                         "\n\nAuthor: George Orwell" +
                         "\n\nGenre: Novel" +
@@ -61,6 +48,7 @@ namespace CityLibrarySYS
                 }
                 else if (txtBookId.Text == "A0000001")
                 {
+                    grpBookInfo.Visible = true;
                     lblBookInfo.Text = "Title: Percy Jackson & the Olympians" +
                         "\n\nAuthor: Rick Riordan" +
                         "\n\nGenre: Finction" +
@@ -71,6 +59,7 @@ namespace CityLibrarySYS
                 }
                 else if (txtBookId.Text == "A0000002")
                 {
+                    grpBookInfo.Visible = true;
                     lblBookInfo.Text = "Title: The Surgeon" +
                         "\n\nAuthor: Tess Gerritsen" +
                         "\n\nGenre: Crime" +
@@ -81,6 +70,7 @@ namespace CityLibrarySYS
                 }
                 else if (txtBookId.Text == "A0000003")
                 {
+                    grpBookInfo.Visible = true;
                     lblBookInfo.Text = "Title: To Kill a Mockingbird" +
                         "\n\nAuthor: Harper Lee" +
                         "\n\nGenre: Novel" +
@@ -89,7 +79,17 @@ namespace CityLibrarySYS
                         "\n\nISBN: 9780099419785" +
                         "\n\nLibrary Location: Suburb Reading Haven";
                 }
-            }
+                else
+                {
+                    MessageBox.Show("Invalid BookId!",
+                                    "Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    txtBookId.Focus();
+                    grpBookInfo.Visible = false;
+                    return;
+                }
+            
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -101,6 +101,7 @@ namespace CityLibrarySYS
 
             grpBookInfo.Visible = false;
             txtBookId.Text = "";
+            return;
         }
     }
 }

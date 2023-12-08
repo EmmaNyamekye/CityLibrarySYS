@@ -28,67 +28,51 @@ namespace CityLibrarySYS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtBookId.Text != "A0000000" || txtBookId.Text != "A0000001" || 
-                txtBookId.Text != "A0000002" || txtBookId.Text != "A0000002")
+
+            if (txtBookId.Text == "A0000000")
             {
-                MessageBox.Show("Invalid BookId!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                txtBookId.Focus();
-                return;
+                grpUpdate.Visible = true;
+                txtISBN.Text = "812911612X";
+                txtTitle.Text = "Animal Farm";
+                txtAuthor.Text = "George Orwell";
+                cboGenre.Text = "Novel";
+                dtpPublication.Text = "17/08/1945";
+                txtDescription.Text = "Animal Farm is a beast fable, in the form of a satirical allegorical novella";
+                cboLibraryId.Text = "01";
+            }
+            else if (txtBookId.Text == "A0000001")
+            {
+                grpUpdate.Visible = true;
+                txtISBN.Text = "1368051472";
+                txtTitle.Text = "Percy Jackson & the Olympians";
+                txtAuthor.Text = "Rick Riordan";
+                cboGenre.Text = "Finction";
+                dtpPublication.Text = "28/06/2005";
+                txtDescription.Text = "Twelve-year-old Percy Jackson is on the most dangerous quest of his life.";
+                cboLibraryId.Text = "02";
+            }
+            else if (txtBookId.Text == "A0000002")
+            {
+                grpUpdate.Visible = true;
+                txtISBN.Text = "0345447832";
+                txtTitle.Text = "The Surgeon";
+                txtAuthor.Text = "Tess Gerritsen";
+                cboGenre.Text = "Crime";
+                dtpPublication.Text = "01/01/2001";
+                txtDescription.Text = "A killer who targets lone women, who breaks into their apartments and performs terrifying ritualistic acts of torture on them before finishing them off.";
+                cboLibraryId.Text = "02";
             }
             else
             {
-                // Enable text boxes
-                grpUpdate.Visible = true;
-
-                if (txtBookId.Text == "A0000000")
-                {
-                    txtISBN.Text = "9788129116123";
-                    txtTitle.Text = "Animal Farm";
-                    txtAuthor.Text = "George Orwell";
-                    cboGenre.Text = "Novel";
-                    dtpPublication.Text = "17/08/1945";
-                    txtDescription.Text = "Animal Farm is a beast fable, in the form of a satirical allegorical novella";
-                    cboLibraryId.Text = "01";
-                }
-                else if (txtBookId.Text == "A0000001")
-                {
-                    txtISBN.Text = "978-1368051477";
-                    txtTitle.Text = "Percy Jackson & the Olympians";
-                    txtAuthor.Text = "Rick Riordan";
-                    cboGenre.Text = "Finction";
-                    dtpPublication.Text = "28/06/2005";
-                    txtDescription.Text = "Twelve-year-old Percy Jackson is on the most dangerous quest of his life.";
-                    cboLibraryId.Text = "02";
-                }
-                else if (txtBookId.Text == "A0000002")
-                {
-                    txtISBN.Text = "9780739420416";
-                    txtTitle.Text = "The Surgeon";
-                    txtAuthor.Text = "Tess Gerritsen";
-                    cboGenre.Text = "Crime";
-                    dtpPublication.Text = "01/01/2001";
-                    txtDescription.Text = "A killer who targets lone women, who breaks into their apartments and performs terrifying ritualistic acts of torture on them before finishing them off.";
-                    cboLibraryId.Text = "02";
-                }
-                else if (txtBookId.Text == "A0000003")
-                {
-                    txtISBN.Text = "9780099419785";
-                    txtTitle.Text = "To Kill a Mockingbird";
-                    txtAuthor.Text = "Harper Lee";
-                    cboGenre.Text = "Novel";
-                    dtpPublication.Text = "11/07/1960";
-                    txtDescription.Text = "Set in small-town Alabama, the novel is a bildungsroman, or coming-of-age story, and chronicles the childhood of Scout and Jem Finch as their father Atticus defends a Black man falsely accused of rape.";
-                    cboLibraryId.Text = "03";
-                }
+                MessageBox.Show("Invalid BookId!",
+                            "Error",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                txtBookId.Focus();
+                grpUpdate.Visible = false;
+                return;
             }
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
+         
         }
 
         private void mnuBack_Click(object sender, EventArgs e)
@@ -159,6 +143,7 @@ namespace CityLibrarySYS
                                 "Success!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                txtBookId.Clear();
                 txtISBN.Clear();
                 txtTitle.Clear();
                 txtAuthor.Clear();
@@ -166,6 +151,7 @@ namespace CityLibrarySYS
                 dtpPublication.Text = "";
                 txtDescription.Clear();
                 cboLibraryId.Text = "";
+                grpUpdate.Visible = false;
             }
 
         }
