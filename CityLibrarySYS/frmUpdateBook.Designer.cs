@@ -266,7 +266,7 @@
             this.txtISBN.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtISBN.Location = new System.Drawing.Point(24, 59);
             this.txtISBN.Margin = new System.Windows.Forms.Padding(2);
-            this.txtISBN.MaxLength = 13;
+            this.txtISBN.MaxLength = 10;
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(350, 24);
             this.txtISBN.TabIndex = 3;
