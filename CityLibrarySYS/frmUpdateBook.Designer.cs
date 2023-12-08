@@ -71,7 +71,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnSearch.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(525, 125);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 30);
             this.btnSearch.TabIndex = 2;
@@ -133,9 +133,9 @@
             this.grpUpdate.Controls.Add(this.lblPublication);
             this.grpUpdate.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpUpdate.Location = new System.Drawing.Point(35, 170);
-            this.grpUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.grpUpdate.Name = "grpUpdate";
-            this.grpUpdate.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpUpdate.Padding = new System.Windows.Forms.Padding(2);
             this.grpUpdate.Size = new System.Drawing.Size(820, 370);
             this.grpUpdate.TabIndex = 101;
             this.grpUpdate.TabStop = false;
@@ -147,7 +147,7 @@
             this.dtpPublication.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpPublication.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpPublication.Location = new System.Drawing.Point(597, 59);
-            this.dtpPublication.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpPublication.Margin = new System.Windows.Forms.Padding(2);
             this.dtpPublication.MaxDate = new System.DateTime(5000, 1, 1, 0, 0, 0, 0);
             this.dtpPublication.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpPublication.Name = "dtpPublication";
@@ -159,7 +159,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(188)))));
             this.btnSubmit.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(364, 310);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(10);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(100, 40);
             this.btnSubmit.TabIndex = 10;
@@ -171,7 +171,7 @@
             // 
             this.txtDescription.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(447, 119);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.MaxLength = 200;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -233,7 +233,7 @@
             // 
             this.txtAuthor.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAuthor.Location = new System.Drawing.Point(24, 179);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.txtAuthor.MaxLength = 35;
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(350, 24);
@@ -265,7 +265,7 @@
             // 
             this.txtISBN.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtISBN.Location = new System.Drawing.Point(24, 59);
-            this.txtISBN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtISBN.Margin = new System.Windows.Forms.Padding(2);
             this.txtISBN.MaxLength = 13;
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(350, 24);
@@ -286,7 +286,7 @@
             // 
             this.txtTitle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.Location = new System.Drawing.Point(24, 119);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitle.MaxLength = 25;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(350, 24);
@@ -329,8 +329,8 @@
             // 
             this.txtBookId.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookId.Location = new System.Drawing.Point(357, 130);
-            this.txtBookId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtBookId.MaxLength = 13;
+            this.txtBookId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBookId.MaxLength = 8;
             this.txtBookId.Name = "txtBookId";
             this.txtBookId.Size = new System.Drawing.Size(150, 24);
             this.txtBookId.TabIndex = 1;
@@ -347,7 +347,7 @@
             this.Controls.Add(this.lblBookId);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUpdateBook";
             this.Text = "Update Book";
             this.mnuBackStrip.ResumeLayout(false);

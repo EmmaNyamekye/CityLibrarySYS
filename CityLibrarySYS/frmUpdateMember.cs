@@ -33,9 +33,8 @@ namespace CityLibrarySYS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtMemberId.Text.Length < 7 && (txtMemberId.Text != "A000000" ||
-                txtMemberId.Text != "A000001" || txtMemberId.Text != "A000002" ||
-                txtMemberId.Text != "A000003"))
+            if (txtMemberId.Text != "A000000" || txtMemberId.Text != "A000001" || 
+                txtMemberId.Text != "A000002" || txtMemberId.Text != "A000003")
                 {
                     MessageBox.Show("Invalid MemberId!",
                                     "Error",

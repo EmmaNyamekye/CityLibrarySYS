@@ -38,7 +38,7 @@ namespace CityLibrarySYS
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (txtMemberId.Text == "A000000" || txtMemberId.Text == "A000001" ||
-                txtMemberId.Text == "A000002" || txtMemberId.Text == "A000003")
+                txtMemberId.Text == "A000002")
             {
                 // Enable text boxes
                 grpMemberInfo.Visible = true;
@@ -64,13 +64,22 @@ namespace CityLibrarySYS
                         "\n\nAddress: Bros Street 3, A65F4E3, Shannon, Munster" +
                         "\n\nEmail: luigibros@yahoo.com";
                 }
-                else if (txtMemberId.Text == "A000003")
-                {
-                    lblMemberInfo.Text = "Name: Mario Bros          Phone: 0611113333" +
-                        "\n\nAdddress: Clare Street 5, A65F4E7, Kilrush, Clare" +
-                        "\n\nEmail: mariobros1@gmail.com";
-                }
 
+            }
+            else if (txtMemberId.Text == "A000003")
+            {
+                MessageBox.Show("This Member's Status is currently Inactive!\n" +
+                                "Unfortunately they cannot Reserve a Book!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                txtMemberId.Focus();
+                grpMemberInfo.Visible = false;
+                lblTitle.Visible = false;
+                txtTitle.Visible = false;
+                btnSearchTitle.Visible = false;
+                grpBookCart.Visible = false;
+                return;
             }
             else
             {

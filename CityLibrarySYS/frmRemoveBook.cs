@@ -34,9 +34,8 @@ namespace CityLibrarySYS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtBookId.Text.Length < 8 && (txtBookId.Text != "A0000000" ||
-                txtBookId.Text != "A0000001" || txtBookId.Text != "A0000002"
-                || txtBookId.Text != "A0000002"))
+            if (txtBookId.Text != "A0000000" || txtBookId.Text != "A0000001" || 
+                txtBookId.Text != "A0000002" || txtBookId.Text != "A0000002")
             {
                 MessageBox.Show("Invalid BookId!",
                                 "Error",
