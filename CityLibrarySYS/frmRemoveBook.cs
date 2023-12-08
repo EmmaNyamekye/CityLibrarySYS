@@ -94,7 +94,7 @@ namespace CityLibrarySYS
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Book has been removed from the Books File",
+            MessageBox.Show("Book Has Been Removed From the Books File",
                             "Success!",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);

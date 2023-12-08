@@ -91,7 +91,7 @@ namespace CityLibrarySYS
 
             else
             {
-                MessageBox.Show("Book has been added to Books File",
+                MessageBox.Show(txtTitle.Text + " Has Been Added to Books File",
                                 "Success!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);

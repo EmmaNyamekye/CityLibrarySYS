@@ -25,7 +25,7 @@ namespace CityLibrarySYS
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("These Books Have Now Been Paid!",
+            MessageBox.Show("This Book Has Now Been Paid!",
                             "Information",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);

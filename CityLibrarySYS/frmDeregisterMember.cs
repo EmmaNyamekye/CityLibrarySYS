@@ -87,7 +87,7 @@ namespace CityLibrarySYS
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             
-            MessageBox.Show("Member has been Deregistered",
+            MessageBox.Show("Member Has Been Deregistered",
                             "Success!",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);

@@ -139,7 +139,7 @@ namespace CityLibrarySYS
 
             else
             {
-                MessageBox.Show("Book has been added to Books File",
+                MessageBox.Show("Book Has Been Updated into the Books File",
                                 "Success!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
